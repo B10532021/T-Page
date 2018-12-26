@@ -7,8 +7,7 @@
                 <img src="../img/user2-160x160.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>會員</p>
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                <p><a href="index.php?page=profile">會員資料</a></p>
             </div>
         </div>
         <!-- search form -->
@@ -28,9 +27,10 @@
             <li class="header">MAIN NAVIGATION</li>
             <li class="treeview">
                 <a href="index.php?page=articles"><i class="fa fa-table"></i> <span>四電資一</span></a>
-                <a href="index.php?page=card"><i class="fa fa-table"></i> <span>四電資二</span></a>
-                <a href="#"><i class="fa fa-table"></i> <span>四電資三</span></a>
-                <a href="#"><i class="fa fa-table"></i> <span>四電資四</span></a>
+                <a href="index.php?page=articles"><i class="fa fa-table"></i> <span>四電資二</span></a>
+                <a href="index.php?page=articles"><i class="fa fa-table"></i> <span>四電資三</span></a>
+                <a href="index.php?page=articles"><i class="fa fa-table"></i> <span>四電資四</span></a>
+                <a href="index.php?page=card"><i class="fa fa-table"></i> <span>抽卡友</span></a>
             </li>
             <!--            {{--TODO: multilevel example, remove before demo--}}-->
 

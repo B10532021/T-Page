@@ -10,6 +10,9 @@ if(isset($_GET["page"])) {
     if($_GET["page"] == "card") {
         $page = "view/card.php";
     }
+    if($_GET["page"] == "profile") {
+    $page = "view/profile.php";
+    }
 }
 
 include("layouts/header.php");
