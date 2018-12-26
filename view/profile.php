@@ -3,12 +3,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            卡友~
-            <small>抽起來</small>
+            會員資料
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">抽卡友</li>
+            <li class="active">Profile</li>
         </ol>
     </section>
 
