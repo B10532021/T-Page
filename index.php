@@ -1,16 +1,14 @@
 <?php
 
-$page = "view/card.php";
+$page = "view/articles.php";
 $title = "Card_Friend";
 
 if(isset($_GET["page"])) {
-    if($_GET["page"] == "about") {
-        $page = "page-about.php";
-        $title = "About Me";
+    if($_GET["page"] == "articles") {
+        $page = "view/article.php";
     }
-    if($_GET["page"] == "contact") {
-        $page = "page-contact.php";
-        $title = "Contact Me";
+    if($_GET["page"] == "card") {
+        $page = "view/card.php";
     }
 }
 
