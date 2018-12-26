@@ -14,10 +14,6 @@
     <!-- Main content -->
     <section class="content">
 
-
-
-        <!-- /.row (main row) -->
-
     </section>
     <!-- /.content -->
 </div>
