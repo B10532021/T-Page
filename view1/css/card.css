@@ -50,3 +50,15 @@
     width: 120px;
     height: 40px;
 }
+
+hr.style-five {
+    border: 0;
+    height: 1px;
+    width: auto;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+hr.style-five:after {
+    /* Not really supposed to work, but does */
+    content: '\00a0'; /* Prevent margin collapse */
+}
