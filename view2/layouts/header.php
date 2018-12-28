@@ -34,15 +34,15 @@
             <h1><a href="#">T-Page</a></h1>
         </div>
 
-        <!-- Nav -->
+
         <nav id="nav">
             <ul>
-                <li class="active"><a href="articles.html">四電資一</a></li>
+                <li class="active"><a href="../index.php?page=articles">四電資一</a></li>
                 <li><a href="">四電資二</a></li>
                 <li><a href="">四電資三</a></li>
                 <li><a href="">四電資四</a></li>
-                <li><a href="">抽卡</a></li>
-                <li><a href="">個人頁面</a></li>
+                <li><a href="../index.php?page=card">抽卡</a></li>
+                <li><a href="../index.php?page=profile">個人頁面</a></li>
             </ul>
         </nav>
 

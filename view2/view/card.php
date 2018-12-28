@@ -1,71 +1,35 @@
 
-	<!-- Main -->
-		<div id="main">
-			<div class="container">
-				<header>
-					<h2>四電資一</h2>
-				</header>
+<!-- Main -->
+<div id="main">
+    <div class="container">
+        <div class="row">
 
-                <div class="divider">&nbsp;</div>
+            <!-- Content -->
+            <div id="content" class="8u skel-cell-important">
+                <section>
+                    <header>
+                        <h2 style="padding-left: 35%">台灣科技大學 電資學士班</h2>
+                    </header>
+                    <div style="padding-left: 35%">
+                    <p><a href="#" class="image full"><img src="../images/angel.jpg"></a></p>
+                    <p>生日: 11/19</p>
+                    <p>興趣: 運動</p>
+                    <p>參加過的社團: 吉他社</p>
+                    </div>
+                    </section>
+            </div>
+            <!-- /Content -->
 
-                <!--       文章         -->
-				<div class="row">
-					<div class="3u">
-						<section>
-							<p>Quisque dictum. Pellentesque viverra  enim. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
-							<a href="#" class="button">Read More</a>
-						</section>
-					</div>
-					<div class="3u">
-						<section>
-							<p>Pellentesque viverra  enim. Tristique ante ut risus. Quisque dictum. Integer sagittis convallis elementum.</p>
-							<a href="#" class="button">Read More</a>
-						</section>
-					</div>
-					<div class="3u">
-						<section>
-							<p>Pellentesque viverra  enim. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
-							<a href="#" class="button">Read More</a>
-						</section>
-					</div>
-					<div class="3u">
-						<section>
-							<p>Tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis elementum.</p>
-							<a href="#" class="button">Read More</a>
-						</section>
-					</div>
-				</div>
-                <!--       /文章         -->
+            <!-- Sidebar -->
+            <div id="sidebar" class="4u">
+                <section>
+                    <img src="../images/ad.jpg">
+                </section>
+            </div>
+            <!-- Sidebar -->
 
-                <!--       文章         -->
-                <div class="row">
-                    <div class="3u">
-                        <section>
-                            <p>Quisque dictum. Pellentesque viverra  enim. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
-                            <a href="#" class="button">Read More</a>
-                        </section>
-                    </div>
-                    <div class="3u">
-                        <section>
-                            <p>Pellentesque viverra  enim. Tristique ante ut risus. Quisque dictum. Integer sagittis convallis elementum.</p>
-                            <a href="#" class="button">Read More</a>
-                        </section>
-                    </div>
-                    <div class="3u">
-                        <section>
-                            <p>Pellentesque viverra  enim. Quisque dictum. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
-                            <a href="#" class="button">Read More</a>
-                        </section>
-                    </div>
-                    <div class="3u">
-                        <section>
-                            <p>Tristique ante ut risus. Quisque dictum. Integer nisl risus, sagittis convallis elementum.</p>
-                            <a href="#" class="button">Read More</a>
-                        </section>
-                    </div>
-                </div>
-                <!--       /文章         -->
-			
-			</div>
-		</div>
-	<!-- Main -->
+        </div>
+
+    </div>
+</div>
+<!-- Main -->
