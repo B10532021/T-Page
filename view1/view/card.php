@@ -1,3 +1,12 @@
+<?php
+$image = 'angel.jpg';
+$name = '大美人';
+$school = '國立台灣科技大學企管系';
+$gender = '女';
+$birth = '1998/01/01';
+$interests = '打撞球、讀小說、聽音樂';
+$clubs = '跆拳道社';
+?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -34,7 +43,7 @@
                                                         ><img src="images/product-plus.png" alt=""/></a>
                                                         <img
                                                                 id="zoom_02"
-                                                                src="../img/angel.jpg"
+                                                                src="../img/<?php echo $image?>"
                                                                 data-zoom-image="/assets/images/single-large.jpg"
                                                                 alt=""/>
                                                     </div>
@@ -46,41 +55,41 @@
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="product_detail_heading">
                                         <div class="detail_heading_left">
-                                            <h4>姓名：大美人</h4>
+                                            <h4>姓名：<?php echo $name ?></h4>
                                         </div>
                                     </div>
                                     <div class="product_detail_heading">
                                         <div class="detail_heading_left">
                                             <div class="detail_heading_left">
-                                                <h4>學校：國立台灣科技大學企管系</h4>
+                                                <h4>學校：<?php echo $school?></h4>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="product_detail_heading">
                                         <div class="detail_heading_left">
                                             <div class="detail_heading_left">
-                                                <h4>性別：女</h4>
+                                                <h4>性別：<?php echo $gender?></h4>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="product_detail_heading">
                                         <div class="detail_heading_left">
                                             <div class="detail_heading_left">
-                                                <h4>生日：1998/01/01</h4>
+                                                <h4>生日：<?php echo $birth?></h4>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="product_detail_heading">
                                         <div class="detail_heading_left">
                                             <div class="detail_heading_left">
-                                                <h4>興趣：打撞球、讀小說、聽音樂</h4>
+                                                <h4>興趣：<?php echo $interests?></h4>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="product_detail_heading">
                                         <div class="detail_heading_left">
                                             <div class="detail_heading_left">
-                                                <h4>參加的社團：跆拳道社</h4>
+                                                <h4>參加的社團：<?php echo $clubs?></h4>
                                             </div>
                                         </div>
                                     </div>

@@ -19,6 +19,7 @@
                     the arrival of the new theme. They say it is going to be one the
                     best themes on the market
                 </p>
+                <a href="index.php?page=article" style="margin-left: 50px">閱讀完整文章...</a>
             </div>
         </div>
     </div>
@@ -39,6 +40,7 @@
                     the arrival of the new theme. They say it is going to be one the
                     best themes on the market
                 </p>
+                <a href="index.php?page=article" style="margin-left: 50px">閱讀完整文章...</a>
             </div>
         </div>
     </div>
@@ -60,6 +62,7 @@
                     the arrival of the new theme. They say it is going to be one the
                     best themes on the market
                 </p>
+                <a href="index.php?page=article" style="margin-left: 50px">閱讀完整文章...</a>
             </div>
         </div>
     </div>
