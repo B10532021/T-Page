@@ -1,6 +1,6 @@
 <?php
 
-$page = "view/card.php";
+$page = "view/articles.php";
 $title = "Card_Friend";
 
 if(isset($_GET["page"])) {
