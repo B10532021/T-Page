@@ -3,6 +3,10 @@
 $page = "view/articles.php";
 $title = "Card_Friend";
 
+function change_page($change) {
+    $GLOBALS['page'] = $change;
+}
+
 if(isset($_GET["page"])) {
     if($_GET["page"] == "articles") {
         $page = "view/articles.php";
@@ -12,6 +16,9 @@ if(isset($_GET["page"])) {
     }
     if($_GET["page"] == "profile") {
     $page = "view/profile.php";
+    }
+    if($_GET["page"] == "article") {
+        $page = "view/article.php";
     }
 }
 

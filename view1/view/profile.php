@@ -85,7 +85,7 @@
 
         <h3>已發表的文章：</h3>
         <hr class="style-five"/>
-        <div class="box box-success">
+        <div class="box box-success" onclick="change_page('article')">
             <div class="box-body chat" id="chat-box">
                 <div class="item">
                     <img src="../img/avatar5.png" alt="user image" class="online">
