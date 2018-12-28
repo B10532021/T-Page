@@ -1,9 +1,12 @@
 <?php
 
-$page = "view/articles.php";
+$page = "view/card.php";
 $title = "Card_Friend";
 
 if(isset($_GET["page"])) {
+    if($_GET["page"] == "article") {
+        $page = "view/article.php";
+    }
     if($_GET["page"] == "articles") {
         $page = "view/articles.php";
     }
@@ -16,8 +19,6 @@ if(isset($_GET["page"])) {
 }
 
 include("layouts/header.php");
-
-//include("layouts/sidebar.php");
 
 include($page);
 
