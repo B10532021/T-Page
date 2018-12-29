@@ -1,15 +1,10 @@
-
-
-
-
-
 <!-- HOME SLIDER -->
 <div class="slider-wrap">
     <div class="fullwidthbanner-container">
         <div class="fullwidthbanner">
             <ul>
                 <li data-transition="random" data-slotamount="7" data-masterspeed="1000">
-                    <img src="images/slider-temp.jpg" alt="slide">
+                    <img src="../images/slider-temp.jpg" alt="slide">
 
                     <div class="tp-caption large_black sfr" data-x="120" data-y="140" data-speed="1100"
                          data-start="1100" data-easing="easeInOutBack"
@@ -24,7 +19,7 @@
                     <div class="tp-caption large_black sfr carousel-caption-inner" data-x="120" data-y="300"
                          data-speed="1100" data-start="1400" data-easing="easeInOutBack"
                          style="">
-                        <img src="images/sep-b.png" alt=""/>
+                        <img src="../images/sep-b.png" alt=""/>
                     </div>
                     <div class="tp-caption lfb carousel-caption-inner" data-x="120" data-y="350" data-speed="1300"
                          data-start="1700" data-easing="easeInOutBack"
@@ -34,7 +29,7 @@
                 </li>
 
                 <li data-transition="random" data-slotamount="7" data-masterspeed="1000">
-                    <img src="images/slider-temp2.jpg" alt="slide">
+                    <img src="../images/slider-temp2.jpg" alt="slide">
 
                     <div class="tp-caption large_black sfr" data-x="120" data-y="140" data-speed="1100"
                          data-start="1100" data-easing="easeInOutBack"
@@ -49,7 +44,7 @@
                     <div class="tp-caption large_black sfr carousel-caption-inner" data-x="120" data-y="300"
                          data-speed="1100" data-start="1400" data-easing="easeInOutBack"
                          style="">
-                        <img src="images/sep-b.png" alt=""/>
+                        <img src="../images/sep-b.png" alt=""/>
                     </div>
                     <div class="tp-caption lfb carousel-caption-inner" data-x="120" data-y="350" data-speed="1300"
                          data-start="1700" data-easing="easeInOutBack"
@@ -59,7 +54,7 @@
                 </li>
 
                 <li data-transition="random" data-slotamount="7" data-masterspeed="1000">
-                    <img src="images/slider-temp.jpg" alt="slide">
+                    <img src="../images/slider-temp.jpg" alt="slide">
 
                     <div class="tp-caption large_black sfr" data-x="120" data-y="140" data-speed="1100"
                          data-start="1100" data-easing="easeInOutBack"
@@ -74,7 +69,7 @@
                     <div class="tp-caption large_black sfr carousel-caption-inner" data-x="120" data-y="300"
                          data-speed="1100" data-start="1400" data-easing="easeInOutBack"
                          style="">
-                        <img src="images/sep-b.png" alt=""/>
+                        <img src="../images/sep-b.png" alt=""/>
                     </div>
                     <div class="tp-caption lfb carousel-caption-inner" data-x="120" data-y="350" data-speed="1300"
                          data-start="1700" data-easing="easeInOutBack"
@@ -137,7 +132,7 @@
                             <div class="promotion_left">
                                 <div class="promotion_top">
                                     <div class="images_box">
-                                        <img src="images/promo_img1.jpg" alt=""/>
+                                        <img src="../images/promo_img1.jpg" alt=""/>
                                     </div>
                                     <div class="promo_text">
                                         <h5>Jackets</h5>
@@ -145,12 +140,12 @@
                                         <a href="">Show More Products <i class="fa fa-caret-right"></i></a>
                                     </div>
                                     <div class="hover_images">
-                                        <img src="images/promo_img11.jpg" alt=""/>
+                                        <img src="../images/promo_img11.jpg" alt=""/>
                                     </div>
                                 </div>
                                 <div class="promotion_bottom">
                                     <div class="images_box">
-                                        <img src="images/promo_img2.jpg" alt=""/>
+                                        <img src="../images/promo_img2.jpg" alt=""/>
                                     </div>
                                     <div class="promo_text_bottom">
                                         <h5>Shirts</h5>
@@ -158,7 +153,7 @@
                                         <a href="">Show More Products <i class="fa fa-caret-right"></i></a>
                                     </div>
                                     <div class="hover_images_bottom hover_images">
-                                        <img src="images/promo_img22.jpg" alt=""/>
+                                        <img src="../images/promo_img22.jpg" alt=""/>
                                     </div>
                                 </div>
 
@@ -168,7 +163,7 @@
                             <div class="promotion_right">
                                 <div class="promotion_bottom promotion_bottom_t">
                                     <div class="images_box">
-                                        <img src="images/promo_img3.jpg" alt=""/>
+                                        <img src="../images/promo_img3.jpg" alt=""/>
                                     </div>
                                     <div class="promo_text promo_text_t">
                                         <h5>Trendy T-shirts</h5>
@@ -176,12 +171,12 @@
                                         <a href="">Show More Products <i class="fa fa-caret-right"></i></a>
                                     </div>
                                     <div class="hover_images_bottom hover_images">
-                                        <img src="images/promo_img33.jpg" alt=""/>
+                                        <img src="../images/promo_img33.jpg" alt=""/>
                                     </div>
                                 </div>
                                 <div class="promotion_top promotion_bottom_b">
                                     <div class="images_box">
-                                        <img src="images/promo_img4.jpg" alt=""/>
+                                        <img src="../images/promo_img4.jpg" alt=""/>
                                     </div>
                                     <div class="promo_text_bottom promo_text_b">
                                         <h5>Pants</h5>
@@ -189,7 +184,7 @@
                                         <a href="">Show More Products <i class="fa fa-caret-right"></i></a>
                                     </div>
                                     <div class="hover_images">
-                                        <img src="images/promo_img44.jpg" alt=""/>
+                                        <img src="../images/promo_img44.jpg" alt=""/>
                                     </div>
                                 </div>
 
@@ -229,14 +224,14 @@
                                 <div id="owl-example" class="owl-carousel">
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item1.jpg" alt=""/>
+                                            <img src="../images/t_item1.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -244,20 +239,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>casual fashion wool coat</h5></a>
+                                            <a href="../product-detail.html"><h5>casual fashion wool coat</h5></a>
                                             <p>$190.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item2.jpg" alt=""/>
+                                            <img src="../images/t_item2.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -266,20 +261,20 @@
                                             <span>-10%</span>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>casual fashion wool coat</h5></a>
+                                            <a href="../product-detail.html"><h5>casual fashion wool coat</h5></a>
                                             <p>$90.00 <span><del>$100</del></span></p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item3.jpg" alt=""/>
+                                            <img src="../images/t_item3.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -287,20 +282,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>super Clover Robe Jacket</h5></a>
+                                            <a href="../product-detail.html"><h5>super Clover Robe Jacket</h5></a>
                                             <p>$120.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item4.jpg" alt=""/>
+                                            <img src="../images/t_item4.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -308,20 +303,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>structured collarless coat</h5></a>
+                                            <a href="../product-detail.html"><h5>structured collarless coat</h5></a>
                                             <p>$90.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item1.jpg" alt=""/>
+                                            <img src="../images/t_item1.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -330,20 +325,20 @@
                                             <span>-10%</span>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>casual fashion wool coat</h5></a>
+                                            <a href="../product-detail.html"><h5>casual fashion wool coat</h5></a>
                                             <p>$80.00 <span><del>$90</del></span></p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item2.jpg" alt=""/>
+                                            <img src="../images/t_item2.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -352,20 +347,20 @@
                                             <span>-10%</span>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>super Clover Robe Jacket</h5></a>
+                                            <a href="../product-detail.html"><h5>super Clover Robe Jacket</h5></a>
                                             <p>$90.00 <span><del>$100</del></span></p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item3.jpg" alt=""/>
+                                            <img src="../images/t_item3.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -373,20 +368,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>casual fashion wool coat</h5></a>
+                                            <a href="../product-detail.html"><h5>casual fashion wool coat</h5></a>
                                             <p>$95.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item12.jpg" alt=""/>
+                                            <img src="../images/t_item12.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -394,20 +389,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>v-neck men blue t-shirt </h5></a>
+                                            <a href="../product-detail.html"><h5>v-neck men blue t-shirt </h5></a>
                                             <p>$170.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item13.jpg" alt=""/>
+                                            <img src="../images/t_item13.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -416,7 +411,7 @@
                                             <span>-10%</span>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>gray shadow jean shirt</h5></a>
+                                            <a href="../product-detail.html"><h5>gray shadow jean shirt</h5></a>
                                             <p>$100.00 <span><del>$110</del></span></p>
                                         </div>
                                     </div>
@@ -427,14 +422,14 @@
                                 <div id="owl-example-two" class="owl-carousel">
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item1.jpg" alt=""/>
+                                            <img src="../images/t_item1.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -442,20 +437,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>super Clover Robe Jacket</h5></a>
+                                            <a href="../product-detail.html"><h5>super Clover Robe Jacket</h5></a>
                                             <p>$80.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item7.jpg" alt=""/>
+                                            <img src="../images/t_item7.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -464,20 +459,20 @@
                                             <span>-10%</span>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>v-neck men blue t-shirt </h5></a>
+                                            <a href="../product-detail.html"><h5>v-neck men blue t-shirt </h5></a>
                                             <p>$130.00 <span><del>$140</del></span></p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item14.jpg" alt=""/>
+                                            <img src="../images/t_item14.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -486,20 +481,20 @@
                                             <span>-10%</span>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>houndsmooth wool t-shirt</h5></a>
+                                            <a href="../product-detail.html"><h5>houndsmooth wool t-shirt</h5></a>
                                             <p>$110.00 <span><del>$120</del></span></p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item5.jpg" alt=""/>
+                                            <img src="../images/t_item5.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -507,20 +502,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>AROS SLIM HEAVY CHINO</h5></a>
+                                            <a href="../product-detail.html"><h5>AROS SLIM HEAVY CHINO</h5></a>
                                             <p>$70.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item6.jpg" alt=""/>
+                                            <img src="../images/t_item6.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -528,20 +523,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>volv checked casual shirt</h5></a>
+                                            <a href="../product-detail.html"><h5>volv checked casual shirt</h5></a>
                                             <p>$90.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item7.jpg" alt=""/>
+                                            <img src="../images/t_item7.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -550,20 +545,20 @@
                                             <span>-10%</span>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>yellow Clover Robe Jacket</h5></a>
+                                            <a href="../product-detail.html"><h5>yellow Clover Robe Jacket</h5></a>
                                             <p>$90.00 <span><del>$100</del></span></p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item15.jpg" alt=""/>
+                                            <img src="../images/t_item15.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -571,20 +566,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>structured collarless coat</h5></a>
+                                            <a href="../product-detail.html"><h5>structured collarless coat</h5></a>
                                             <p>$90.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item8.jpg" alt=""/>
+                                            <img src="../images/t_item8.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -593,20 +588,20 @@
                                             <span>-10%</span>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>super Clover Robe Jacket</h5></a>
+                                            <a href="../product-detail.html"><h5>super Clover Robe Jacket</h5></a>
                                             <p>$90.00 <span><del>$100</del></span></p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item9.jpg" alt=""/>
+                                            <img src="../images/t_item9.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -614,7 +609,7 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>full hand animal jacket</h5></a>
+                                            <a href="../product-detail.html"><h5>full hand animal jacket</h5></a>
                                             <p>$90.00</p>
                                         </div>
                                     </div>
@@ -625,14 +620,14 @@
                                 <div id="owl-example-three" class="owl-carousel">
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item10.jpg" alt=""/>
+                                            <img src="../images/t_item10.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -641,20 +636,20 @@
                                             <span>-10%</span>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>men’s fashion blue jean coat</h5></a>
+                                            <a href="../product-detail.html"><h5>men’s fashion blue jean coat</h5></a>
                                             <p>$90.00 <span><del>$100</del></span></p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item16.jpg" alt=""/>
+                                            <img src="../images/t_item16.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -662,20 +657,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>AROS SLIM HEAVY CHINO</h5></a>
+                                            <a href="../product-detail.html"><h5>AROS SLIM HEAVY CHINO</h5></a>
                                             <p>$90.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item4.jpg" alt=""/>
+                                            <img src="../images/t_item4.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -683,20 +678,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>black men leather coat</h5></a>
+                                            <a href="../product-detail.html"><h5>black men leather coat</h5></a>
                                             <p>$90.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item11.jpg" alt=""/>
+                                            <img src="../images/t_item11.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -705,20 +700,20 @@
                                             <span>-10%</span>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>houndsmooth wool t-shirt</h5></a>
+                                            <a href="../product-detail.html"><h5>houndsmooth wool t-shirt</h5></a>
                                             <p>$90.00 <span><del>$100</del></span></p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item1.jpg" alt=""/>
+                                            <img src="../images/t_item1.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -726,20 +721,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>casual fashion wool coat</h5></a>
+                                            <a href="../product-detail.html"><h5>casual fashion wool coat</h5></a>
                                             <p>$90.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item12.jpg" alt=""/>
+                                            <img src="../images/t_item12.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -748,20 +743,20 @@
                                             <span>-10%</span>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>structured collarless coat</h5></a>
+                                            <a href="../product-detail.html"><h5>structured collarless coat</h5></a>
                                             <p>$90.00 <span><del>$100</del></span></p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item3.jpg" alt=""/>
+                                            <img src="../images/t_item3.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -769,20 +764,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>casual fashion wool coat</h5></a>
+                                            <a href="../product-detail.html"><h5>casual fashion wool coat</h5></a>
                                             <p>$90.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item2.jpg" alt=""/>
+                                            <img src="../images/t_item2.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -790,20 +785,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>structured collarless coat</h5></a>
+                                            <a href="../product-detail.html"><h5>structured collarless coat</h5></a>
                                             <p>$90.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item3.jpg" alt=""/>
+                                            <img src="../images/t_item3.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -812,7 +807,7 @@
                                             <span>-10%</span>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>men’s fashion blue jean coat</h5></a>
+                                            <a href="../product-detail.html"><h5>men’s fashion blue jean coat</h5></a>
                                             <p>$90.00 <span><del>$100</del></span></p>
                                         </div>
                                     </div>
@@ -823,14 +818,14 @@
                                 <div id="owl-example-four" class="owl-carousel">
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item1.jpg" alt=""/>
+                                            <img src="../images/t_item1.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -838,20 +833,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>casual fashion wool coat</h5></a>
+                                            <a href="../product-detail.html"><h5>casual fashion wool coat</h5></a>
                                             <p>$90.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item2.jpg" alt=""/>
+                                            <img src="../images/t_item2.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -860,20 +855,20 @@
                                             <span>-10%</span>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>casual fashion wool coat</h5></a>
+                                            <a href="../product-detail.html"><h5>casual fashion wool coat</h5></a>
                                             <p>$90.00 <span><del>$100</del></span></p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item7.jpg" alt=""/>
+                                            <img src="../images/t_item7.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -882,20 +877,20 @@
                                             <span>-10%</span>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>casual fashion wool coat</h5></a>
+                                            <a href="../product-detail.html"><h5>casual fashion wool coat</h5></a>
                                             <p>$90.00 <span><del>$100</del></span></p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item4.jpg" alt=""/>
+                                            <img src="../images/t_item4.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -903,20 +898,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>v-neck men blue t-shirt </h5></a>
+                                            <a href="../product-detail.html"><h5>v-neck men blue t-shirt </h5></a>
                                             <p>$90.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item1.jpg" alt=""/>
+                                            <img src="../images/t_item1.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -924,20 +919,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>v-neck men blue t-shirt </h5></a>
+                                            <a href="../product-detail.html"><h5>v-neck men blue t-shirt </h5></a>
                                             <p>$90.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item2.jpg" alt=""/>
+                                            <img src="../images/t_item2.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -945,20 +940,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>casual fashion wool coat</h5></a>
+                                            <a href="../product-detail.html"><h5>casual fashion wool coat</h5></a>
                                             <p>$90.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item3.jpg" alt=""/>
+                                            <img src="../images/t_item3.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -967,20 +962,20 @@
                                             <span>-10%</span>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>gray shadow jean shirt</h5></a>
+                                            <a href="../product-detail.html"><h5>gray shadow jean shirt</h5></a>
                                             <p>$90.00 <span><del>$100</del></span></p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item12.jpg" alt=""/>
+                                            <img src="../images/t_item12.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -988,20 +983,20 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>casual fashion wool coat</h5></a>
+                                            <a href="../product-detail.html"><h5>casual fashion wool coat</h5></a>
                                             <p>$90.00</p>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="item-img">
-                                            <img src="images/t_item14.jpg" alt=""/>
+                                            <img src="../images/t_item14.jpg" alt=""/>
                                             <div class="tr-add-cart">
                                                 <ul>
                                                     <li><a class="fa fa-shopping-cart tr_cart" href="#"></a></li>
                                                     <li><a class="tr_text" href="#">ADD TO CART</a></li>
                                                     <li><a class="fa fa-heart tr_heart" href="#"></a></li>
                                                     <li><a class="fa fa-search tr_search"
-                                                           href="product-detail.html"></a></li>
+                                                           href="../product-detail.html"></a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1009,7 +1004,7 @@
                                             <p>New</p>
                                         </div>
                                         <div class="item-sub">
-                                            <a href="product-detail.html"><h5>houndsmooth wool t-shirt</h5></a>
+                                            <a href="../product-detail.html"><h5>houndsmooth wool t-shirt</h5></a>
                                             <p>$90.00 </p>
                                         </div>
                                     </div>
@@ -1040,10 +1035,10 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to1.png" alt=""/>
+                                                    <img src="../images/t_to1.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>casual fashion wool <br>coat</p>
+                                                    <a href="../product-detail.html"><p>casual fashion wool <br>coat</p>
                                                     </a>
                                                     <div class="t_to_b_dollr"><span>$90.00</span></div>
                                                     <div class="t_to_b_del">
@@ -1055,10 +1050,11 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to2.png" alt=""/>
+                                                    <img src="../images/t_to2.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>structured collarless <br>coat</p>
+                                                    <a href="../product-detail.html"><p>structured collarless <br>coat
+                                                        </p>
                                                     </a>
                                                     <div class="t_to_b_dollr"><span>$133.20</span></div>
                                                 </div>
@@ -1067,10 +1063,10 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to3.png" alt=""/>
+                                                    <img src="../images/t_to3.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>super Clover Robe <br>Jacket</p>
+                                                    <a href="../product-detail.html"><p>super Clover Robe <br>Jacket</p>
                                                     </a>
                                                     <div class="t_to_b_dollr"><span>$124.22</span></div>
                                                     <div class="t_to_b_del">
@@ -1082,10 +1078,10 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to4.png" alt=""/>
+                                                    <img src="../images/t_to4.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>casual fashion wool <br>coat</p>
+                                                    <a href="../product-detail.html"><p>casual fashion wool <br>coat</p>
                                                     </a>
                                                     <div class="t_to_b_dollr"><span>$90.00</span></div>
                                                     <div class="t_to_b_del">
@@ -1097,10 +1093,10 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to5.png" alt=""/>
+                                                    <img src="../images/t_to5.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>casual fashion wool <br>coat</p>
+                                                    <a href="../product-detail.html"><p>casual fashion wool <br>coat</p>
                                                     </a>
                                                     <div class="t_to_b_dollr"><span>$170.00</span></div>
                                                     <div class="t_to_b_del">
@@ -1112,10 +1108,10 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to6.png" alt=""/>
+                                                    <img src="../images/t_to6.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>super Clover Robe <br>Jacket</p>
+                                                    <a href="../product-detail.html"><p>super Clover Robe <br>Jacket</p>
                                                     </a>
                                                     <div class="t_to_b_dollr"><span>$180.00</span></div>
                                                     <div class="t_to_b_del">
@@ -1139,10 +1135,10 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to4.png" alt=""/>
+                                                    <img src="../images/t_to4.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>casual fashion wool <br>coat</p>
+                                                    <a href="../product-detail.html"><p>casual fashion wool <br>coat</p>
                                                     </a>
                                                     <div class="t_to_b_dollr"><span>$190.00</span></div>
                                                     <div class="t_to_b_del">
@@ -1154,10 +1150,11 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to5.png" alt=""/>
+                                                    <img src="../images/t_to5.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>yellow Clover Robe <br>Jacket</p>
+                                                    <a href="../product-detail.html"><p>yellow Clover Robe <br>Jacket
+                                                        </p>
                                                     </a>
                                                     <div class="t_to_b_dollr"><span>$90.00</span></div>
                                                     <div class="t_to_b_del">
@@ -1169,10 +1166,11 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to8.png" alt=""/>
+                                                    <img src="../images/t_to8.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>houndsmooth wool <br>t-shirt </p>
+                                                    <a href="../product-detail.html"><p>houndsmooth wool <br>t-shirt
+                                                        </p>
                                                     </a>
                                                     <div class="t_to_b_dollr"><span>$180.00</span></div>
                                                     <div class="t_to_b_del">
@@ -1184,10 +1182,10 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to1.png" alt=""/>
+                                                    <img src="../images/t_to1.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>volv checked casual<br>shirt</p>
+                                                    <a href="../product-detail.html"><p>volv checked casual<br>shirt</p>
                                                     </a>
                                                     <div class="t_to_b_dollr"><span>$90.00</span></div>
                                                     <div class="t_to_b_del">
@@ -1199,10 +1197,10 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to3.png" alt=""/>
+                                                    <img src="../images/t_to3.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>casual fashion wool <br>coat</p>
+                                                    <a href="../product-detail.html"><p>casual fashion wool <br>coat</p>
                                                     </a>
                                                     <div class="t_to_b_dollr"><span>$140.00</span></div>
                                                     <div class="t_to_b_del">
@@ -1214,10 +1212,10 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to9.png" alt=""/>
+                                                    <img src="../images/t_to9.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>super Clover Robe <br>Jacket</p>
+                                                    <a href="../product-detail.html"><p>super Clover Robe <br>Jacket</p>
                                                     </a>
                                                     <div class="t_to_b_dollr"><span>$90.00</span></div>
                                                     <div class="t_to_b_del">
@@ -1241,10 +1239,11 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to6.png" alt=""/>
+                                                    <img src="../images/t_to6.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>men’s fashion blue jean<br>coat</p>
+                                                    <a href="../product-detail.html"><p>men’s fashion blue jean<br>coat
+                                                        </p>
                                                     </a>
                                                     <div class="t_to_b_dollr"><span>$130.00</span></div>
                                                     <div class="t_to_b_del">
@@ -1256,10 +1255,10 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to9.png" alt=""/>
+                                                    <img src="../images/t_to9.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>casual fashion wool <br>coat</p>
+                                                    <a href="../product-detail.html"><p>casual fashion wool <br>coat</p>
                                                     </a>
                                                     <div class="t_to_b_dollr"><span>$90.00</span></div>
                                                     <div class="t_to_b_del">
@@ -1271,10 +1270,11 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to7.png" alt=""/>
+                                                    <img src="../images/t_to7.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>AROS SLIM HEAVY <br>CHINO</p></a>
+                                                    <a href="../product-detail.html"><p>AROS SLIM HEAVY <br>CHINO</p>
+                                                    </a>
                                                     <div class="t_to_b_dollr"><span>$181.00</span></div>
                                                     <div class="t_to_b_del">
                                                         <del>$200.00</del>
@@ -1285,10 +1285,10 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to6.png" alt=""/>
+                                                    <img src="../images/t_to6.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>casual fashion wool <br>coat</p>
+                                                    <a href="../product-detail.html"><p>casual fashion wool <br>coat</p>
                                                     </a>
                                                     <div class="t_to_b_dollr"><span>$100.00</span></div>
                                                     <div class="t_to_b_del">
@@ -1300,10 +1300,10 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to4.png" alt=""/>
+                                                    <img src="../images/t_to4.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>casual fashion wool <br>coat</p>
+                                                    <a href="../product-detail.html"><p>casual fashion wool <br>coat</p>
                                                     </a>
                                                     <div class="t_to_b_dollr"><span>$40.00</span></div>
                                                     <div class="t_to_b_del">
@@ -1315,10 +1315,10 @@
                                         <div class="slide">
                                             <div class="t_to_b_content">
                                                 <div class="t_to_b_img">
-                                                    <img src="images/t_to3.png" alt=""/>
+                                                    <img src="../images/t_to3.png" alt=""/>
                                                 </div>
                                                 <div class="t_to_b_text">
-                                                    <a href="product-detail.html"><p>super Clover Robe <br>Jacket</p>
+                                                    <a href="../product-detail.html"><p>super Clover Robe <br>Jacket</p>
                                                     </a>
                                                     <div class="t_to_b_dollr"><span>$90.00</span></div>
                                                     <div class="t_to_b_del">
@@ -1373,7 +1373,7 @@
                                             </div>
                                         </div>
                                         <div class="fresh_blog_img">
-                                            <img src="images/blog1.jpg" alt=""/>
+                                            <img src="../images/blog1.jpg" alt=""/>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -1396,7 +1396,7 @@
                                             </div>
                                         </div>
                                         <div class="fresh_blog_img">
-                                            <img src="images/blog2.jpg" alt=""/>
+                                            <img src="../images/blog2.jpg" alt=""/>
                                         </div>
                                     </div>
                                 </div>
@@ -1423,7 +1423,7 @@
                                             </div>
                                         </div>
                                         <div class="fresh_blog_img">
-                                            <img src="images/blog1.jpg" alt=""/>
+                                            <img src="../images/blog1.jpg" alt=""/>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -1446,7 +1446,7 @@
                                             </div>
                                         </div>
                                         <div class="fresh_blog_img">
-                                            <img src="images/blog2.jpg" alt=""/>
+                                            <img src="../images/blog2.jpg" alt=""/>
                                         </div>
                                     </div>
                                 </div>
@@ -1469,223 +1469,110 @@
     </div>
 </section>
 
-<section class="testimonial_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="textimonial_box">
-                    <img src="images/msg.png" alt=""/>
-                    <h2>lovely clients comment</h2>
-                    <div class="multi_line"></div>
+<!--<section class="testimonial_area">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-12 col-sm-12 col-xs-12">-->
+<!--                <div class="textimonial_box">-->
+<!--                    <img src="../images/msg.png" alt=""/>-->
+<!--                    <h2>lovely clients comment</h2>-->
+<!--                    <div class="multi_line"></div>-->
+<!---->
+<!--                    <div id="testi_carosel" class="carousel slide" data-ride="carousel">-->
+<!--                        <!-- Indicators -->-->
+<!--                        <ol class="carousel-indicators">-->
+<!--                            <li data-target="#testi_carosel" data-slide-to="0" class="active"></li>-->
+<!--                            <li data-target="#testi_carosel" data-slide-to="1"></li>-->
+<!--                            <li data-target="#testi_carosel" data-slide-to="2"></li>-->
+<!--                        </ol>-->
+<!---->
+<!--                        <!-- Wrapper for slides -->-->
+<!--                        <div class="carousel-inner" role="listbox">-->
+<!--                            <div class="item active">-->
+<!--                                <p>It’s really Awesome Theme & specialy made for brand online shopping, so this theme-->
+<!--                                    uniqe elements use to create your dream website and help to promote your-->
+<!--                                    Product.</p>-->
+<!--                                <div class="client_box">-->
+<!--                                    <img src="../images/client_qoute.png" alt=""/>-->
+<!--                                    <div class="client_box_text">-->
+<!--                                        <h4>SAN MICHLE</h4>-->
+<!--                                        <p>DIRECTOR OF EXAMPLE LTD</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <p>It’s really Awesome Theme & specialy made for brand online shopping, so this theme-->
+<!--                                    uniqe elements use to create your dream website and help to promote your-->
+<!--                                    Product.</p>-->
+<!--                                <div class="client_box">-->
+<!--                                    <img src="../images/client_qoute.png" alt=""/>-->
+<!--                                    <div class="client_box_text">-->
+<!--                                        <h4>SAN MICHLE</h4>-->
+<!--                                        <p>DIRECTOR OF EXAMPLE LTD</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <p>It’s really Awesome Theme & specialy made for brand online shopping, so this theme-->
+<!--                                    uniqe elements use to create your dream website and help to promote your-->
+<!--                                    Product.</p>-->
+<!--                                <div class="client_box">-->
+<!--                                    <img src="../images/client_qoute.png" alt=""/>-->
+<!--                                    <div class="client_box_text">-->
+<!--                                        <h4>SAN MICHLE</h4>-->
+<!--                                        <p>DIRECTOR OF EXAMPLE LTD</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<!--<section class="branding_area">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-12 col-sm-12 col-xs-12">-->
+<!--                <div class="branding_box">-->
+<!--                    <div class="branding_box_heading">-->
+<!--                        <h2>Branding</h2>-->
+<!--                        <div class="dotted_line"></div>-->
+<!--                    </div>-->
+<!--                    <div id="branding_caro" class="owl-carousel">-->
+<!--                        <div>-->
+<!--                            <img src="../images/brand1.png" alt=""/>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <img src="../images/brand2.png" alt=""/>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <img src="../images/brand3.png" alt=""/>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <img src="../images/brand4.png" alt=""/>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <img src="../images/brand5.png" alt=""/>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <img src="../images/brand6.png" alt=""/>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <img src="../images/brand1.png" alt=""/>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <img src="../images/brand2.png" alt=""/>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 
-                    <div id="testi_carosel" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#testi_carosel" data-slide-to="0" class="active"></li>
-                            <li data-target="#testi_carosel" data-slide-to="1"></li>
-                            <li data-target="#testi_carosel" data-slide-to="2"></li>
-                        </ol>
 
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <p>It’s really Awesome Theme & specialy made for brand online shopping, so this theme
-                                    uniqe elements use to create your dream website and help to promote your
-                                    Product.</p>
-                                <div class="client_box">
-                                    <img src="images/client_qoute.png" alt=""/>
-                                    <div class="client_box_text">
-                                        <h4>SAN MICHLE</h4>
-                                        <p>DIRECTOR OF EXAMPLE LTD</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <p>It’s really Awesome Theme & specialy made for brand online shopping, so this theme
-                                    uniqe elements use to create your dream website and help to promote your
-                                    Product.</p>
-                                <div class="client_box">
-                                    <img src="images/client_qoute.png" alt=""/>
-                                    <div class="client_box_text">
-                                        <h4>SAN MICHLE</h4>
-                                        <p>DIRECTOR OF EXAMPLE LTD</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <p>It’s really Awesome Theme & specialy made for brand online shopping, so this theme
-                                    uniqe elements use to create your dream website and help to promote your
-                                    Product.</p>
-                                <div class="client_box">
-                                    <img src="images/client_qoute.png" alt=""/>
-                                    <div class="client_box_text">
-                                        <h4>SAN MICHLE</h4>
-                                        <p>DIRECTOR OF EXAMPLE LTD</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="branding_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="branding_box">
-                    <div class="branding_box_heading">
-                        <h2>Branding</h2>
-                        <div class="dotted_line"></div>
-                    </div>
-                    <div id="branding_caro" class="owl-carousel">
-                        <div>
-                            <img src="images/brand1.png" alt=""/>
-                        </div>
-                        <div>
-                            <img src="images/brand2.png" alt=""/>
-                        </div>
-                        <div>
-                            <img src="images/brand3.png" alt=""/>
-                        </div>
-                        <div>
-                            <img src="images/brand4.png" alt=""/>
-                        </div>
-                        <div>
-                            <img src="images/brand5.png" alt=""/>
-                        </div>
-                        <div>
-                            <img src="images/brand6.png" alt=""/>
-                        </div>
-                        <div>
-                            <img src="images/brand1.png" alt=""/>
-                        </div>
-                        <div>
-                            <img src="images/brand2.png" alt=""/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer class="entire_footer_area">
-    <div class="footer_top_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7 col-sm-6 col-xs-12">
-                    <div class="footer_top_left">
-                        <a href=""><i class="fa fa-envelope"></i>signup newsletter</a>
-                        <input type="text" placeholder=""/>
-                        <input type="submit" value="submit"/>
-                    </div>
-                </div>
-                <div class="col-md-5 col-sm-6 col-xs-12">
-                    <div class="footer_top_right">
-                        <ul id="payment">
-                            <li><a href="">
-                                    <img src="images/pay1.png" alt=""/>
-                                </a></li>
-                            <li><a href="">
-                                    <img src="images/pay2.png" alt=""/>
-                                </a></li>
-                            <li><a href="">
-                                    <img src="images/pay3.png" alt=""/>
-                                </a></li>
-                            <li><a href="">
-                                    <img src="images/pay4.png" alt=""/>
-                                </a></li>
-                            <li><a href="">
-                                    <img src="images/pay5.png" alt=""/>
-                                </a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="single_widget">
-                        <h5>information</h5>
-                        <div class="wid_line"></div>
-                        <ul class="widget_nav">
-                            <li><a href="">New Products</a></li>
-                            <li><a href="">Top Seller</a></li>
-                            <li><a href="">Special</a></li>
-                            <li><a href="">Manufactures</a></li>
-                            <li><a href="">Suppliers</a></li>
-                            <li><a href="">Our Stores</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="single_widget">
-                        <h5>my account</h5>
-                        <div class="wid_line"></div>
-                        <ul class="widget_nav">
-                            <li><a href="">My Account</a></li>
-                            <li><a href="">Personal Information</a></li>
-                            <li><a href="">Addresses</a></li>
-                            <li><a href="">Discounts</a></li>
-                            <li><a href="">Order History</a></li>
-                            <li><a href="">Your Vouchers</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="single_widget">
-                        <h5>customer service</h5>
-                        <div class="wid_line"></div>
-                        <ul class="widget_nav">
-                            <li><a href="">Help & Contact</a></li>
-                            <li><a href="">Shipping & Taxes</a></li>
-                            <li><a href="">Return Policy</a></li>
-                            <li><a href="">Careers</a></li>
-                            <li><a href="">Affliates</a></li>
-                            <li><a href="">Legal Notice</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="single_widget">
-                        <h5>contact Info</h5>
-                        <div class="wid_line"></div>
-                        <address>
-                            Address : 44 New Design Street,<br>
-                            Melbourne 005<br>
-                            Phone : (01) 800 433 633<br>
-                            Email : info@Example.com
-                        </address>
-                        <ul class="wid_social">
-                            <li><a class="fa fa-facebook" href=""></a></li>
-                            <li><a class="fa fa-twitter" href=""></a></li>
-                            <li><a class="fa fa-google-plus" href=""></a></li>
-                            <li><a class="fa fa-pinterest" href=""></a></li>
-                            <li><a class="fa fa-rss" href=""></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer_bottom_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="footer_bottom">
-                        <p>Copyright &copy; 2015 <a href="index.php">Men’swaer</a>. All Rights Reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
 
 <!-- JS Files -->
 <script src="https://code.jquery.com/jquery.min.js"></script>
@@ -1706,10 +1593,10 @@
     });
 </script>
 
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/lightbox.min.js"></script>
-<script src="js/jquery.elevatezoom.js"></script>
-<script src="js/jquery.bxslider.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
+<script src="../js/lightbox.min.js"></script>
+<script src="../js/jquery.elevatezoom.js"></script>
+<script src="../js/jquery.bxslider.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('.slider8').bxSlider({
@@ -1732,13 +1619,13 @@
         });
     });
 </script>
-<script src="js/bootstrap-select.min.js"></script>
-<script src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-<script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-<script src="js/rs-plugin/rs.home.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="../js/bootstrap-select.min.js"></script>
+<script src="../js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+<script src="../js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="../js/rs-plugin/rs.home.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 <!--Opacity & Other IE fix for older browser-->
 <!--[if lte IE 8]>
-<script type="text/javascript" src="js/ie-opacity-polyfill.js"></script>
+<script type="text/javascript" src="../js/ie-opacity-polyfill.js"></script>
 <![endif]-->
-<script src="js/main.js"></script>
+<script src="../js/main.js"></script>

@@ -2,6 +2,7 @@
 
 $page = "view/articles.php";
 $title = "Card_Friend";
+$board=1;
 
 if(isset($_GET["page"])) {
     if($_GET["page"] == "article") {
@@ -18,6 +19,20 @@ if(isset($_GET["page"])) {
     }
     if($_GET["page"] == "writeArticle") {
         $page = "view/writeArticle.php";
+    }
+}
+if(isset($_GET["board"])) {
+    if($_GET["board"] == 1) {
+        $board=1;
+    }
+    if($_GET["board"] == 2) {
+        $board=2;
+    }
+    if($_GET["board"] == 3) {
+        $board=3;
+    }
+    if($_GET["board"] == 4) {
+        $board=4;
     }
 }
 
