@@ -21,6 +21,9 @@ if(isset($_GET["page"])) {
     if($_GET["page"] == "article") {
         $page = "view/article.php";
     }
+    if($_GET["page"] == "add") {
+        $page = "view/add_article.php";
+    }
 }
 
 include("layouts/header.php");

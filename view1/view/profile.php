@@ -79,28 +79,47 @@ $article_title = '今晚的月色如何?';
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="product_detail_heading">
-                                            <div class="detail_heading_left">
+                                        <form method="post" action="model.php" id="modifyProfile">
+                                            <div class="product_detail_heading">
                                                 <div class="detail_heading_left">
-                                                    <h4>興趣：</h4>
-                                                    <textarea style="border:0; background-color:#f7f8f9"
-                                                              placeholder="請輸入你的興趣" cols="50"
-                                                              rows="5"><?php echo $interests ?>
-                                        </textarea>
+                                                    <div class="detail_heading_left">
+                                                        <h4>興趣：</h4>
+                                                        <textarea style="border:0; background-color:#f7f8f9"
+                                                                  placeholder="請輸入你的興趣" cols="50"
+                                                                  rows="5"><?php echo $interests ?>
+                                                        </textarea>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product_detail_heading">
-                                            <div class="detail_heading_left">
+                                            <div class="product_detail_heading">
                                                 <div class="detail_heading_left">
-                                                    <h4>參加的社團：</h4>
-                                                    <textarea style="border:0; background-color:#f7f8f9"
-                                                              placeholder="請輸入參加過的社團" cols="50"
-                                                              rows="5"><?php echo $clubs ?>
-                                        </textarea>
+                                                    <div class="detail_heading_left">
+                                                        <h4>參加的社團：</h4>
+                                                        <textarea style="border:0; background-color:#f7f8f9"
+                                                                  placeholder="請輸入參加過的社團" cols="50"
+                                                                  rows="5"><?php echo $clubs ?>
+                                                    </textarea>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                            <div>
+                                                <input type="submit" value="儲存修改" style="
+                                            background: none repeat scroll 0 0;
+                                            background-color: #2975d8;
+                                            border: 2px solid;
+                                            border-color: #2975d8;
+                                            color: #fff;
+                                            font-size: 13px;
+                                            font-weight: 700;
+                                            margin: 8px auto 15px;
+                                            padding: 7px;
+                                            margin-left: 200px;
+                                            text-align: center;
+                                            text-transform: uppercase;
+                                            width: 120px;
+                                            height: 40px;">
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
 

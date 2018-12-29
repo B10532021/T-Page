@@ -51,6 +51,27 @@
     height: 40px;
 }
 
+.add_button {
+    padding: 0px;
+}
+
+.add_button{
+    background: none repeat scroll 0 0;
+    background-color: #2975d8;
+    border: 2px solid;
+    border-color: #2975d8;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 8px auto 15px;
+    padding: 7px;
+    margin-left: 200px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 120px;
+    height: 40px;
+}
+
 hr.style-five {
     border: 0;
     height: 1px;
@@ -73,30 +94,4 @@ hr.style-five:after {
     height: auto;
 }
 
-/* Buttons */
 
-.button
-{
-    position: relative;
-    display: inline-block;
-    margin-top: 2em;
-    padding: 0.8em 1.5em;
-    background: #1d1d1d;
-    border-radius: 6px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1em;
-    color: #FFF;
-    -moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-    -webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-    -o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-    -ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-    transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
-    cursor: pointer;
-}
-
-.button:hover
-{
-    background: #141414;
-    color: #FFF !important;
-}
