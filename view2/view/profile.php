@@ -23,6 +23,7 @@
 <!--                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">--><?php //echo $num[0]?><!--</li>-->
 <!--                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">台灣科技大學<br>--><?php //echo $test?><!--</li>-->
                         <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">家族: 我們這一家</li>
+                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">性別: 女</li>
                     </ul>
                 </section>
             </div>
@@ -33,7 +34,6 @@
                 <section>
                     <header>
                         <h2>狀態: 今天天氣真好</h2>
-                        <a href="../index.php?page=writeArticle" class="button">發文</a>
                     </header>
                     <!--       文章         -->
                     <div class="row">

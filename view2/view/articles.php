@@ -3,7 +3,11 @@
 		<div id="main">
 			<div class="container">
 				<header>
-					<h2>四電資一</h2>
+					<h2><?php switch ($board){case 1: echo "四電資一";break;
+                            case 2: echo "四電資二";break;
+                            case 3: echo "四電資三";break;
+                            case 4: echo "四電資四";break;} ?></h2>
+                    <a href="../index.php?page=writeArticle<?php echo"&board=".$board ?>" class="button">發文</a>
 				</header>
 
                 <div class="divider">&nbsp;</div>
