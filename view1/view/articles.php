@@ -1,105 +1,73 @@
+<?php
+$board = '四電資一';
+$image = 'angel.jpg';
+$name = '大美人';
+$article_title = '今晚的月色如何?';
+?>
 <div class="content-wrapper" style="min-height:100%;height: 100%; overflow: scroll">
     <div style="width: 70%;display: inline-block;">
         <div class="callout callout-info">
-            <h4>四電資一</h4>
+            <h4><?php echo $board?></h4>
+            <a href="index.php?page=add" style="text-decoration:none;">新增文章</a>
         </div>
     <!-- article -->
-    <div class="box box-success">
-        <div class="box-header">
-            <h3 class="box-title">Article</h3>
-        </div>
-        <div class="box-body chat" id="chat-box">
-            <div class="item">
-                <img src="../img/avatar5.png" alt="user image" class="online">
-                <p class="message">
-                    <a href="#" class="name">
-                        Mike Doe
-                    </a>
-                    I would like to meet you to discuss the latest news about
-                    the arrival of the new theme. They say it is going to be one the
-                    best themes on the market
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- /article -->
-    <!-- article -->
-    <div class="box box-success">
-        <div class="box-header">
-            <h3 class="box-title">Article 2</h3>
-        </div>
-        <div class="box-body chat" id="chat-box">
-            <div class="item">
-                <img src="../img/avatar5.png" alt="user image" class="online">
-                <p class="message">
-                    <a href="#" class="name">
-                        Mike Doe
-                    </a>
-                    I would like to meet you to discuss the latest news about
-                    the arrival of the new theme. They say it is going to be one the
-                    best themes on the market
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- /article -->
-
-    <!-- article -->
-    <div class="box box-success">
-        <div class="box-header">
-            <h3 class="box-title">Article 3</h3>
-        </div>
-        <div class="box-body chat" id="chat-box">
-            <div class="item">
-                <img src="../img/avatar5.png" alt="user image" class="online">
-                <p class="message">
-                    <a href="#" class="name">
-                        Mike Doe
-                    </a>
-                    I would like to meet you to discuss the latest news about
-                    the arrival of the new theme. They say it is going to be one the
-                    best themes on the market
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- /article -->
-        <!-- article -->
-        <div class="box box-success">
-            <div class="box-header">
-                <h3 class="box-title">Article 3</h3>
-            </div>
+        <div class="box box-success" onclick="<?php change_page('../view/article') ?>">
             <div class="box-body chat" id="chat-box">
                 <div class="item">
-                    <img src="../img/avatar5.png" alt="user image" class="online">
+                    <img src="../img/<?php echo $image?>" alt="user image" class="online">
                     <p class="message">
-                        <a href="#" class="name">
-                            Mike Doe
+                        <a href="index.php?page=profile" class="name">
+                            <?php echo $name ?>
                         </a>
-                        I would like to meet you to discuss the latest news about
-                        the arrival of the new theme. They say it is going to be one the
-                        best themes on the market
+                        <?php echo $article_title ?>
                     </p>
+                    <a href="index.php?page=article" style="margin-left: 50px">閱讀完整文章...</a>
                 </div>
             </div>
         </div>
         <!-- /article -->
         <!-- article -->
         <div class="box box-success">
-            <div class="box-header">
-                <h3 class="box-title">Article 3</h3>
-            </div>
             <div class="box-body chat" id="chat-box">
                 <div class="item">
                     <img src="../img/avatar5.png" alt="user image" class="online">
                     <p class="message">
-                        <a href="#" class="name">
-                            Mike Doe
+                        <a href="index.php?page=profile" class="name">
+                            <?php echo $name ?>
                         </a>
-                        I would like to meet you to discuss the latest news about
-                        the arrival of the new theme. They say it is going to be one the
-                        best themes on the market
+                        <?php echo $article_title ?>
                     </p>
+                    <a href="index.php?page=article" style="margin-left: 50px">閱讀完整文章...</a>
+                </div>
+            </div>
+        </div>
+        <div class="box box-success" onclick="<?php change_page('../view/article') ?>">
+            <div class="box-body chat" id="chat-box">
+                <div class="item">
+                    <img src="../img/avatar5.png" alt="user image" class="online">
+                    <p class="message">
+                        <a href="index.php?page=profile" class="name">
+                            <?php echo $name ?>
+                        </a>
+                        <?php echo $article_title ?>
+                    </p>
+                    <a href="index.php?page=article" style="margin-left: 50px">閱讀完整文章...</a>
+                </div>
+            </div>
+        </div>
+        <!-- /article -->
+        <!-- article -->
+        <div class="box box-success">
+            <div class="box-body chat" id="chat-box">
+                <div class="item">
+                    <img src="../img/avatar5.png" alt="user image" class="online">
+                    <p class="message">
+                        <a href="index.php?page=profile" class="name">
+                            <?php echo $name ?>
+                        </a>
+                        <?php echo $article_title ?>
+                    </p>
+                    <a href="index.php?page=article" style="margin-left: 50px">閱讀完整文章...</a>
                 </div>
             </div>
         </div>

@@ -1,4 +1,13 @@
-
+<?php
+//
+//$conn = mysqli_connect("localhost:33060","root","root");
+//
+//// 設定連線編碼
+//mysqli_query( $conn, "SET NAMES 'utf8'");
+//$sql ="select * from tpage.member";
+//$result = mysqli_query($conn, $sql);
+//$num = mysqli_fetch_row($result);
+//?>
 <!-- Main -->
 <div id="main">
     <div class="container">
@@ -11,7 +20,8 @@
                         <img src="../images/angel.jpg" style="width: 100%;height: 100%;">
                     </header>
                     <ul class="default">
-                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">台灣科技大學<br>電資學士班</li>
+<!--                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">--><?php //echo $num[0]?><!--</li>-->
+<!--                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">台灣科技大學<br>--><?php //echo $test?><!--</li>-->
                         <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">家族: 我們這一家</li>
                     </ul>
                 </section>
@@ -23,6 +33,7 @@
                 <section>
                     <header>
                         <h2>狀態: 今天天氣真好</h2>
+                        <a href="../index.php?page=writeArticle" class="button">發文</a>
                     </header>
                     <!--       文章         -->
                     <div class="row">

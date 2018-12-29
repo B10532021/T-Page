@@ -51,6 +51,27 @@
     height: 40px;
 }
 
+.add_button {
+    padding: 0px;
+}
+
+.add_button{
+    background: none repeat scroll 0 0;
+    background-color: #2975d8;
+    border: 2px solid;
+    border-color: #2975d8;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 8px auto 15px;
+    padding: 7px;
+    margin-left: 200px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 120px;
+    height: 40px;
+}
+
 hr.style-five {
     border: 0;
     height: 1px;
@@ -62,3 +83,15 @@ hr.style-five:after {
     /* Not really supposed to work, but does */
     content: '\00a0'; /* Prevent margin collapse */
 }
+
+.textarea_style {
+    border: 0;
+    background-color: transparent;
+    /*scrollbar-arrow-color:yellow;
+    scrollbar-base-color:lightsalmon;
+    overflow: hidden;*/
+    color: #666464;
+    height: auto;
+}
+
+
