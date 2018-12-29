@@ -4,13 +4,6 @@ class Model extends Model_SQL
 {
     protected $model;
     private $table = [];
-
-    public function createTable() {
-
-        $this->table = "contents";
-        $this->table = "cardname";
-    }
-
     public function __construct()
     {
         if (!$this->table) {
