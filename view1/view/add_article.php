@@ -13,6 +13,17 @@
                 <input name="newTitle" type="text" placeholder="請輸入文章標題">
             </div>
             <div>
+                <span style="font-size: 18px;">文章看板：</span>
+                <span name="board" style="font-size: 18px;">
+                    <?php switch ($board){
+                        case 1: echo "四電資一";break;
+                        case 2: echo "四電資二";break;
+                        case 3: echo "四電資三";break;
+                        case 4: echo "四電資四";break;}
+                    ?>
+                </span>
+            </div>
+            <div>
                 <h4>文章內容：</h4>
                 <textarea name="newArticle" placeholder="發文..." cols="100"
                           rows="30" ></textarea>

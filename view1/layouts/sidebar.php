@@ -26,10 +26,10 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
             <li class="treeview">
-                <a href="index.php?page=articles"><i class="fa fa-table"></i> <span>四電資一</span></a>
-                <a href="index.php?page=articles"><i class="fa fa-table"></i> <span>四電資二</span></a>
-                <a href="index.php?page=articles"><i class="fa fa-table"></i> <span>四電資三</span></a>
-                <a href="index.php?page=articles"><i class="fa fa-table"></i> <span>四電資四</span></a>
+                <a href="index.php?page=articles&board=1"><i class="fa fa-table"></i> <span>四電資一</span></a>
+                <a href="index.php?page=articles&board=2"><i class="fa fa-table"></i> <span>四電資二</span></a>
+                <a href="index.php?page=articles&board=3"><i class="fa fa-table"></i> <span>四電資三</span></a>
+                <a href="index.php?page=articles&board=4"><i class="fa fa-table"></i> <span>四電資四</span></a>
                 <a href="index.php?page=card"><i class="fa fa-table"></i> <span>抽卡友</span></a>
             </li>
             <!--            {{--TODO: multilevel example, remove before demo--}}-->
