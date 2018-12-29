@@ -16,6 +16,9 @@ if(isset($_GET["page"])) {
     if($_GET["page"] == "profile") {
     $page = "view/profile.php";
     }
+    if($_GET["page"] == "writeArticle") {
+        $page = "view/writeArticle.php";
+    }
 }
 
 include("layouts/header.php");
