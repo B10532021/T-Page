@@ -63,22 +63,30 @@
     <![endif]-->
 </head>
 
+</html>
 <?php
 
-$page = "articles.php";
+$page = "view/index.php";
 $title = "Card_Friend";
 
-function change_page($change) {
+function change_page($change)
+{
     $GLOBALS['page'] = $change;
 }
 
-if(isset($_GET["page"])) {
-    if($_GET["page"] == "articles") {
-        $page = "articles.php";
+if (isset($_GET["page"])) {
+    if ($_GET["page"] == "index") {
+        $page = "view/index.php";
     }
-//    if($_GET["page"] == "card") {
-//        $page = "card.php";
-//    }
+    else if ($_GET["page"] == "card") {
+        $page = "view/card.php";
+    }
+    else if ($_GET["page"] == "login") {
+        $page = "view/login.php";
+    }
+    else if ($_GET["page"] == "register") {
+        $page = "view/register.php";
+    }
 //    if($_GET["page"] == "profile") {
 //        $page = "view/profile.php";
 //    }
@@ -87,14 +95,13 @@ if(isset($_GET["page"])) {
 //    }
 }
 
-include("header.php");
+include("layout/header.php");
 
-include ("nav.php");
+include("layout/nav.php");
 
 include($page);
 
-
+include("layout/footer.php");
 ?>
 
 
-</html>

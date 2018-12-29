@@ -9,7 +9,7 @@
             </div>
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="header_top_right floatright">
-                    <p><a href="">login</a> / <a href="">register</a></p>
+                    <p><a href="index.php?page=login">login</a> / <a href="index.php?page=register">register</a></p>
                     <!--<nav class="currency alignleft">-->
                     <!--<ul>-->
                     <!--<li><a href="">USD</a>-->
@@ -41,7 +41,7 @@
             </div>
             <div class="col-md-6 col-sm-5 col-xs-12">
                 <div class="header_center">
-                    <a href="index.php"><img src="images/logo.png" alt="Site Logo"/></a>
+                    <a href="../index.php"><img src="../images/logo.png" alt="Site Logo"/></a>
                 </div>
             </div>
             <div class="col-md-3 col-sm-4 col-xs-12">

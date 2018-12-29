@@ -44,17 +44,18 @@
         <div class="nav_center">
             <nav class="mainmenu">
                 <ul id="nav">
-                    <li class="current-page-item"><a href="index.php">Home</a>
-                        <ul id="sub-menu4">
-                            <li><a href="index-2.html">Home Version Two</a></li>
-                        </ul>
+                    <li><a href="../#">Home</a>
+                        <!--                    <li class="current-page-item"><a href="../#">Home</a>-->
+                        <!--                        <ul id="sub-menu4">-->
+                        <!--                            <li><a href="index-2.html">Home Version Two</a></li>-->
+                        <!--                        </ul>-->
                     </li>
-                    <li><a href="category-2.html">shop</a>
+                    <li><a href="../category-2.html">board</a>
                         <ul id="sub-menu7">
-                            <li><a href="product-detail.html">Product Detail Page</a></li>
+                            <li><a href="../product-detail.html">Product Detail Page</a></li>
                         </ul>
                     </li>
-                    <li><a href="category-1.html">accessories</a>
+                    <li><a href="../category-1.html">accessories</a>
                         <ul id="sub-menu">
                             <li><a href="">check shirts</a></li>
                             <li><a href="">denim shirts</a></li>
@@ -67,16 +68,16 @@
                     </li>
                     <li><a href="#">pages</a>
                         <ul id="sub-menu5">
-                            <li><a href="category-1.html">Shop Page With Filter</a></li>
-                            <li><a href="category-2.html">Shop Page Without Filter</a></li>
-                            <li><a href="checkout.html">Checkout page</a></li>
-                            <li><a href="cart.html">Cart page</a></li>
-                            <li><a href="single-blog.html">Blog single</a></li>
-                            <li><a href="contact.html">Contact page</a></li>
-                            <li><a href="404.html">404 page</a></li>
+                            <li><a href="../category-1.html">Shop Page With Filter</a></li>
+                            <li><a href="../category-2.html">Shop Page Without Filter</a></li>
+                            <li><a href="../checkout.html">Checkout page</a></li>
+                            <li><a href="../cart.html">Cart page</a></li>
+                            <li><a href="../single-blog.html">Blog single</a></li>
+                            <li><a href="../contact.html">Contact page</a></li>
+                            <li><a href="../404.html">404 page</a></li>
                         </ul>
                     </li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
                 </ul>
             </nav>
         </div>
@@ -142,15 +143,15 @@
                 <div id='cssmenu'>
                     <ul>
                         <li class='has-sub'>
-                            <a href='index.php'><span>Home</span></a>
+                            <a href='../index.php'><span>Home</span></a>
                             <ul class="sub-nav">
-                                <li><a href="index.php"><span>Home 1</span></a></li>
+                                <li><a href="../index.php"><span>Home 1</span></a></li>
                                 <li><a href="index-2.html"><span>Home 2</span></a></li>
                             </ul>
                         </li>
 
                         <li class='has-sub'>
-                            <a href='category-1.html'><span>category</span></a>
+                            <a href='../category-1.html'><span>category</span></a>
                             <ul>
                                 <li class='has-sub'>
                                     <a href='#'><span>Shirts</span></a>
@@ -159,7 +160,7 @@
                                         <li><a href="#"><span>denim shirts</span></a></li>
                                         <li><a href="#"><span>long sleeve shirts</span></a></li>
                                         <li><a href="#"><span>denim shirts</span></a></li>
-                                        <li class="last"><a href="./#"><span>long sleeve shirts</span></a></li>
+                                        <li class="last"><a href="..#"><span>long sleeve shirts</span></a></li>
                                     </ul>
                                 </li>
                                 <li class='has-sub'>
@@ -189,7 +190,7 @@
                                         <div class="clearfix"></div>
                                         <div class="row in1">
                                             <div class="col-md-6">
-                                                <a href="#"><img src="images/menu_cat.png" class="img-responsive"
+                                                <a href="#"><img src="../images/menu_cat.png" class="img-responsive"
                                                                  alt=""/></a>
                                             </div>
                                             <div class="col-md-6">
@@ -206,10 +207,10 @@
                             </ul>
                         </li>
                         <li>
-                            <a href='category-2.html'><span>shop</span></a>
+                            <a href='../category-2.html'><span>shop</span></a>
                         </li>
                         <li class='has-sub'>
-                            <a href='category-1.html'><span>accessories</span></a>
+                            <a href='../category-1.html'><span>accessories</span></a>
                             <ul class="sub-nav">
                                 <li><a href="#"><span>check shirts</span></a></li>
                                 <li><a href="#"><span>denim shirts</span></a></li>
@@ -223,22 +224,22 @@
                         <li class='has-sub'>
                             <a href='#'><span>pages</span></a>
                             <ul id="sub-nav">
-                                <li><a href="category-1.html">Category page</a></li>
-                                <li><a href="category-2.html">Category page without filter</a></li>
-                                <li><a href="checkout.html">Checkout page</a></li>
-                                <li><a href="cart.html">Cart page</a></li>
-                                <li><a href="product-detail.html">Product detail page</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="single-blog.html">Blog single</a></li>
-                                <li><a href="contact.html">Contact page</a></li>
-                                <li><a href="404.html">404 page</a></li>
+                                <li><a href="../category-1.html">Category page</a></li>
+                                <li><a href="../category-2.html">Category page without filter</a></li>
+                                <li><a href="../checkout.html">Checkout page</a></li>
+                                <li><a href="../cart.html">Cart page</a></li>
+                                <li><a href="../product-detail.html">Product detail page</a></li>
+                                <li><a href="../blog.html">Blog</a></li>
+                                <li><a href="../single-blog.html">Blog single</a></li>
+                                <li><a href="../contact.html">Contact page</a></li>
+                                <li><a href="../404.html">404 page</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href='blog.html'><span>Blog</span></a>
+                            <a href='../blog.html'><span>Blog</span></a>
                         </li>
                         <li>
-                            <a href='cart.html'><span>cart</span></a>
+                            <a href='../cart.html'><span>cart</span></a>
                         </li>
                     </ul>
                 </div>
