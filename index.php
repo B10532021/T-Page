@@ -40,6 +40,32 @@
 </head>
 <?php
 
+/**
+ * Composer
+ */
+require __DIR__ . './vendor/autoload.php';
+
+$router = new \Core\Router();
+$router->addRoute('GET', 'users', 'UserController@index');
+$router->addRoute('GET', 'users/{id:\d+}', 'UserController@show');
+$router->addRoute('GET', 'users/create', 'UserController@create');
+$router->addRoute('POST', 'users/{id:\d+}', 'UserController@store');
+$router->addRoute('GET', 'users/{id:\d+}/edit', 'UserController@edit');
+$router->addRoute('PUT', 'users/{id:\d+}', 'UserController@update');
+$router->addRoute('DELETE', 'users/{id:\d+}', 'UserController@destroy');
+
+$router->addRoute('GET', 'boards', 'BoardController@index');
+$router->addRoute('GET', 'boards/{id:\d+}', 'BoardController@show');
+$router->addRoute('GET', 'boards/create', 'BoardController@create');
+$router->addRoute('POST', 'boards/{id:\d+}', 'BoardController@store');
+$router->addRoute('GET', 'boards/{id:\d+}/edit', 'BoardController@edit');
+$router->addRoute('PUT', 'boards/{id:\d+}', 'BoardController@update');
+$router->addRoute('DELETE', 'boards/{id:\d+}', 'BoardController@destroy');
+
+if($router->match('users/13', 'PUT')) {
+    //$router->runRoute('users/13', 'PUT');
+    include("view1/index.php");
+}
 //$page = "view1/view/index.php";
 //$title = "Card_Friend";
 //
@@ -62,9 +88,6 @@
 //include($page);
 //
 //include("view1/layouts/footer.php");
-include_once "model/Model_SQL.php";
-$model = new Model_SQL();
 
-include("view1/index.php");
 
 ?>
