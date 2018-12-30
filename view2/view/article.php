@@ -9,8 +9,96 @@
                     <header>
                         <h2>Title</h2>
                     </header>
-                    <p>Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo.</p>
+                    <p>
+                        各位大大，本人目前奧德賽完成50%，但有些深感
+
+                        我玩過黑旗.起源.奧德賽這三個作品，其中黑旗遊玩度讓人深感，大海的戰爭，尤其是迫擊砲
+
+                        雖然因為地圖大部分都是海，還有藏寶地圖解謎，實在十分有趣，整個遊戲我都沒看過攻略
+
+                        但是內容讓人感受到不足，卻能夠體會到遊戲的有趣
+
+                        之後接觸到起源，一開始讓人震撼，開場就要暗殺某位國王，一接觸WTF?一開始就這麼高潮?
+
+                        後來碰到星象圖，看到巴耶克想念自己的兒子，每個星象圖都深感，劇情也讓人體會到巴耶克的無奈
+
+                        現在碰到奧德賽，我玩的是卡珊卓，也聽說女生才是正史，他的對話框讓我感受到，他是不是覺得
+
+                        全世界都在欠他，劇情讓人感受到焦躁，地圖非常大，但是幾乎有百分之50%都是相同的東西
+
+                        同樣的兵營.同樣的洞穴...讓人感受到無奈，遠古墓穴一開始幾個有比較精細，探險內容十分足夠
+
+                        後面卻開始放爛，直接遠古墓碑在門口，一進去就結束，謎題陶片也像是講幾句話就打發你
+
+                        而且攀牆真的是讓人驚訝，古代人都這麼強的嗎，一片光滑的岩石直接爬上去
+
+                        我知道攀牆系統越來越簡陋，從黑旗要爬建築物的凸起，起源則是爬紋路，奧德賽卻有牆就能爬
+
+                        再來本身不是刺客教條嗎，卻搞得像是戰士教條，遊戲的初衷好像已經偏離了
+
+                        海戰，真的很糟糕，有時候根本打不完，一座船毀了另一座又來，海戰內容也十分不夠
+
+                        我相信有部分玩家不是為了你的MMORPG系統才購買遊戲，而是為了能邊體會歷史邊遊玩遊戲
+
+                        你選了一個沒有內容的斯巴達雅典之爭，為何不選羅馬為主題，內容不是更豐富
+
+                        羅馬神教也不是更神秘
+
+                        如果刺客教條比喻為餐點，黑旗是給你一塊精細的A5牛肉，讓你能體會到牛肉深刻的味道
+
+                        起源則是給你一塊醬料豐富的牛排，讓你體會到牛肉不同的味道
+
+                        奧德賽則是給妳半隻很糟糕的牛，你想吃哪裡就吃哪裡，吃不完也沒關西，還搭配很糟糕的醬料
+
+                        搞得你不知道在吃牛肉還是吃葷
+                    </p>
                 </section>
+
+                <div class="divider"></div>
+
+                <header>
+                    <h2>留言區</h2>
+                </header>
+                <!--       留言         -->
+                <div class="row">
+                    <div class="2u">
+                        <section>
+                            <p>我也這麼覺得!!</p>
+                        </section>
+                    </div>
+                    <div class="2u">
+                        <section>
+                            <p>太可憐了吧</p>
+                        </section>
+                    </div>
+                    <div class="2u">
+                        <section>
+                            <p>民眾表示太誇張了</p>
+                        </section>
+                    </div>
+                    <div class="2u">
+                        <section>
+                            <p>這個留言很長喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔</p>
+                        </section>
+                    </div>
+                    <div class="2u">
+                        <section>
+                            <p>這個留言很長喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔</p>
+                        </section>
+                    </div>
+                    <div class="2u">
+                        <section>
+                            <p>這個留言很長喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔</p>
+                        </section>
+                    </div>
+                </div>
+                <!--       /留言         -->
+
+                <form>
+                    <input type="text" placeholder="留言...">
+                    <button class="button" type="submit">送出留言</button>
+                </form>
+
             </div>
             <!-- /Content -->
 

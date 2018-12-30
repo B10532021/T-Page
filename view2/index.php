@@ -1,5 +1,10 @@
 <?php
 
+include "../model/Model_SQL.php";
+
+$model=new Model_SQL();
+
+$user=$model->searchUser();
 $page = "view/articles.php";
 $title = "Card_Friend";
 $board=1;
@@ -21,6 +26,7 @@ if(isset($_GET["page"])) {
         $page = "view/writeArticle.php";
     }
 }
+
 if(isset($_GET["board"])) {
     if($_GET["board"] == 1) {
         $board=1;

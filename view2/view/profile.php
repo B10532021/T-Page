@@ -1,13 +1,6 @@
 <?php
-//
-//$conn = mysqli_connect("localhost:33060","root","root");
-//
-//// 設定連線編碼
-//mysqli_query( $conn, "SET NAMES 'utf8'");
-//$sql ="select * from tpage.member";
-//$result = mysqli_query($conn, $sql);
-//$num = mysqli_fetch_row($result);
-//?>
+
+?>
 <!-- Main -->
 <div id="main">
     <div class="container">
@@ -20,10 +13,11 @@
                         <img src="../images/angel.jpg" style="width: 100%;height: 100%;">
                     </header>
                     <ul class="default">
-<!--                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">--><?php //echo $num[0]?><!--</li>-->
-<!--                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">台灣科技大學<br>--><?php //echo $test?><!--</li>-->
-                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">家族: 我們這一家</li>
-                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">性別: 女</li>
+                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;"><?php echo $user[0]?></li>
+                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;"><?php echo $user[1]."<br>"?></li>
+                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">性別: <?php echo $user[2]?></li>
+                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">生日: <?php echo $user[3]?></li>
+                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">家族: <?php echo $user[6]?></li>
                     </ul>
                 </section>
             </div>
@@ -51,8 +45,6 @@
                         </div>
                     </div>
                     <!--       /文章         -->
-
-
                 </section>
             </div>
             <!-- /Content -->
@@ -60,7 +52,9 @@
             <!-- Sidebar -->
             <div id="sidebar" class="3u">
                 <section>
-                   <img src="../images/ad.jpg">
+                   <a href="https://store.playstation.com/zh-hant-tw/grid/STORE-MSF86012-HS_GAME_ASIA/1?emcid=tw-cht_ad_holiday_bahamut">
+                       <img src="../images/ad.jpg">
+                   </a>
                 </section>
             </div>
             <!-- Sidebar -->
