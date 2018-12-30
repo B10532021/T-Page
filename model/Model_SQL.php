@@ -29,18 +29,22 @@ class Model_SQL
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
-    private function getArticleData()
+    private function getArticleData($board)
     {
         $conn = mysqli_connect("localhost:33060","root","root");
         //設定連線編碼
+        mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
-        $sql = "select * from tpage.articles";
+        $sql = "select * from tpage.articles where board='$board'";
         $result = mysqli_query($conn, $sql);
-        $this->articleData = mysqli_fetch_row($result);
+        while($article = mysqli_fetch_row($result)) {
+            $this->articleData[] = $article;
+        }
+
     }
-    public function searchArticle()
+    public function searchArticle($board)
     {
-        $this->getArticleData();
+        $this->getArticleData($board);
         return $this->articleData;
     }
     public function addBoard($ECE, $TAA)
