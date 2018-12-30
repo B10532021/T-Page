@@ -79,7 +79,12 @@ $article_title = '今晚的月色如何?';
                                                 </div>
                                             </div>
                                         </div>
-                                        <form method="post" action="model.php" id="modifyProfile">
+                                        <script>
+                                            function show_alert() {
+                                                alert("修改成功");
+                                            }
+                                        </script>
+                                        <form method="post" action="index.php?page=profile" id="modifyProfile">
                                             <div class="product_detail_heading">
                                                 <div class="detail_heading_left">
                                                     <div class="detail_heading_left">
@@ -103,7 +108,7 @@ $article_title = '今晚的月色如何?';
                                                 </div>
                                             </div>
                                             <div>
-                                                <input type="submit" value="儲存修改" style="
+                                                <input type="submit" value="儲存修改" onclick="show_alert()" style="
                                             background: none repeat scroll 0 0;
                                             background-color: #2975d8;
                                             border: 2px solid;

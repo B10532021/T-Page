@@ -62,6 +62,9 @@
 //include($page);
 //
 //include("view1/layouts/footer.php");
+include_once "model/Model_SQL.php";
+$model = new Model_SQL();
+
 include("view1/index.php");
 
 ?>
