@@ -6,17 +6,11 @@ class Model_SQL
     private $param = array();
 
     private $state;
-    private $data = array();
+    private $articleData = array();
+    private $boardData = array();
+    private $messageData = array();
+    private $userData = array();
 
-    private function getDBData()
-    {
-        $conn = mysqli_connect("localhost:33060","root","root");
-        //設定連線編碼
-        mysqli_query( $conn, "SET NAMES 'utf8'");
-        $sql = "select * from t_page.member";
-        $result = mysqli_query($conn, $sql);
-        $this->data = mysqli_fetch_row($result);
-    }
     public function getState()
     {
         return $this->state;
@@ -25,6 +19,7 @@ class Model_SQL
     {
         $this->state = $aState;
     }
+
     public function addArticle($title, $board, $author, $content)
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
@@ -34,10 +29,19 @@ class Model_SQL
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
+    private function getArticleData()
+    {
+        $conn = mysqli_connect("localhost:33060","root","root");
+        //設定連線編碼
+        mysqli_query( $conn, "SET NAMES 'utf8'");
+        $sql = "select * from tpage.articles";
+        $result = mysqli_query($conn, $sql);
+        $this->articleData = mysqli_fetch_row($result);
+    }
     public function searchArticle()
     {
-        $this->getDBData();
-        return $this->data[0];
+        $this->getArticleData();
+        return $this->articleData;
     }
     public function addBoard($ECE, $TAA)
     {
@@ -63,10 +67,19 @@ class Model_SQL
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
+    private function getBoardData()
+    {
+        $conn = mysqli_connect("localhost:33060","root","root");
+        //設定連線編碼
+        mysqli_query( $conn, "SET NAMES 'utf8'");
+        $sql = "select * from tpage.board";
+        $result = mysqli_query($conn, $sql);
+        $this->boardData = mysqli_fetch_row($result);
+    }
     public function searchBoard()
     {
-        $this->getDBData();
-        return $this->data[1];
+        $this->getBoardData();
+        return $this->boardData;
     }
     public function addMessage($name, $message, $board)
     {
@@ -77,10 +90,19 @@ class Model_SQL
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
+    private function getMessageData()
+    {
+        $conn = mysqli_connect("localhost:33060","root","root");
+        //設定連線編碼
+        mysqli_query( $conn, "SET NAMES 'utf8'");
+        $sql = "select * from tpage.message";
+        $result = mysqli_query($conn, $sql);
+        $this->messageData = mysqli_fetch_row($result);
+    }
     public function searchMessage()
     {
-        $this->getDBData();
-        return $this->data[2];
+        $this->getMessageData();
+        return $this->messageData;
     }
     public function addUser($name, $school, $gender, $birth, $interests, $clubs, $family)
     {
@@ -91,10 +113,19 @@ class Model_SQL
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
+    private function getUserData()
+    {
+        $conn = mysqli_connect("localhost:33060","root","root");
+        //設定連線編碼
+        mysqli_query( $conn, "SET NAMES 'utf8'");
+        $sql = "select * from tpage.users";
+        $result = mysqli_query($conn, $sql);
+        $this->userData = mysqli_fetch_row($result);
+    }
     public function searchUser()
     {
-        $this->getDBData();
-        return $this->data[3];
+        $this->getUserData();
+        return $this->userData;
     }
 
     public function add($data)
