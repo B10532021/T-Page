@@ -2,7 +2,6 @@
 class Model_SQL
 {
     private $articleID = 1;
-    private $userID = 1;
     private $state;
 
     private $advertisementData = array();
@@ -23,7 +22,7 @@ class Model_SQL
         $this->state = $aState;
     }
     //跟廣告有關
-    public function addAdvertisement($title, $content)
+    public function addAD($title, $content)
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
@@ -32,22 +31,36 @@ class Model_SQL
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
-    private function getAdvertisementData($title)
+    public function searchAD($title)
     {
         $this->advertisementData = array();
         $conn = mysqli_connect("localhost:33060","root","root");
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
-        $sql = "select * from tpage.advertisement where title = '$title'";
+        $sql = "select * from advertisement where title = '$title'";
         $result = mysqli_query($conn, $sql);
         while($advertisement = mysqli_fetch_row($result)) {
             $this->advertisementData[] = $advertisement;
         }
-    }
-    public function searchAdvertisement($title)
-    {
-        $this->getAdvertisementData($title);
         return $this->advertisementData;
+    }
+    public function updateAD($title, $content)
+    {
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8");
+        $sql = "UPDATE advertisement SET billboard = '$content' WHERE title = '$title'";
+        mysqli_query($conn, $sql);
+        mysqli_close($conn);
+    }
+    public function deleteAD($title)
+    {
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8");
+        $sql = "DELETE FROM advertisement WHERE title = '$title'";
+        mysqli_query($conn, $sql);
+        mysqli_close($conn);
     }
     //跟文章有關
     public function addArticle($title, $board, $author, $content)
@@ -60,52 +73,75 @@ class Model_SQL
         mysqli_close($conn);
         $this->articleID++;
     }
-    private function getArticleData($title)
+    public function searchArticle($title)
     {
         $this->articleData = array();
         $conn = mysqli_connect("localhost:33060","root","root");
-        //設定連線編碼
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
-        $sql = "select * from tpage.articles where title = '$title'";
+        $sql = "select * from articles where title = '$title'";
         $result = mysqli_query($conn, $sql);
         while($article = mysqli_fetch_row($result)) {
             $this->articleData[] = $article;
         }
+        return $this->articleData;
     }
-    public function searchArticle($title)
+    public function searchAuthor($author)
     {
-        $this->getArticleData($title);
+        $this->articleData = array();
+        $conn = mysqli_connect("localhost:33060","root","root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
+        $sql = "select * from articles where author = '$author'";
+        $result = mysqli_query($conn, $sql);
+        while($article = mysqli_fetch_row($result)) {
+            $this->articleData[] = $article;
+        }
         return $this->articleData;
     }
     public function getArticleID($title)
     {
         $this->searchArticle($title);
-        return $this->articleData[4];
+        return $this->articleData;
+    }
+    public function updateArticle($title, $content)
+    {
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8");
+        $sql = "UPDATE articles SET content = '$content', WHERE title = '$title'";
+        mysqli_query($conn, $sql);
+        mysqli_close($conn);
+    }
+    public function deleteArticle($title)
+    {
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8");
+        $sql = "DELETE FROM articles WHERE title = '$title'";
+        mysqli_query($conn, $sql);
+        mysqli_close($conn);
     }
     //跟看板有關
-    private function getBoardData($board)
+    public function searchBoard($board)
     {
         $this->boardData = array();
         $conn = mysqli_connect("localhost:33060","root","root");
+        mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
-        $sql = "select * from tpage.articles where board = '$board'";
+        $sql = "select * from articles where board = '$board'";
         $result = mysqli_query($conn, $sql);
         while($board = mysqli_fetch_row($result)) {
             $this->boardData[] = $board;
         }
-    }
-    public function searchBoard($board)
-    {
-        $this->getBoardData($board);
         return $this->boardData;
     }
     //跟卡友有關
-    public function addCardFriend()
+    public function sendInvitation()
     {
         return true;
     }
-    public function becomeCardFriend($me, $friend)
+    public function addCardFriend($me, $friend)
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
@@ -116,32 +152,40 @@ class Model_SQL
         mysqli_query($conn, $sql2);
         mysqli_close($conn);
     }
-    private function getCardFriendData($name)
+    public function searchCardFriend($name)
     {
         $this->cardFriendData = array();
         $conn = mysqli_connect("localhost:33060","root","root");
+        mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
-        $sql = "select * from tpage.cardfriend where me = '$name'";
+        $sql = "select * from cardfriend where me = '$name'";
         $result = mysqli_query($conn, $sql);
         while($friend = mysqli_fetch_row($result)) {
             $this->cardFriendData[] = $friend;
         }
+        return $this->cardFriendData;
     }
-    public function searchCardFriendData($name)
+    public function deleteCardFriend($me, $friend)
     {
-        $this->getCardFriendData($name);
-        return $this->cardFriendData[1];
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8");
+        $sql = "DELETE FROM cardfriend WHERE me = '$me' AND friend = '$friend'";
+        $sql2 = "DELETE FROM cardfriend WHERE me = '$friend' AND friend = '$me'";
+        mysqli_query($conn, $sql);
+        mysqli_query($conn, $sql2);
+        mysqli_close($conn);
     }
     //跟家族有關
-    public function addFamily()
+    public function request()
     {
         return true;
     }
-    public function allowEnterFamily()
+    public function allow()
     {
         return true;
     }
-    public function jointFamily($member, $familyID)
+    public function addFamily($member, $familyID)
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
@@ -155,7 +199,7 @@ class Model_SQL
         mysqli_query($conn, $sql2);
         mysqli_close($conn);
     }
-    private function getFamilyData($familyID)
+    public function searchFamily($familyID)
     {
         $this->familyData = array();
         $conn = mysqli_connect("localhost:33060","root","root");
@@ -165,10 +209,6 @@ class Model_SQL
         while($family = mysqli_fetch_row($result)) {
             $this->familyData[] = $family;
         }
-    }
-    public function searchFamily($familyID)
-    {
-        $this->getFamilyData($familyID);
         return $this->familyData[0];
     }
     //跟訊息有關
@@ -181,60 +221,40 @@ class Model_SQL
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
-    private function getMessageData($article_ID)
+    public function searchMessage($article_ID)
     {
         $this->messageData = array();
         $conn = mysqli_connect("localhost:33060","root","root");
-        //設定連線編碼
+        mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
-        $sql = "select * from tpage.message where articleID = '$article_ID'";
+        $sql = "select * from message where articleID = '$article_ID'";
         $result = mysqli_query($conn, $sql);
         while($message = mysqli_fetch_row($result)) {
             $this->messageData[] = $message;
         }
-    }
-    public function searchMessage($article_ID)
-    {
-        $this->getMessageData($article_ID);
         return $this->messageData;
     }
     //跟使用者有關
-    public function addUser($name, $school, $gender, $birth, $interests, $clubs, $family)
+    public function addUser($name, $email, $password, $school, $gender, $birth, $interests, $clubs, $family)
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8");
-        $sql = "INSERT INTO users(name, school, gender, birth, interests, clubs, family, userID) VALUES ('$name', '$school', '$gender', '$birth', '$interests', '$clubs', '$family', $this->userID)";
+        $sql = "INSERT INTO users(name, email, password, school, gender, birth, interests, clubs, family) VALUES ('$name', '$email', '$password', '$school', '$gender', '$birth', '$interests', '$clubs', '$family')";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
-        $this->userID++;
     }
-    private function getUserData($name = null)
+    public function searchUser($name)
     {
         $this->userData = array();
         $conn = mysqli_connect("localhost:33060","root","root");
-        //設定連線編碼
+        mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
-        if($name == null)
-        {
-            $sql = "select * from tpage.users";
-        }
-        else{
-            $sql = "select * from tpage.users where name = '$name'";
-        }
+        $sql = "select * from users where name = '$name'";
         $result = mysqli_query($conn, $sql);
         while($user = mysqli_fetch_row($result)){
             $this->userData[] = $user;
         }
-    }
-    public function searchUserData($name)
-    {
-        $this->getUserData($name);
         return $this->userData;
-    }
-    public function getUserID($name)
-    {
-        $this->searchUserData($name);
-        return $this->articleData[7];
     }
 }
