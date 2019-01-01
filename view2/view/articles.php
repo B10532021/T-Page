@@ -13,15 +13,50 @@
                 <div class="divider">&nbsp;</div>
 
                 <?php
-                echo "
+
+                $rowLength=floor(sizeof($articles)/4);
+                for($i=0;$i<=$rowLength;$i++)
+                {
+                ?>
 				<div class='row'>
-					<div class='3u'>
+                    <?php
+                    if($i!=$rowLength)
+                    {
+                        for($j=0;$j<4;$j++)
+                        {
+
+                        ?>
+                    <div class='3u'>
 						<section>
-							<p>Quisque dictum. Pellentesque viverra  enim. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
-							<a href='#' class='button'>Read More</a>
+							<p><?php echo$articles[$i*4+$j][0]?></p>
+							<a href="../index.php?page=article&articleTitle=<?php echo $articles[$i*4+$j][0]?>" class='button' onclick="document.write('<?php clickReadMore($articles[$i*4+$j][0]); ?>');">Read More</a>
 						</section>
 					</div>
-				</div>";
+                            <?php
+                        }
+                    }
+                    else
+                    {
+                        for($j=0;$j<sizeof($articles)%4;$j++)
+                        {
+
+                        ?>
+                            <div class='3u'>
+						<section>
+							<p><?php echo$articles[$i*4+$j][0]?></p>
+							<a href="../index.php?page=article&articleTitle=<?php echo $articles[$i*4+$j][0]?>" class='button' onclick="document.write('<?php clickReadMore($articles[$i*4+$j][0]); ?>');">Read More</a>
+						</section>
+					</div>
+
+                    <?php
+                        }
+                    }
+                    ?>
+
+				</div>
+                    <?php
+                }
+
                 ?>
 
                 <div class="row">
