@@ -101,7 +101,7 @@ class Model_SQL
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8");
-        $sql = "UPDATE articles SET content = '$content', WHERE title = '$title'";
+        $sql = "UPDATE articles SET content = '$content' WHERE title = '$title'";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
@@ -115,6 +115,15 @@ class Model_SQL
         mysqli_close($conn);
     }
     //跟看板有關
+    public function addBoard($boardName)
+    {
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8");
+        $sql = "INSERT INTO board(boardname) VALUES ('$boardName')";
+        mysqli_query($conn, $sql);
+        mysqli_close($conn);
+    }
     public function searchBoard($board)
     {
         $this->boardData = array();
@@ -127,6 +136,24 @@ class Model_SQL
             $this->boardData[] = $board;
         }
         return $this->boardData;
+    }
+    public function updateBoard($boardName)
+    {
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8");
+        $sql = "UPDATE board SET boardname = '$boardName' WHERE boardname = '$boardName'";
+        mysqli_query($conn, $sql);
+        mysqli_close($conn);
+    }
+    public function deleteBoard($boardName)
+    {
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8");
+        $sql = "DELETE FROM board WHERE boardname = '$boardName'";
+        mysqli_query($conn, $sql);
+        mysqli_close($conn);
     }
     //跟卡友有關
     public function sendInvitation()
