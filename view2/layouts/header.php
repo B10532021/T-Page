@@ -44,6 +44,8 @@
                 <li><a href="../index.php?page=articles&board=4">四電資四</a></li>
                 <li><a href="../index.php?page=card">抽卡</a></li>
                 <li><a href="../index.php?page=profile">個人頁面</a></li>
+                <li><a href="../index.php?page=register">註冊</a></li>
+                <li><a href="../index.php?page=login">登入</a></li>
             </ul>
         </nav>
 

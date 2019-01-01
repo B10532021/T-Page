@@ -28,6 +28,12 @@ if(isset($_GET["page"])) {
     if($_GET["page"] == "writeArticle") {
         $page = "view/writeArticle.php";
     }
+    if($_GET["page"] == "register") {
+        $page = "view/register.php";
+    }
+    if($_GET["page"] == "login") {
+        $page = "view/login.php";
+    }
 }
 
 if(isset($_GET["board"])) {
@@ -59,7 +65,7 @@ function clickReadMore($title)
 }
 
 
-$user=$model->searchUserData("王小明")[0];
+$user=$model->searchUser("王小明")[0];
 $articles=$model->searchBoard("ECE".$board);
 
 include("layouts/header.php");

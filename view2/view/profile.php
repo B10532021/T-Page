@@ -1,6 +1,4 @@
-<?php
 
-?>
 <!-- Main -->
 <div id="main">
     <div class="container">
@@ -14,10 +12,10 @@
                     </header>
                     <ul class="default">
                         <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;"><?php echo $user[0]?></li>
-                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;"><?php echo $user[1]."<br>"?></li>
-                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">性別: <?php echo $user[2]?></li>
-                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">生日: <?php echo $user[3]?></li>
-                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">家族: <?php echo $user[6]?></li>
+                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;"><?php echo $user[3]."<br>"?></li>
+                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">性別: <?php echo $user[4]?></li>
+                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">生日: <?php echo $user[5]?></li>
+                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">家族: <?php echo $user[8]?></li>
                     </ul>
                 </section>
             </div>
