@@ -33,7 +33,7 @@ $article_title = '今晚的月色如何?';
                         <img src="../img/<?php echo $image ?>" alt="user image" class="online">
                         <p class="message">
                             <a href="index.php?page=profile" class="name">
-                                <?php echo $article[1]?>
+                                <?php echo $article[2]?>
                             </a>
                             <?php echo $article[0] ?>
                         </p>

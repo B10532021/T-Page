@@ -1,12 +1,6 @@
 <!-- Content Wrapper. Contains page content -->
 <?php
 $image = 'angel.jpg';
-$name = '大美人';
-$school = '國立台灣科技大學';
-$gender = '女';
-$birth = '1998/01/01';
-$interests = '打撞球、讀小說、聽音樂';
-$clubs = '跆拳道社';
 $article_title = '今晚的月色如何?';
 ?>
 <div class="content-wrapper">
@@ -55,27 +49,27 @@ $article_title = '今晚的月色如何?';
                                     <div class="product_detail_heading">
                                         <div><h3>個人簡介</h3>
                                             <div class="detail_heading_left">
-                                                <h4>姓名：<?php echo $name ?></h4>
+                                                <h4>姓名：<?php echo $user[0] ?></h4>
                                             </div>
                                         </div>
                                         <div class="product_detail_heading">
                                             <div class="detail_heading_left">
                                                 <div class="detail_heading_left">
-                                                    <h4>學校：<?php echo $school ?></h4>
+                                                    <h4>學校：<?php echo $user[3] ?></h4>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product_detail_heading">
                                             <div class="detail_heading_left">
                                                 <div class="detail_heading_left">
-                                                    <h4>性別：<?php echo $gender ?></h4>
+                                                    <h4>性別：<?php echo $user[4] ?></h4>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product_detail_heading">
                                             <div class="detail_heading_left">
                                                 <div class="detail_heading_left">
-                                                    <h4>生日：<?php echo $birth ?></h4>
+                                                    <h4>生日：<?php echo $user[5] ?></h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -91,7 +85,8 @@ $article_title = '今晚的月色如何?';
                                                         <h4>興趣：</h4>
                                                         <textarea style="border:0; background-color:#f7f8f9"
                                                                   placeholder="請輸入你的興趣" cols="50"
-                                                                  rows="5"><?php echo $interests ?>
+                                                                  rows="5"
+                                                                  name="interests"><?php echo $user[6] ?>
                                                         </textarea>
                                                     </div>
                                                 </div>
@@ -102,7 +97,8 @@ $article_title = '今晚的月色如何?';
                                                         <h4>參加的社團：</h4>
                                                         <textarea style="border:0; background-color:#f7f8f9"
                                                                   placeholder="請輸入參加過的社團" cols="50"
-                                                                  rows="5"><?php echo $clubs ?>
+                                                                  rows="5"
+                                                                  name="clubs"><?php echo $user[7] ?>
                                                     </textarea>
                                                     </div>
                                                 </div>
@@ -135,35 +131,27 @@ $article_title = '今晚的月色如何?';
             </div>
             <h3>已發表的文章：</h3>
             <hr class="style-five"/>
-            <div class="box box-success" onclick="<?php change_page('../view/article') ?>">
-                <div class="box-body chat" id="chat-box">
-                    <div class="item">
-                        <img src="../img/avatar5.png" alt="user image" class="online">
-                        <p class="message">
-                            <a href="index.php?page=profile" class="name">
-                                <?php echo $name ?>
-                            </a>
-                            <?php echo $article_title ?>
-                        </p>
-                        <a href="index.php?page=article" style="margin-left: 50px">閱讀完整文章...</a>
+            <?php
+            $i = 0;
+            foreach ($articles as $article) {
+                ?>
+                <div class="box box-success">
+                    <div class="box-body chat" id="chat-box">
+                        <div class="item">
+                            <img src="../img/<?php echo $image ?>" alt="user image" class="online">
+                            <p class="message">
+                                <a href="index.php?page=profile" class="name">
+                                    <?php echo $article[2] ?>
+                                </a>
+                                <?php echo $article[0] ?>
+                            </p>
+                            <a href="index.php?page=article&article=<?php echo $article[0] ?>" style="margin-left: 50px">閱讀完整文章...</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- /article -->
-            <!-- article -->
-            <div class="box box-success">
-                <div class="box-body chat" id="chat-box">
-                    <div class="item">
-                        <img src="../img/avatar5.png" alt="user image" class="online">
-                        <p class="message">
-                            <a href="index.php?page=profile" class="name">
-                                <?php echo $name ?>
-                            </a>
-                            <?php echo $article_title ?>
-                        </p>
-                        <a href="index.php?page=article" style="margin-left: 50px">閱讀完整文章...</a>
-                    </div>
-                </div>
-            </div>
+                <?php
+                $i++;
+            }
+            ?>
         </section>
 </div>

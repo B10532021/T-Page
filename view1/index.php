@@ -5,8 +5,12 @@ $model = new Model_SQL();
 $page = "view/articles.php";
 $title = "HOME PAGE";
 $board = 1;
+$messages;
 $title;
 $article;
+
+$user=$model->searchUser("大美人")[0];
+
 
 if(isset($_GET["board"])) {
     if($_GET["board"] == 1) {
@@ -22,7 +26,7 @@ if(isset($_GET["board"])) {
         $board=4;
     }
 }
-
+$articles=$model->searchBoard("ECE".$board);
 
 if(isset($_GET["page"])) {
     if($_GET["page"] == "articles") {
@@ -33,6 +37,7 @@ if(isset($_GET["page"])) {
     }
     if($_GET["page"] == "profile") {
         $page = "view/profile.php";
+        $articles=$model->searchAuthor($user[0]);
     }
     if($_GET["page"] == "article") {
         $page = "view/article.php";
@@ -45,13 +50,14 @@ if(isset($_GET["page"])) {
     }
 }
 
-
-$articles=$model->searchBoard("ECE".$board);
 if(isset($_GET["title"])) {
-
     $title=$_GET["title"];
-
     $article=$articles[$title];
+    $messages=$model->searchMessage($article[0]);
+}
+if(isset($_GET["article"])) {
+    $article=$model->searchArticle($_GET["article"])[0];
+    $messages=$model->searchMessage($article[0]);
 }
 
 include("layouts/header.php");

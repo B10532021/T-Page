@@ -23,20 +23,26 @@ $comment = '真感動';
 
         <div style="padding-top: 100px">
             <h4>留言板</h4>
-            <div class="box box-success">
-                <div class="box-body chat" id="chat-box">
-                    <div class="item">
-                        <img src="../img/angel.jpg" alt="user image" class="online">
-                        <p class="message">
+            <?php
+            foreach ($messages as $message) {
+                ?>
+                <div class="box box-success">
+                    <div class="box-body chat" id="chat-box">
+                        <div class="item">
+                            <img src="../img/angel.jpg" alt="user image" class="online">
+                            <p class="message">
                             <span style="font-size: 16px">
-                                <?php echo $name ?>
+                                <?php echo $message[0] ?>
                                 <br>
-                                <?php echo $comment ?>
+                                <?php echo $message[1] ?>
                             </span>
-                        </p>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <?php
+            }
+            ?>
         </div>
 
         <form style="padding-top: 50px" method="post" aciton="controller.php">
@@ -44,9 +50,12 @@ $comment = '真感動';
                 <div class="detail_heading_left">
                     <div class="detail_heading_left">
                         <h4>留言：</h4>
+                        <span name="name" style="display: none"><?php echo $user[0]?></span>
+                        <span name="title" style="display: none"><?php echo $article[0]?></span>
                         <textarea style="border:0; background-color:#f7f8f9"
                                   placeholder="請輸入想說的話" cols="50"
-                                  rows="5"></textarea>
+                                  rows="5"
+                                  name="message"></textarea>
                     </div>
                 </div>
             </div>
