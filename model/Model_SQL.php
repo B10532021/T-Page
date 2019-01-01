@@ -1,9 +1,7 @@
 <?php
 class Model_SQL
 {
-    private $articleID = 1;
     private $state;
-
     private $advertisementData = array();
     private $articleData = array();
     private $boardData = array();
@@ -68,10 +66,9 @@ class Model_SQL
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8");
-        $sql = "INSERT INTO articles(title, board, author, content, articleID) VALUES ('$title', '$board', '$author', '$content', '$this->articleID')";
+        $sql = "INSERT INTO articles(title, board, author, content) VALUES ('$title', '$board', '$author', '$content')";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
-        $this->articleID++;
     }
     public function searchArticle($title)
     {
@@ -97,11 +94,6 @@ class Model_SQL
         while($article = mysqli_fetch_row($result)) {
             $this->articleData[] = $article;
         }
-        return $this->articleData;
-    }
-    public function getArticleID($title)
-    {
-        $this->searchArticle($title);
         return $this->articleData;
     }
     public function updateArticle($title, $content)
@@ -191,10 +183,7 @@ class Model_SQL
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8");
         $sql = "INSERT INTO family(member, familyID) VALUES ('$member', '$familyID')";
-        $this->searchUserData($member);
-        $sql2 = "UPDATE users SET family = '$familyID' where name = '$this->userData[0]' AND school = '$this->userData[1]' 
-        AND gender = '$this->userData[2]' AND birth = '$this->userData[3]' AND interests = '$this->userData[4]' AND clubs = '$this->userData[5]'
-        AND  userID = '$this->userData[7]' AND cardFriend  = '$this->userData[8]'";
+        $sql2 = "UPDATE users SET family = '$familyID' WHERE name = '$member'";
         mysqli_query($conn, $sql);
         mysqli_query($conn, $sql2);
         mysqli_close($conn);
@@ -203,36 +192,66 @@ class Model_SQL
     {
         $this->familyData = array();
         $conn = mysqli_connect("localhost:33060","root","root");
+        mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
-        $sql = "select * from tpage.family where familyID = '$familyID'";
+        $sql = "select * from family where familyID = '$familyID'";
         $result = mysqli_query($conn, $sql);
         while($family = mysqli_fetch_row($result)) {
             $this->familyData[] = $family;
         }
-        return $this->familyData[0];
+        return $this->familyData;
     }
-    //跟訊息有關
-    public function addMessage($name, $message, $article_ID)
+    public function deleteFamily($member, $family)
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8");
-        $sql = "INSERT INTO message(name, message, articleID) VALUES ('$name', '$message', '$article_ID')";
+        $sql = "DELETE FROM family WHERE member = '$member' AND familyID = '$family'";
+        $sql2 = "UPDATE users SET family = null WHERE name = '$member'";
+        mysqli_query($conn, $sql);
+        mysqli_query($conn, $sql2);
+        mysqli_close($conn);
+    }
+    //跟訊息有關
+    public function addMessage($name, $message, $title)
+    {
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8");
+        $sql = "INSERT INTO message(name, message, title) VALUES ('$name', '$message', '$title')";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
-    public function searchMessage($article_ID)
+    public function searchMessage($title)
     {
         $this->messageData = array();
         $conn = mysqli_connect("localhost:33060","root","root");
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
-        $sql = "select * from message where articleID = '$article_ID'";
+        $sql = "select * from message Where title = '$title'";
         $result = mysqli_query($conn, $sql);
         while($message = mysqli_fetch_row($result)) {
             $this->messageData[] = $message;
         }
         return $this->messageData;
+    }
+    public function updateMessage($name, $message, $title)
+    {
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8");
+        $sql = "UPDATE message SET message = '$message' WHERE name = '$name' AND title = '$title'";
+        mysqli_query($conn, $sql);
+        mysqli_close($conn);
+    }
+    public function deleteMessage($name, $message, $title)
+    {
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8");
+        $sql = "DELETE FROM message WHERE name = '$name' AND message = '$message' AND title = '$title'";
+        mysqli_query($conn, $sql);
+        mysqli_close($conn);
     }
     //跟使用者有關
     public function addUser($name, $email, $password, $school, $gender, $birth, $interests, $clubs, $family)
@@ -256,5 +275,24 @@ class Model_SQL
             $this->userData[] = $user;
         }
         return $this->userData;
+    }
+    public function updateUser($name, $email, $password, $school, $gender, $birth, $interests, $clubs, $family)
+    {
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8");
+        $sql = "UPDATE users SET name = '$name', email = '$email', password = '$password', interests = '$interests', clubs = '$clubs' 
+        WHERE school = '$school' AND gender = '$gender' AND birth = '$birth' AND family = '$family'";
+        mysqli_query($conn, $sql);
+        mysqli_close($conn);
+    }
+    public function deleteUser($name, $email, $password)
+    {
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8");
+        $sql = "DELETE FROM users WHERE name = '$name' AND email = '$email' AND password = '$password'";
+        mysqli_query($conn, $sql);
+        mysqli_close($conn);
     }
 }
