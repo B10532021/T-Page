@@ -26,7 +26,6 @@ $article_title = '今晚的月色如何?';
         <?php
         $i=0;
         foreach ($articles as $article) {
-            if($i > 1) {
             ?>
             <div class="box box-success">
                 <div class="box-body chat" id="chat-box">
@@ -38,12 +37,11 @@ $article_title = '今晚的月色如何?';
                             </a>
                             <?php echo $article[0] ?>
                         </p>
-                        <a href="index.php?page=article&board=<?php echo $board ?>&index=<?php echo $i?>" style="margin-left: 50px">閱讀完整文章...</a>
+                        <a href="index.php?page=article&board=<?php echo $board ?>&title=<?php echo $i?>" style="margin-left: 50px">閱讀完整文章...</a>
                     </div>
                 </div>
             </div>
             <?php
-            }
             $i++;
         }
         ?>

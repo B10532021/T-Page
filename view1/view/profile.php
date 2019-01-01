@@ -42,7 +42,7 @@ $article_title = '今晚的月色如何?';
                                                         ><img src="images/product-plus.png" alt=""/></a>
                                                         <img
                                                                 id="zoom_02"
-                                                                src="../../img/<?php echo $image ?>"
+                                                                src="../img/<?php echo $image ?>"
                                                                 data-zoom-image="/assets/images/single-large.jpg"
                                                                 alt=""/>
                                                     </div>
