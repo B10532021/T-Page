@@ -32,7 +32,7 @@ class Model_SQL
         while($user = mysqli_fetch_row($result)) {
             $this->userData[] = $user;
         }
-        if(mysqli_fetch_lengths($this->userData[]))
+        if(mysqli_fetch_lengths($this->userData[0]))
         {
             return true;
         }

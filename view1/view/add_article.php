@@ -7,14 +7,15 @@
     </section>
 
     <section>
-        <form method="post" action="model.php" id="newArticleForm" style="margin-left: 100px">
+        <form method="post" action="../index.php?page=articles&board=1" style="margin-left: 100px">
             <div>
                 <h4>文章標題：</h4>
-                <input name="newTitle" type="text" placeholder="請輸入文章標題">
+                <input name="newTitle" type="text" placeholder="請輸入文章標題" size="100">
             </div>
             <div>
                 <span style="font-size: 18px;">文章看板：</span>
-                <span name="board" style="font-size: 18px;">
+                <input name="board1" style="display: none" value="<?php echo $board ?>">
+                <span style="font-size: 18px;">
                     <?php switch ($board){
                         case 1: echo "四電資一";break;
                         case 2: echo "四電資二";break;

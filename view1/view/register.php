@@ -11,7 +11,7 @@
                 <div class="col-md-8">
                     <div class="card">
                         <div class="card-body">
-                            <form method="POST" action="index.php?page=articles&board=1">
+                            <form method="POST" action="../index.php?page=articles&board=1" accept-charset="utf-8">
 
                                 <div class="form-group row">
                                     <label for="name" class="col-md-4 col-form-label text-md-right">姓名：</label>
@@ -79,29 +79,29 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group row">
-                                    <label for="password-confirm"
-                                           class="col-md-4 col-form-label text-md-right">生日：</label>
-
-                                    <div class="col-md-6">
-                                        <input id="birth" class="form-control"
-                                               name="birth"
-                                               placeholder="請輸入生日"
-                                               required>
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label for="password-confirm"
-                                           class="col-md-4 col-form-label text-md-right">家族：</label>
-
-                                    <div class="col-md-6">
-                                        <input id="family" class="form-control"
-                                               name="family"
-                                               placeholder="請輸入家族"
-                                               required>
-                                    </div>
-                                </div>
+<!--                                <div class="form-group row">-->
+<!--                                    <label for="password-confirm"-->
+<!--                                           class="col-md-4 col-form-label text-md-right">生日：</label>-->
+<!---->
+<!--                                    <div class="col-md-6">-->
+<!--                                        <input id="birth" class="form-control"-->
+<!--                                               name="birth"-->
+<!--                                               placeholder="請輸入生日"-->
+<!--                                               required>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!---->
+<!--                                <div class="form-group row">-->
+<!--                                    <label for="password-confirm"-->
+<!--                                           class="col-md-4 col-form-label text-md-right">家族：</label>-->
+<!---->
+<!--                                    <div class="col-md-6">-->
+<!--                                        <input id="family" class="form-control"-->
+<!--                                               name="family"-->
+<!--                                               placeholder="請輸入家族"-->
+<!--                                               required>-->
+<!--                                    </div>-->
+<!--                                </div>-->
 
                                 <div class="form-group row mb-0" style="padding-left: 500px">
                                     <div class="col-md-6 offset-md-4">

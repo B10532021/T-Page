@@ -11,16 +11,19 @@ $comment = '真感動';
     </section>
 
     <section style="padding-top: 50px">
-        <div style="font-size: 24px">
-            文章標題：<?php echo $article[0] ?>
-            <br>
-            發文者：<?php echo $article[2] ?>
-        </div>
-        <hr class="style-five"/>
-        <div style="font-size: 18px">
-            <?php echo $article[3] ?>
-        </div>
+        <div style="padding-left: 50px">
+            <div style="font-size: 24px">
+                文章標題：<?php echo $article[0] ?>
+                <br>
+                發文者：<?php echo $article[2] ?>
+            </div>
+            <hr class="style-five"/>
+            <div style="font-size: 18px;white-space: pre-line;">
 
+                <?php echo $article[3] ?>
+
+            </div>
+        </div>
         <div style="padding-top: 100px">
             <h4>留言板</h4>
             <?php
@@ -45,13 +48,13 @@ $comment = '真感動';
             ?>
         </div>
 
-        <form style="padding-top: 50px" method="post" aciton="controller.php">
+        <form style="padding-top: 50px" method="post" aciton="../index.php" accept-charset="utf-8">
             <div class="product_detail_heading">
                 <div class="detail_heading_left">
                     <div class="detail_heading_left">
                         <h4>留言：</h4>
-                        <span name="name" style="display: none"><?php echo $user[0]?></span>
-                        <span name="title" style="display: none"><?php echo $article[0]?></span>
+                        <input name="name" style="display: none" value="<?php echo $user[0] ?>">
+                        <input name="title" style="display: none" value="<?php echo $article[0] ?>">
                         <textarea style="border:0; background-color:#f7f8f9"
                                   placeholder="請輸入想說的話" cols="50"
                                   rows="5"
@@ -60,7 +63,7 @@ $comment = '真感動';
                 </div>
             </div>
             <div>
-                <input type="submit" value="留言" style="
+                <button type="submit" style="
                                             background: none repeat scroll 0 0;
                                             background-color: #2975d8;
                                             border: 2px solid;
@@ -74,7 +77,8 @@ $comment = '真感動';
                                             text-align: center;
                                             text-transform: uppercase;
                                             width: 120px;
-                                            height: 40px;">
+                                            height: 40px;">留言
+                </button>
             </div>
         </form>
     </section>

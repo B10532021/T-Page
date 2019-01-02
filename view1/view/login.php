@@ -20,7 +20,7 @@
                                     <div class="col-md-6">
                                         <input id="email" type="email"
                                                class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
-                                               name="email" placeholder="請輸入帳號/信箱" required autofocus>
+                                               name="login_email" placeholder="請輸入帳號/信箱" required autofocus>
                                     </div>
                                 </div>
 
@@ -30,7 +30,7 @@
                                     <div class="col-md-6">
                                         <input id="password" type="password"
                                                class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
-                                               name="password" required>
+                                               name="login_password" required>
                                     </div>
                                 </div>
 

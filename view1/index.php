@@ -2,8 +2,8 @@
 include_once "../model/Model_SQL.php";
 $model = new Model_SQL();
 
-$page = "view/articles.php";
-$title = "HOME PAGE";
+$page = "view/login.php";
+$title = 0;
 $board = 1;
 $messages;
 $title;
@@ -50,14 +50,31 @@ if(isset($_GET["page"])) {
     }
 }
 
-if(isset($_GET["title"])) {
-    $title=$_GET["title"];
-    $article=$articles[$title];
-    $messages=$model->searchMessage($article[0]);
-}
+//if(isset($_GET["title"])) {
+//    $title=$_GET["title"];
+//    $article=$articles[$title];
+//    $messages=$model->searchMessage($article[0]);
+//}
 if(isset($_GET["article"])) {
     $article=$model->searchArticle($_GET["article"])[0];
     $messages=$model->searchMessage($article[0]);
+}
+
+if(isset($_POST["message"])) {
+    $model->addMessage($_POST["name"], $_POST["message"], $_POST["title"]);
+}
+
+if(isset($_POST["login_email"]) and isset($_POST['login_password'])) {
+}
+
+if(isset($_POST["email"]) and isset($_POST['password'])) {
+    $model->register($_POST["name"], $_POST["email"], $_POST["password"],
+        $_POST["school"], $_POST["gender"]);
+}
+
+if(isset($_POST["newArticle"])) {
+    $model->addArticle($_POST['newTitle'], 'ECE'.$_POST["board1"], $user[0], $_POST["newArticle"]);
+    $page = "view/articles.php";
 }
 
 include("layouts/header.php");
