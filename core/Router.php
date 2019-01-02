@@ -32,6 +32,16 @@ class Router
         $this->addRoute('DELETE', $uri, $params);
     }
 
+    public function resource($name, $controller)
+    {
+        $this->get($name, $controller . '@index');
+        $this->get($name . '/{id:\d+}', $controller . '@show');
+        $this->get($name . '/create', $controller . '@create');
+        $this->post($name, $controller . '@store');
+        $this->get($name . '/{id:\d+}/edit', $controller . '@edit');
+        $this->put($name . '/{id:\d+}', $controller . '@update');
+        $this->delete($name . '/{id:\d+}', $controller . '@destroy');
+    }
     public function addRoute($method, $uri, $action)
     {
         $uri = preg_replace('/\//', '\\/', $uri);

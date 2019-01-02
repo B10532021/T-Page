@@ -10,8 +10,6 @@ function change_page($change) {
 }
 $uri = $_SERVER['QUERY_STRING'];
 $method = $_SERVER['REQUEST_METHOD'];
-echo $uri;
-echo $method;
 $router->runRoute($uri, $method);
 
 if(isset($_GET["page"])) {

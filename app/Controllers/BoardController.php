@@ -1,15 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Yang
- * Date: 2018/12/30
- * Time: 下午 10:32
- */
 
 namespace App\Controllers;
 
+use Core\Controller;
+use Core\View;
 
-class BoardController
+class BoardController extends Controller
 {
     public function index()
     {
@@ -28,7 +24,10 @@ class BoardController
 
     public function show()
     {
-        echo 'show ';
+        View::render('article.php', [
+            'title' => '標題',
+            'author' => 'author',
+        ]);
     }
 
     public function edit()
