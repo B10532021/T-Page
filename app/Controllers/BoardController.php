@@ -24,9 +24,12 @@ class BoardController extends Controller
 
     public function show()
     {
+        $article = [
+            'title' => 'title',
+            'author' => '作者',
+        ];
         View::render('article.php', [
-            'title' => '標題',
-            'author' => 'author',
+            'article' => $article,
         ]);
     }
 
