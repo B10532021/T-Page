@@ -155,6 +155,19 @@ class Model_SQL
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
+    public function lookUpBoard()
+    {
+        $this->boardData = array();
+        $conn = mysqli_connect("localhost:33060","root","root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
+        $sql = "select * from board";
+        $result = mysqli_query($conn, $sql);
+        while($board = mysqli_fetch_row($result)) {
+            $this->boardData[] = $board;
+        }
+        return $this->boardData;
+    }
     //跟卡友有關
     public function sendInvitation()
     {
