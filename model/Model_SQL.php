@@ -24,7 +24,7 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "INSERT INTO advertisement(title, billboard) VALUES ('$title', '$content')";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
@@ -46,7 +46,7 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "UPDATE advertisement SET billboard = '$content' WHERE title = '$title'";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
@@ -55,7 +55,7 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "DELETE FROM advertisement WHERE title = '$title'";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
@@ -65,7 +65,7 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "INSERT INTO articles(title, board, author, content) VALUES ('$title', '$board', '$author', '$content')";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
@@ -100,7 +100,7 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "UPDATE articles SET content = '$content' WHERE title = '$title'";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
@@ -109,7 +109,7 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "DELETE FROM articles WHERE title = '$title'";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
@@ -119,7 +119,7 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "INSERT INTO board(boardname) VALUES ('$boardName')";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
@@ -141,7 +141,7 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "UPDATE board SET boardname = '$boardName' WHERE boardname = '$boardName'";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
@@ -150,7 +150,7 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "DELETE FROM board WHERE boardname = '$boardName'";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
@@ -177,7 +177,7 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "INSERT INTO cardfriend(me, friend) VALUES ('$me', '$friend')";
         $sql2 = "INSERT INTO cardfriend(me, friend) VALUES ('$friend', '$me')";
         mysqli_query($conn, $sql);
@@ -201,7 +201,7 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "DELETE FROM cardfriend WHERE me = '$me' AND friend = '$friend'";
         $sql2 = "DELETE FROM cardfriend WHERE me = '$friend' AND friend = '$me'";
         mysqli_query($conn, $sql);
@@ -221,7 +221,7 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "INSERT INTO family(member, familyID) VALUES ('$member', '$familyID')";
         $sql2 = "UPDATE users SET family = '$familyID' WHERE name = '$member'";
         mysqli_query($conn, $sql);
@@ -245,7 +245,7 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "DELETE FROM family WHERE member = '$member' AND familyID = '$family'";
         $sql2 = "UPDATE users SET family = null WHERE name = '$member'";
         mysqli_query($conn, $sql);
@@ -257,7 +257,7 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "INSERT INTO message(name, message, title) VALUES ('$name', '$message', '$title')";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
@@ -279,7 +279,7 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "UPDATE message SET message = '$message' WHERE name = '$name' AND title = '$title'";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
@@ -288,17 +288,17 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "DELETE FROM message WHERE name = '$name' AND message = '$message' AND title = '$title'";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
     //跟使用者有關
-    public function addUser($name, $email, $password, $school, $gender, $birth, $interests, $clubs, $family)
+    public function addUser($name, $email, $password, $school, $gender, $birth = null, $interests = null, $clubs = null, $family = null)
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "INSERT INTO users(name, email, password, school, gender, birth, interests, clubs, family) VALUES ('$name', '$email', '$password', '$school', '$gender', '$birth', '$interests', '$clubs', '$family')";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
@@ -320,7 +320,7 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "UPDATE users SET name = '$name', email = '$email', password = '$password', interests = '$interests', clubs = '$clubs' 
         WHERE school = '$school' AND gender = '$gender' AND birth = '$birth' AND family = '$family'";
         mysqli_query($conn, $sql);
@@ -330,7 +330,7 @@ class Model_SQL
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
         $sql = "DELETE FROM users WHERE name = '$name' AND email = '$email' AND password = '$password'";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
