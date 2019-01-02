@@ -50,7 +50,7 @@
                         <!--                            <li><a href="index-2.html">Home Version Two</a></li>-->
                         <!--                        </ul>-->
                     </li>
-                    <li><a href="../category-2.html">board</a>
+                    <li><a>board</a>
                         <ul id="sub-menu7">
                             <li><a href="../product-detail.html">Product Detail Page</a></li>
                         </ul>

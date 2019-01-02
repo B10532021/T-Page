@@ -52,7 +52,7 @@
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
-    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico"/>
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.png"/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -66,12 +66,26 @@
 </html>
 <?php
 
-$page = "view/index.php";
-$title = "Card_Friend";
+include_once "../model/Model_SQL.php";
+$model = new Model_SQL();
 
-function change_page($change)
-{
-    $GLOBALS['page'] = $change;
+$page = "view/index.php";
+$title = "HOME PAGE";
+$board = 1;
+
+if(isset($_GET["board"])) {
+    if($_GET["board"] == 1) {
+        $board=1;
+    }
+    if($_GET["board"] == 2) {
+        $board=2;
+    }
+    if($_GET["board"] == 3) {
+        $board=3;
+    }
+    if($_GET["board"] == 4) {
+        $board=4;
+    }
 }
 
 if (isset($_GET["page"])) {
@@ -87,6 +101,19 @@ if (isset($_GET["page"])) {
     else if ($_GET["page"] == "register") {
         $page = "view/register.php";
     }
+    else if ($_GET["page"] == "article") {
+        $page = "view/article.php";
+    }
+    else if ($_GET["page"] == "articles") {
+        $page = "view/articles.php";
+    }
+    else if ($_GET["page"] == "add") {
+        $page = "view/add_article.php";
+    }
+    else{
+        $page = "view/index.php";
+    }
+
 //    if($_GET["page"] == "profile") {
 //        $page = "view/profile.php";
 //    }
@@ -94,6 +121,18 @@ if (isset($_GET["page"])) {
 //        $page = "view/article.php";
 //    }
 }
+
+$articles=$model->searchBoard("ECE".$board);
+if(isset($_GET["title"])) {
+    $title=$_GET["title"];
+    $article=$articles[$title];
+    $messages=$model->searchMessage($article[0]);
+}
+if(isset($_GET["article"])) {
+    $article=$model->searchArticle($_GET["article"])[0];
+    $messages=$model->searchMessage($article[0]);
+}
+
 
 include("layout/header.php");
 

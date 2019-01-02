@@ -6,104 +6,62 @@
             <div class="col-md-offset-2 col-md-4 col-sm-6 col-xs-12">
                 <h3 class="register-header">註冊</h3>
 
-                <form (ngSubmit)="form.form.valid && onSubmit(form)" #form="ngForm">
+                <form  #form="ngForm">
                     <div
                             class="form-group"
-                            [ngClass]="{ invalid: form.submitted && name.invalid }"
                     >
                         <label>姓名 *</label>
                         <input
                                 type="text"
-                                [(ngModel)]="model.name"
                                 name="name"
-                                #name="ngModel"
                                 required
                         />
-                        <div
-                                *ngIf="form.submitted && name.invalid"
-                                class="invalid_feedback"
-                        >
-                            必須欄位
-                        </div>
                     </div>
                     <div
                             class="form-group"
-                            [ngClass]="{ invalid: form.submitted && email.invalid }"
                     >
                         <label>信箱 *</label>
                         <input
                                 type="text"
-                                [(ngModel)]="model.email"
                                 name="email"
-                                #email="ngModel"
                                 required
-                                email
                         />
-                        <div
-                                *ngIf="form.submitted && email.invalid"
-                                class="invalid_feedback"
-                        >
-                            必須欄位
-                        </div>
                     </div>
                     <div
                             class="form-group"
-                            [ngClass]="{ invalid: form.submitted && phone.invalid }"
                     >
                         <label>手機號碼 </label>
                         <input
                                 type="text"
-                                [(ngModel)]="model.phone"
                                 name="phone"
-                                #phone="ngModel"
                         />
                     </div>
                     <div
                             class="form-group"
-                            [ngClass]="{ invalid: form.submitted && password.invalid }"
                     >
                         <label>密碼(至少六碼) *</label>
                         <input
                                 type="password"
-                                [(ngModel)]="model.password"
                                 name="password"
-                                #password="ngModel"
                                 required
                         />
-                        <div
-                                *ngIf="form.submitted && password.invalid"
-                                class="invalid_feedback"
-                        >
-                            必須欄位
-                        </div>
                     </div>
                     <div
                             class="form-group"
-                            [ngClass]="{ invalid: form.submitted && password_confirm.invalid }"
                     >
                         <label>確認密碼 *</label>
                         <input
                                 type="password"
-                                [(ngModel)]="model.password_confirm"
                                 name="password_confirm"
-                                #password_confirm="ngModel"
                                 required
                         />
-                        <div
-                                *ngIf="password.value !== password_confirm.value"
-                                class="invalid_feedback"
-                        >
-                            密碼不一致
-                        </div>
                     </div>
 
                     <div class="form-check">
                         <label>
                             <input
                                     type="checkbox"
-                                    [(ngModel)]="model.check"
                                     name="check"
-                                    #check="ngModel"
                                     required
                             />
                         </label>
@@ -415,20 +373,7 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div
-                                *ngIf="form.submitted && check.invalid"
-                                class="invalid_feedback"
-                        >
-                            必須欄位
-                        </div>
                     </div>
-                    <re-captcha
-                            [(ngModel)]="model.captcha"
-                            name="captcha"
-                            required
-                            #captchaControl="ngModel"
-                    ></re-captcha>
                     <div class="submit_btn form-group">
                         <input type="submit" value="註冊"/>
                     </div>
