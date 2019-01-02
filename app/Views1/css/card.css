@@ -1,0 +1,97 @@
+.gray_tshirt_area {
+    background: none repeat scroll 0 0 #f7f8f9;
+    padding-top: 80px;
+}
+
+.gray_tshirt {
+    border-bottom: 1px solid #eeeeef;
+    overflow: hidden;
+    padding-bottom: 60px;
+}
+
+.single_product_image_tab .nav.nav-tabs.product_detail_zoom_tab {
+    border-bottom: 0 solid #ddd;
+}
+
+.single_p_image {
+    overflow: inherit;
+    position: relative;
+}
+
+.product_detail_heading {
+    border-bottom: 1px solid #eeeeef;
+    overflow: hidden;
+}
+
+.detail_heading_left h3 {
+    color: #232323;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.invest_button {
+    padding: 0px;
+}
+
+.invest_button > input[type='button'] {
+    background: none repeat scroll 0 0;
+    background-color: #2975d8;
+    border: 2px solid;
+    border-color: #2975d8;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 8px auto 15px;
+    padding: 7px;
+    margin-left: 200px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 120px;
+    height: 40px;
+}
+
+.add_button {
+    padding: 0px;
+}
+
+.add_button{
+    background: none repeat scroll 0 0;
+    background-color: #2975d8;
+    border: 2px solid;
+    border-color: #2975d8;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 8px auto 15px;
+    padding: 7px;
+    margin-left: 200px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 120px;
+    height: 40px;
+}
+
+hr.style-five {
+    border: 0;
+    height: 1px;
+    width: auto;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+hr.style-five:after {
+    /* Not really supposed to work, but does */
+    content: '\00a0'; /* Prevent margin collapse */
+}
+
+.textarea_style {
+    border: 0;
+    background-color: transparent;
+    /*scrollbar-arrow-color:yellow;
+    scrollbar-base-color:lightsalmon;
+    overflow: hidden;*/
+    color: #666464;
+    height: auto;
+}
+
+

@@ -56,6 +56,7 @@ $router = new \Core\Router();
 
 $router->resource('users', 'UserController');
 $router->resource('boards', 'BoardController');
+$router->resource('articles', 'ArticleController');
 
 $uri = $_SERVER['QUERY_STRING'];
 $method = $_SERVER['REQUEST_METHOD'];
