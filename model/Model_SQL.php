@@ -10,6 +10,37 @@ class Model_SQL
     private $messageData = array();
     private $userData = array();
 
+    //註冊
+    public function register($name, $email, $password, $school, $gender, $birth = null, $interests = null, $clubs = null, $family = null)
+    {
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
+        $sql = "INSERT INTO users(name, email, password, school, gender, birth, interests, clubs, family) VALUES ('$name', '$email', '$password', '$school', '$gender', '$birth', '$interests', '$clubs', '$family')";
+        mysqli_query($conn, $sql);
+        mysqli_close($conn);
+    }
+    //登入
+    public function login($name, $password)
+    {
+        $this->userData = array();
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
+        $sql = "select * from users WHERE name = '$name' AND password = '$password'";
+        $result = mysqli_query($conn, $sql);
+        while($user = mysqli_fetch_row($result)) {
+            $this->userData[] = $user;
+        }
+        if(mysqli_fetch_lengths($this->userData[]))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     //跟狀態有關
     public function getState()
     {
@@ -294,15 +325,7 @@ class Model_SQL
         mysqli_close($conn);
     }
     //跟使用者有關
-    public function addUser($name, $email, $password, $school, $gender, $birth = null, $interests = null, $clubs = null, $family = null)
-    {
-        $conn = mysqli_connect("localhost:33060", "root", "root");
-        mysqli_select_db($conn, "tpage");
-        mysqli_query( $conn, "SET NAMES 'utf8'");
-        $sql = "INSERT INTO users(name, email, password, school, gender, birth, interests, clubs, family) VALUES ('$name', '$email', '$password', '$school', '$gender', '$birth', '$interests', '$clubs', '$family')";
-        mysqli_query($conn, $sql);
-        mysqli_close($conn);
-    }
+
     public function searchUser($name)
     {
         $this->userData = array();
