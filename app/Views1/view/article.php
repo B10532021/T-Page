@@ -12,19 +12,19 @@ $comment = '真感動';
 
     <section style="padding-top: 50px">
         <div style="font-size: 24px">
-            文章標題：<?php echo $article[0] ?>
+            文章標題：<?php echo $article['title'] ?>
             <br>
-            發文者：<?php echo $article[2] ?>
+            發文者：<?php echo $article['author'] ?>
         </div>
         <hr class="style-five"/>
         <div style="font-size: 18px">
-            <?php echo $article[3] ?>
+            <?php echo $article['content'] ?>
         </div>
 
         <div style="padding-top: 100px">
             <h4>留言板</h4>
             <?php
-            foreach ($messages as $message) {
+            foreach ($article['messages'] as $message) {
                 ?>
                 <div class="box box-success">
                     <div class="box-body chat" id="chat-box">
@@ -32,9 +32,9 @@ $comment = '真感動';
                             <img src="../img/angel.jpg" alt="user image" class="online">
                             <p class="message">
                             <span style="font-size: 16px">
-                                <?php echo $message[0] ?>
+                                <?php echo $message['name'] ?>
                                 <br>
-                                <?php echo $message[1] ?>
+                                <?php echo $message['content'] ?>
                             </span>
                             </p>
                         </div>
