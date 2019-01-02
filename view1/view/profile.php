@@ -45,6 +45,7 @@ $article_title = '今晚的月色如何?';
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="product_detail_heading">
                                         <div><h3>個人簡介</h3>
@@ -86,7 +87,7 @@ $article_title = '今晚的月色如何?';
                                                         <textarea style="border:0; background-color:#f7f8f9"
                                                                   placeholder="請輸入你的興趣" cols="50"
                                                                   rows="5"
-                                                                  name="interests"><?php echo $user[6] ?>
+                                                                  name="update_interests"><?php echo $user[6] ?>
                                                         </textarea>
                                                     </div>
                                                 </div>
@@ -98,7 +99,7 @@ $article_title = '今晚的月色如何?';
                                                         <textarea style="border:0; background-color:#f7f8f9"
                                                                   placeholder="請輸入參加過的社團" cols="50"
                                                                   rows="5"
-                                                                  name="clubs"><?php echo $user[7] ?>
+                                                                  name="update_clubs"><?php echo $user[7] ?>
                                                     </textarea>
                                                     </div>
                                                 </div>
@@ -120,8 +121,8 @@ $article_title = '今晚的月色如何?';
                                             width: 120px;
                                             height: 40px;">
                                             </div>
-                                        </form>
                                     </div>
+                                    </form>
                                 </div>
 
                             </div>
@@ -145,7 +146,8 @@ $article_title = '今晚的月色如何?';
                                 </a>
                                 <?php echo $article[0] ?>
                             </p>
-                            <a href="index.php?page=article&article=<?php echo $article[0] ?>" style="margin-left: 50px">閱讀完整文章...</a>
+                            <a href="index.php?page=article&article=<?php echo $article[0] ?>"
+                               style="margin-left: 50px">閱讀完整文章...</a>
                         </div>
                     </div>
                 </div>
