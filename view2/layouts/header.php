@@ -38,7 +38,7 @@
 
         <nav id="nav">
             <ul>
-                <li class="active"><a href="../index.php?page=articles&board=1">四電資一</a></li>
+                <li><a href="../index.php?page=articles&board=1">四電資一</a></li>
                 <li><a href="../index.php?page=articles&board=2">四電資二</a></li>
                 <li><a href="../index.php?page=articles&board=3">四電資三</a></li>
                 <li><a href="../index.php?page=articles&board=4">四電資四</a></li>

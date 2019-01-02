@@ -10,6 +10,8 @@ $page = "view/articles.php";
 $title = "Card_Friend";
 $articleTitle="1";
 $article;
+$messages=array();
+$userArticles;
 $board=1;
 
 if(isset($_GET["page"])) {
@@ -56,12 +58,18 @@ if(isset($_GET["articleTitle"])) {
     $articleTitle=$_GET["articleTitle"];
 
     $article=$model->searchArticle($articleTitle)[0];
+    $messages=$model->searchMessage($articleTitle);
+
 }
 
-function clickReadMore($title)
+if(isset($_POST["newMessage"]))
 {
-    $GLOBALS['articleTitle']=$title;
+    $model->addMessage("王小明",$_POST["newMessage"],$_POST["title"]);
+}
 
+if(isset($_POST["newArticle"]))
+{
+    $model->addArticle($_POST["title"],$_POST["board"],"王小明",$_POST["newArticle"]);
 }
 
 

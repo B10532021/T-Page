@@ -1,4 +1,6 @@
-
+<?php
+$userArticles=$model->searchAuthor("王小明");
+?>
 <!-- Main -->
 <div id="main">
     <div class="container">
@@ -27,22 +29,55 @@
                     <header>
                         <h2>狀態: 今天天氣真好</h2>
                     </header>
-                    <!--       文章         -->
-                    <div class="row">
-                        <div class="6u">
-                            <section>
-                                <p>Quisque dictum. Pellentesque viverra  enim. Integer nisl risus, sagittis convallis, rutrum id, elementum.</p>
-                                <a href="#" class="button">Read More</a>
-                            </section>
+
+
+                    <?php
+
+                    $rowLength=floor(sizeof($userArticles)/2);
+                    for($i=0;$i<=$rowLength;$i++)
+                    {
+                        ?>
+                        <div class='row'>
+                            <?php
+                            if($i!=$rowLength)
+                            {
+                                for($j=0;$j<2;$j++)
+                                {
+
+                                    ?>
+                                    <div class='6u'>
+                                        <section>
+                                            <p><?php echo$articles[$i*2+$j][0]?></p>
+                                            <a href="../index.php?page=article&articleTitle=<?php echo $articles[$i*2+$j][0]?>" class='button'>Read More</a>
+                                        </section>
+                                    </div>
+                                    <?php
+                                }
+                            }
+                            else
+                            {
+                                for($j=0;$j<sizeof($articles)%2;$j++)
+                                {
+
+                                    ?>
+                                    <div class='6u'>
+                                        <section>
+                                            <p><?php echo$articles[$i*2+$j][0]?></p>
+                                            <a href="../index.php?page=article&articleTitle=<?php echo $articles[$i*2+$j][0]?>" class='button'>Read More</a>
+                                        </section>
+                                    </div>
+
+                                    <?php
+                                }
+                            }
+                            ?>
+
                         </div>
-                        <div class="6u">
-                            <section>
-                                <p>Pellentesque viverra  enim. Tristique ante ut risus. Quisque dictum. Integer sagittis convallis elementum.</p>
-                                <a href="#" class="button">Read More</a>
-                            </section>
-                        </div>
-                    </div>
-                    <!--       /文章         -->
+                        <?php
+                    }
+
+                    ?>
+
                 </section>
             </div>
             <!-- /Content -->

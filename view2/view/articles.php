@@ -29,7 +29,7 @@
                     <div class='3u'>
 						<section>
 							<p><?php echo$articles[$i*4+$j][0]?></p>
-							<a href="../index.php?page=article&articleTitle=<?php echo $articles[$i*4+$j][0]?>" class='button' onclick="document.write('<?php clickReadMore($articles[$i*4+$j][0]); ?>');">Read More</a>
+							<a href="../index.php?page=article&articleTitle=<?php echo $articles[$i*4+$j][0]?>" class='button'>Read More</a>
 						</section>
 					</div>
                             <?php
@@ -44,7 +44,7 @@
                             <div class='3u'>
 						<section>
 							<p><?php echo$articles[$i*4+$j][0]?></p>
-							<a href="../index.php?page=article&articleTitle=<?php echo $articles[$i*4+$j][0]?>" class='button' onclick="document.write('<?php clickReadMore($articles[$i*4+$j][0]); ?>');">Read More</a>
+							<a href="../index.php?page=article&articleTitle=<?php echo $articles[$i*4+$j][0]?>" class='button'>Read More</a>
 						</section>
 					</div>
 

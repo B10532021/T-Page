@@ -16,7 +16,7 @@
                         <p>性別: <?php echo $user[4]?></p>
                     <p>興趣: <?php echo $user[6]?></p>
                     <p>參加過的社團: <?php echo $user[7]?></p>
-                        <a href="#" class="button">送出交友邀請</a>
+                        <button class="button">送出交友邀請</button>
                     </div>
                     </section>
             </div>

@@ -5,7 +5,7 @@
 
             <!-- Content -->
             <div id="content" class="12u skel-cell-important">
-                <section>
+                <section style="padding-left: 45%;">
                     <header>
                         <h2>登入</h2>
                     </header>

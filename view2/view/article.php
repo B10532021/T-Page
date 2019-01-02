@@ -9,10 +9,12 @@
                 <section>
                     <header>
                         <h2><?php echo $article[0]?></h2>
+                        發文者 : <?php echo $article[2]?>
                     </header>
-                    <p>
+                    <pre>
                         <?php echo $article[3]?>
-                    </p>
+                    </pre>
+                    <img src="../images/thumb.png" style="float: right;">
                 </section>
 
                 <div class="divider"></div>
@@ -20,43 +22,54 @@
                 <header>
                     <h2>留言區</h2>
                 </header>
-                <!--       留言         -->
-                <div class="row">
-                    <div class="2u">
-                        <section>
-                            <p>我也這麼覺得!!</p>
-                        </section>
-                    </div>
-                    <div class="2u">
-                        <section>
-                            <p>太可憐了吧</p>
-                        </section>
-                    </div>
-                    <div class="2u">
-                        <section>
-                            <p>民眾表示太誇張了</p>
-                        </section>
-                    </div>
-                    <div class="2u">
-                        <section>
-                            <p>這個留言很長喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔</p>
-                        </section>
-                    </div>
-                    <div class="2u">
-                        <section>
-                            <p>這個留言很長喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔</p>
-                        </section>
-                    </div>
-                    <div class="2u">
-                        <section>
-                            <p>這個留言很長喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔喔</p>
-                        </section>
-                    </div>
-                </div>
-                <!--       /留言         -->
 
-                <form>
-                    <input type="text" placeholder="留言...">
+                <?php
+                $length=floor(sizeof($messages)/6);
+                for($i=0;$i<=$length;$i++) {
+
+                    ?>
+                    <!--       留言         -->
+                    <div class="row">
+                        <?php
+                        if($i!=$length)
+                        {
+                            for($j=0;$j<6;$j++)
+                            {
+                                ?>
+                                <div class="2u">
+                                    <section>
+                                        <p><?php echo $messages[$i*6+$j][1]?></p>
+                                    </section>
+                                </div>
+                                <?php
+                            }
+                        }
+                        else{
+                            for($j=0;$j<sizeof($messages)%6;$j++)
+                            {
+
+                                ?>
+                                <div class="2u">
+                                    <section>
+                                        <p><?php echo $messages[$i*6+$j][1]?></p>
+                                    </section>
+                                </div>
+                        <?php
+                            }
+                        }
+                        ?>
+
+                    </div>
+                    <!--       /留言         -->
+
+                    <?php
+                }
+                ?>
+
+                <br>
+                <form method="post" action="../index.php">
+                    <input type="text" name="title" style="display: none" value="<?php echo $article[0]?>">
+                    <input type="text" name="newMessage" placeholder="留言...">
                     <button class="button" type="submit">送出留言</button>
                 </form>
 
