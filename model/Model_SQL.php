@@ -227,7 +227,7 @@ class Model_SQL
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
-        $sql = "INSERT INTO invitationqueue(me, friend) VALUES ('$me, '$friend)";
+        $sql = "INSERT INTO invitationqueue(me, friend) VALUES ('$me', '$friend')";
         mysqli_query($conn, $sql);
         $this->invitationData = array();
         $sql2 = "select * from invitationqueue WHERE (me = '$me' AND friend = '$friend') OR (me = '$friend' AND friend = '$me')";
