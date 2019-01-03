@@ -20,12 +20,11 @@ if(isset($_POST["login_name"]) and isset($_POST['login_password'])) {
     }
     else {
         echo "alert('登入失敗')";
-       // echo "<meta http-equiv='refresh' content='0'>";
+        echo "<meta http-equiv='refresh' content='0'>";
     }
 }
 
 if(isset($_SESSION['user'])) {
-    echo $_SESSION["user"];
     $user = $model->searchUser($_SESSION["user"])[0];
 }
 
@@ -57,6 +56,9 @@ if(isset($_GET["page"])) {
     }
     if($_GET["page"] == "profile") {
         $page = "view/profile.php";
+        if(isset($_GET["author"])) {
+            $user = $model->searchUser($_GET["author"])[0];
+        }
         $articles=$model->searchAuthor($user[0]);
     }
     if($_GET["page"] == "article") {
