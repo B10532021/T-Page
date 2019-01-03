@@ -74,7 +74,7 @@
                         <label>興趣 </label>
                         <input
                                 type="text"
-                                name="intersets"
+                                name="interests"
                         />
                     </div>
                     <div
@@ -83,7 +83,7 @@
                         <label>社團 </label>
                         <input
                                 type="text"
-                                name="club"
+                                name="clubs"
                         />
                     </div>
                     <div

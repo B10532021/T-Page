@@ -112,6 +112,11 @@ if (isset($_GET["page"])) {
         unset($_SESSION["user"]);
         echo "<script>location.href='../#'</script>";
     }
+    if ($_GET["page"] == "family") {
+        $user = $model->searchUser($_SESSION["user"])[0];
+       $f_friends = $model->searchFamily($user[8]);
+       $page = "view/family.php";
+    }
 }
 
 if (isset($_GET["board"])) {
@@ -222,7 +227,8 @@ if (isset($_POST["profile"])) {
 if (isset($_POST["add_article"])) {
     if (isset($_SESSION['user'])) {
         $model->addArticle($_POST["title2"], $_POST["board"], $_SESSION["user"], $_POST["context"]);
-//        $model->addMoney($_SESSION["user"], 1);
+        $user = $model->searchUser($_SESSION["user"])[0];
+        $model->addMoney($_SESSION["user"], $user[9]);
         echo "<script>location.href='../?page=articles&board={$_POST["board"]}'</script>";
     } else {
         echo "<script>alert('請先登入')</script>";
@@ -234,7 +240,8 @@ if (isset($_POST["add_article"])) {
 if (isset($_POST["message"])) {
     if (isset($_SESSION["user"])) {
         $model->addMessage($_SESSION["user"], $_POST["context"], $_POST["title1"]);
-        $model->addMoney($_SESSION["user"], 1);
+        $user = $model->searchUser($_SESSION["user"])[0];
+        $model->addMoney($_SESSION["user"], $user[9]);
         echo "<script>location.href='../?page=article&board={$_POST['board1']}&title={$_POST['title1']}'</script>";
     } else {
         echo "<script>alert('請先登入')</script>";
