@@ -47,7 +47,7 @@
                     <div class="form-group">
                         <label>birth</label>
                         <input
-                                type="date"
+                                type="text"
                                 name="birth"
                                 value="<?php echo $friend[5] ?>"
                                 readonly

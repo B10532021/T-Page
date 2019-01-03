@@ -11,17 +11,17 @@
                 <div class="header_top_right floatright">
                     <?php if (!isset($_SESSION['user'])) { ?>
                         <p>
-                            <a href="index.php?page=login">login</a>
+                            <a href="index.php?page=login" style="text-decoration:none;">login</a>
                             /
-                            <a href="index.php?page=register">register</a>
+                            <a href="index.php?page=register" style="text-decoration:none;">register</a>
                         </p>
                     <?php } else { ?>
                         <p>
-                            <a href="../?page=logout">
+                            <a href="../?page=logout" style="text-decoration:none;">
                                 logout
                             </a>
                             /
-                            <a href="../?page=profile">
+                            <a href="../?page=profile" style="text-decoration:none;">
                                 profile
                             </a>
                         </p>
@@ -36,8 +36,8 @@
         <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <div class="header_left floatleft">
-                    <a class="fa fa-search" href=""></a>
-                    <input type="text" placeholder="search"/>
+<!--                    <a class="fa fa-search" href=""></a>-->
+<!--                    <input type="text" placeholder="search"/>-->
                 </div>
             </div>
             <div class="col-md-6 col-sm-5 col-xs-12">
