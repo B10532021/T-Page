@@ -24,6 +24,8 @@ if(isset($_GET["page"])) {
     }
     if($_GET["page"] == "card") {
         $page = "view/card.php";
+        $newCardUser=$model->randomUser()[0];
+
     }
     if($_GET["page"] == "profile") {
     $page = "view/profile.php";

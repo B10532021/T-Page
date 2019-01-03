@@ -7,6 +7,7 @@ class Model_SQL
     private $boardData = array();
     private $cardFriendData = array();
     private $familyData = array();
+    private $invitationData = array();
     private $messageData = array();
     private $userData = array();
 
@@ -221,19 +222,30 @@ class Model_SQL
         return $this->boardData;
     }
     //跟卡友有關
-    public function sendInvitation()
-    {
-        return true;
-    }
-    public function addCardFriend($me, $friend)
+    public function sendInvitation($me, $friend)
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
-        $sql = "INSERT INTO cardfriend(me, friend) VALUES ('$me', '$friend')";
-        $sql2 = "INSERT INTO cardfriend(me, friend) VALUES ('$friend', '$me')";
+        $sql = "INSERT INTO invitationqueue(me, friend) VALUES ('$me, '$friend)";
         mysqli_query($conn, $sql);
-        mysqli_query($conn, $sql2);
+        $this->invitationData = array();
+        $sql2 = "select * from invitationqueue WHERE (me = '$me' AND friend = '$friend') OR (me = '$friend' AND friend = '$me')";
+        $result = mysqli_query($conn, $sql2);
+        while($cardfriend = mysqli_fetch_row($result)) {
+            $this->invitationData[] = $cardfriend;
+        }
+        $num = count($this->invitationData);
+        if($num == 2)
+        {
+            //$this->addCardFriend($me, $friend);
+            $sql3 = "INSERT INTO cardfriend(me, friend) VALUES ('$me', '$friend')";
+            $sql4 = "INSERT INTO cardfriend(me, friend) VALUES ('$friend', '$me')";
+            mysqli_query($conn, $sql3);
+            mysqli_query($conn, $sql4);
+            $sql5 = "DELETE FROM invitationqueue WHERE (me = '$me' AND friend = '$friend') OR (me = '$friend' AND friend = '$me')";
+            mysqli_query($conn, $sql5);
+        }
         mysqli_close($conn);
     }
     public function searchCardFriend($name)
@@ -413,19 +425,15 @@ class Model_SQL
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
-        $sql = "select * from users";
+        $result=mysqli_query($conn,"select * from users");
+        $totalUsers=mysqli_num_rows($result);
+        $id = rand(1, $totalUsers);
+        $sql = "select * from users WHERE id = ".$id;
         $result = mysqli_query($conn, $sql);
         while($user = mysqli_fetch_row($result)){
             $this->userData[] = $user;
         }
-        $num = count($this->userData);
-        $id = rand(0, $num - 1);
-        $this->userData = array();
-        $sql2 = "select * from users WHERE id = '$id'";
-        $result2 = mysqli_query($conn, $sql2);
-        while($user = mysqli_fetch_row($result2)){
-            $this->userData[] = $user;
-        }
+
         return $this->userData;
     }
 }
