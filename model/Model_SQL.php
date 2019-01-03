@@ -9,7 +9,7 @@ class Model_SQL
     private $familyData = array();
     private $messageData = array();
     private $userData = array();
-
+    private $thumbnumber;
     //註冊
     public function register($name, $email, $password, $school, $gender, $birth = null, $interests = null, $clubs = null, $family = null)
     {
@@ -32,7 +32,7 @@ class Model_SQL
         while($user = mysqli_fetch_row($result)) {
             $this->userData[] = $user;
         }
-        if(mysqli_fetch_lengths($this->userData[0]))
+        if(count($this->userData))
         {
             return true;
         }
@@ -98,7 +98,17 @@ class Model_SQL
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
         $datetime = date("Y-m-d/H:i:s", mktime(date('H')+8, date('i'), date('s'), date('m'), date('d'), date('Y')));
-        $sql = "INSERT INTO articles(title, board, author, content, time) VALUES ('$title', '$board', '$author', '$content', '$datetime')";
+        $sql = "INSERT INTO articles(title, board, author, content, time, thumb) VALUES ('$title', '$board', '$author', '$content', '$datetime', '0')";
+        mysqli_query($conn, $sql);
+        mysqli_close($conn);
+    }
+    public function addThumb($title, $thumb)
+    {
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
+        $thumb++;
+        $sql = "UPDATE articles SET thumb = $thumb WHERE title = '$title'";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
@@ -124,7 +134,7 @@ class Model_SQL
         $sql = "select * from articles where author = '$author'";
         $result = mysqli_query($conn, $sql);
         while($article = mysqli_fetch_row($result)) {
-            $this->articleData[] = $article;
+            $this->articleData[] = $article;a
         }
         return $this->articleData;
     }
