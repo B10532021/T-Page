@@ -42,9 +42,8 @@ $clubs = '跆拳道社';
                                                                     data-title="My caption"
                                                             ><img src="images/product-plus.png" alt=""/></a>
                                                             <img
-                                                                    id="zoom_02"
+                                                                    width="80%"
                                                                     src="../img/<?php echo $image?>"
-                                                                    data-zoom-image="/assets/images/single-large.jpg"
                                                                     alt=""/>
                                                         </div>
                                                     </div>
@@ -55,49 +54,72 @@ $clubs = '跆拳道社';
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <div class="product_detail_heading">
                                             <div class="detail_heading_left">
-                                                <h4>姓名：<?php echo $name ?></h4>
+                                                <h4>姓名：<?php echo $_SESSION["cardfriend"][0] ?></h4>
                                             </div>
                                         </div>
                                         <div class="product_detail_heading">
                                             <div class="detail_heading_left">
                                                 <div class="detail_heading_left">
-                                                    <h4>學校：<?php echo $school?></h4>
+                                                    <h4>學校：<?php echo $_SESSION["cardfriend"][3]?></h4>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product_detail_heading">
                                             <div class="detail_heading_left">
                                                 <div class="detail_heading_left">
-                                                    <h4>性別：<?php echo $gender?></h4>
+                                                    <h4>性別：<?php echo $_SESSION["cardfriend"][4]?></h4>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product_detail_heading">
                                             <div class="detail_heading_left">
                                                 <div class="detail_heading_left">
-                                                    <h4>生日：<?php echo $birth?></h4>
+                                                    <h4>生日：<?php echo $_SESSION["cardfriend"][5]?></h4>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product_detail_heading">
                                             <div class="detail_heading_left">
                                                 <div class="detail_heading_left">
-                                                    <h4>興趣：<?php echo $interests?></h4>
+                                                    <h4>興趣：<?php echo $_SESSION["cardfriend"][6]?></h4>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="product_detail_heading">
                                             <div class="detail_heading_left">
                                                 <div class="detail_heading_left">
-                                                    <h4>參加的社團：<?php echo $clubs?></h4>
+                                                    <h4>參加的社團：<?php echo $_SESSION["cardfriend"][7]?></h4>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="invest_button">
-                                        <input type="button" value="送出好友邀請">
+                                    <script>
+                                        function show_alert() {
+                                            alert('已送出交友邀請');
+                                        }
+                                    </script>
+                                    <form method="post" action="index.php?page=card">
+                                    <div>
+                                        <input name="name" style="display: none" value="<?php echo $_SESSION["user"] ?>">
+                                        <input name="cardfriend" style="display: none" value="<?php echo $_SESSION["cardfriend"][0] ?>">
+                                        <button type="submit" style="
+                                            background: none repeat scroll 0 0;
+                                            background-color: #2975d8;
+                                            border: 2px solid;
+                                            border-color: #2975d8;
+                                            color: #fff;
+                                            font-size: 13px;
+                                            font-weight: 700;
+                                            margin: 8px auto 15px;
+                                            padding: 7px;
+                                            margin-left: 200px;
+                                            text-align: center;
+                                            text-transform: uppercase;
+                                            width: 120px;
+                                            height: 40px;">送出交友邀請
+                                        </button>
                                     </div>
-
+                                    </form>
                                 </div>
                             </div>
                         </div>

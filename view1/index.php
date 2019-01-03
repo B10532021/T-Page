@@ -11,6 +11,7 @@ $messages;
 $title;
 $article;
 $user;
+$newCardUser;
 
 //登入
 if(isset($_POST["login_name"]) and isset($_POST['login_password'])) {
@@ -18,6 +19,15 @@ if(isset($_POST["login_name"]) and isset($_POST['login_password'])) {
         $_SESSION['user'] = $_POST['login_name'];
         $user = $model->searchUser($_POST['login_name'])[0];
         $page="view/articles.php";
+        $newCardUser=$model->randomUser()[0];
+
+        while($newCardUser[0]==$_SESSION['user'])
+        {
+            $newCardUser=$model->randomUser()[0];
+        }
+        if(!isset($_SESSION["cardfriend"])) {
+            $_SESSION["cardfriend"] = $newCardUser;
+        }
     }
     else {
         echo "<script>alert('登入失敗')</script>";
@@ -29,6 +39,15 @@ if(isset($_POST["login_name"]) and isset($_POST['login_password'])) {
 if(isset($_POST["email"]) and isset($_POST['password'])) {
     $model->register($_POST["name"], $_POST["email"], $_POST["password"], $_POST["school"], $_POST["gender"], $_POST["birth"]);
     $_SESSION["user"] = $_POST['name'];
+    $newCardUser=$model->randomUser()[0];
+
+    while($newCardUser[0]==$_SESSION['user'])
+    {
+        $newCardUser=$model->randomUser()[0];
+    }
+    if($_SESSION["cardfriend"] == null) {
+        $_SESSION["cardfriend"] = $newCardUser;
+    }
 }
 
 if(isset($_SESSION["user"])) {
@@ -60,6 +79,7 @@ if(isset($_GET["page"])) {
     }
     if($_GET["page"] == "card") {
         $page = "view/card.php";
+
     }
     if($_GET["page"] == "profile") {
         $page = "view/profile.php";
@@ -80,6 +100,7 @@ if(isset($_GET["page"])) {
     if($_GET["page"] == "login") {
         $page = "view/login.php";
         unset($_SESSION['user']);
+        unset($_SESSION['cardfriend']);
     }
     if($_GET["page"] == "joinFamily") {
         $page = "view/join_family.php";
@@ -138,7 +159,10 @@ if(isset($_POST["dislike"])) {
     echo "<meta http-equiv='refresh' content='0'>";
 }
 
-
+if(isset($_POST["cardfriend"]))
+{
+    //$model->sendInvitation($_POST['name'],$_POST['cardfriend']);
+}
 
 
 include("layouts/header.php");
