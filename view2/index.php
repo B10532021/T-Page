@@ -117,11 +117,6 @@ function logout()
     unset($_SESSION['user']);
 }
 
-function addCardFriend($myName,$friendName)
-{
-    $model=new Model_SQL();
-    $model->sendInvitation($myName,$friendName);
-}
 
 if(isset($_POST['action']))
 {
@@ -131,7 +126,7 @@ if(isset($_POST['action']))
     }
     if($_POST['action']=="addCardFriend")
     {
-        addCardFriend($_POST['myName'],$_POST['friendName']);
+        $model->sendInvitation($_POST['myName'],$_POST['friendName']);
     }
 }
 
