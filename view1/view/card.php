@@ -107,6 +107,7 @@ $clubs = '跆拳道社';
                                             background-color: #2975d8;
                                             border: 2px solid;
                                             border-color: #2975d8;
+                                            border-radius:10px;
                                             color: #fff;
                                             font-size: 13px;
                                             font-weight: 700;
@@ -116,7 +117,7 @@ $clubs = '跆拳道社';
                                             text-align: center;
                                             text-transform: uppercase;
                                             width: 120px;
-                                            height: 40px;">送出交友邀請
+                                            height: 40px;" onclick="show_alert()">送出交友邀請
                                         </button>
                                     </div>
                                     </form>
