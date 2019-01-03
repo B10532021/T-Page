@@ -22,7 +22,7 @@
                     >
                         <label>信箱 *</label>
                         <input
-                                type="text"
+                                type="email"
                                 name="email"
                                 required
                         />
@@ -30,7 +30,7 @@
                     <div
                             class="form-group"
                     >
-                        <label>密碼(至少六碼) *</label>
+                        <label>密碼 *</label>
                         <input
                                 type="password"
                                 name="password"
@@ -71,21 +71,28 @@
                     <div
                             class="form-group"
                     >
-                        <label>興趣 *</label>
+                        <label>興趣 </label>
                         <input
                                 type="text"
                                 name="intersets"
-                                required
                         />
                     </div>
                     <div
                             class="form-group"
                     >
-                        <label>社團 *</label>
+                        <label>社團 </label>
                         <input
                                 type="text"
                                 name="club"
-                                required
+                        />
+                    </div>
+                    <div
+                            class="form-group"
+                    >
+                        <label>家族 </label>
+                        <input
+                                type="text"
+                                name="family"
                         />
                     </div>
                     <div class="form-check">

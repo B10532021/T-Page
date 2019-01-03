@@ -94,5 +94,49 @@
     </div>
 </div>
 
+<section class="blog_page_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <h3>已發表的文章</h3>
+                <?php
+                $i = 0;
+                foreach ($articles as $article) {
+                    ?>
+                    <div class="single_blog_in_page">
+                        <div class="blog_date_in_page">
+                            <h2>_ <span><?php if($article[4] != null){
+                                        echo $article[4][8].$article[4][9];
+                                    }
+                                    ?>
+                                    </span></h2>
+                            <p><?php if($article[4] != null){
+                                    echo $article[4][0].$article[4][1].$article[4][2].$article[4][3].$article[4][4].$article[4][5].$article[4][6].$article[4][7];
+                                }
+                                ?>
+                        </div>
+                        <div class="blog_text_in_page">
+                            <a href="../?page=articles&board=<?php echo $article[1] ?>&title=<?php echo $i ?>" style="display: inline-block"><h3><?php echo $article[0] ?></h3></a>
+                            <img src="../images/close.png" style="display: inline-block padding-left:30px text-align:center ;">
+                            <h4>By <span><?php echo $article[2] ?></span></h4>
+                            <div class="read_more">
+                                <a class="read_more_blog"
+                                   href="index.php?page=article&board=<?php echo $article[1] ?>&title=<?php echo $i ?>">Read
+                                    more</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <?php
+                    $i++;
+                }
+                ?>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
 

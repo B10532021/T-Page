@@ -5,7 +5,13 @@
         <div class="col-md-offset-2 col-sm-offset-2 col-md-8 col-sm-8 col-xs-12">
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <img style="width:80%; height: 80%; overflow:scroll;"
-                     src="../images/tzuyu.jpg"
+                     src="<?php
+                     if(file_exists("images/{$friend[0]}.jpg")){
+                         echo "../images/{$friend[0]}.jpg";
+                     }
+                     else{
+                         echo "../images/comment1.png";
+                     }?> "
                 />
             </div>
 
@@ -16,6 +22,7 @@
                         <input
                                 type="text"
                                 name="name"
+                                value="<?php echo $friend[0] ?>"
                                 readonly
                         />
                     </div>
@@ -24,7 +31,7 @@
                         <input
                                 type="text"
                                 name="school"
-                                value="國立台灣科技大學企管系"
+                                value="<?php echo $friend[3] ?>"
                                 readonly
                         />
                     </div>
@@ -33,7 +40,7 @@
                         <input
                                 type="text"
                                 name="sex"
-                                value="男"
+                                value="<?php echo $friend[4] ?>"
                                 readonly
                         />
                     </div>
@@ -42,25 +49,25 @@
                         <input
                                 type="date"
                                 name="birth"
-                                value="1998-01-01"
+                                value="<?php echo $friend[5] ?>"
                                 readonly
                         />
                     </div>
                     <div class="form-group">
-                        <p><label>interest</label></p>
+                        <p><label>interests</label></p>
                         <input
                                 type="text"
-                                name="interest"
-                                value="打撞球、讀小說、聽音樂"
+                                name="interests"
+                                value="<?php echo $friend[6] ?>"
                                 readonly
                         />
                     </div>
                     <div class="form-group">
-                        <p><label>Society</label></p>
+                        <p><label>clubs</label></p>
                         <input
                                 type="text"
-                                name="Society"
-                                value="跆拳道社"
+                                name="clubs"
+                                value="<?php echo $friend[7] ?>"
                                 readonly
                         />
                     </div>
@@ -68,7 +75,7 @@
                 <div class="col-md-offset-5 col-md-3 col-sm-offset-2">
                     <div class="submit_btn form-group" >
                         <!-- TODO:驗證表單再重新導向 -->
-                        <input type="submit" value="send invitation"/>
+                        <input type="submit" value="send invitation" name="card"/>
                     </div>
                 </div>
 

@@ -1,4 +1,4 @@
-<?php session_start();?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <!--[if lt IE 7 ]>
@@ -74,42 +74,41 @@ $model = new Model_SQL();
 $page = "view/index.php";
 $title = "HOME PAGE";
 
-if(isset($_GET["page"])) {
-    if($_GET["page"] == "articles") {
+if (isset($_GET["page"])) {
+    if ($_GET["page"] == "articles") {
         $page = "view/articles.php";
     }
-    if($_GET["page"] == "card") {
+    if ($_GET["page"] == "card") {
         $page = "view/card.php";
+        $friend = $model->randomUser()[0];
     }
-    if($_GET["page"] == "profile") {
+    if ($_GET["page"] == "profile") {
         $page = "view/profile.php";
         $user = $model->searchUser($_SESSION["user"])[0];
         $articles = $model->searchAuthor($_SESSION["user"]);
     }
-    if($_GET["page"] == "article") {
+    if ($_GET["page"] == "article") {
         $page = "view/article.php";
     }
-    if($_GET["page"] == "add") {
+    if ($_GET["page"] == "add") {
         $page = "view/add_article.php";
     }
-    if($_GET["page"] == "register") {
-        if(isset($_SESSION["user"])){
+    if ($_GET["page"] == "register") {
+        if (isset($_SESSION["user"])) {
             echo "<script>location.href='../#'</script>";
-        }
-        else{
+        } else {
             $page = "view/register.php";
         }
 
     }
-    if($_GET["page"] == "login") {
-        if(isset($_SESSION["user"])){
+    if ($_GET["page"] == "login") {
+        if (isset($_SESSION["user"])) {
             echo "<script>location.href='../#'</script>";
-        }
-        else{
+        } else {
             $page = "view/login.php";
         }
     }
-    if($_GET["page"] == "logout") {
+    if ($_GET["page"] == "logout") {
         unset($_SESSION["user"]);
         echo "<script>location.href='../#'</script>";
     }
@@ -136,90 +135,116 @@ if (isset($_FILES["file"]["name"])) {
     $name = $_FILES["file"]["name"];
     $tmp_name = $_FILES['file']['tmp_name'];
     $error = $_FILES['file']['error'];
+    $imageFileType = strtolower(pathinfo("uploads/" . basename($_FILES["file"]["name"]), PATHINFO_EXTENSION));
+    // Allow certain file formats
+    if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+        && $imageFileType != "gif") {
+        echo "<script>alert(\"Sorry, only JPG, JPEG, PNG & GIF files are allowed.\")</script>";
+        echo "<script>location.href='../?page=profile'</script>";
 
+
+    }
     if (!empty($name)) {
         $location = 'images/';
-        if  (move_uploaded_file($tmp_name, $location.$_SESSION["user"].".jpg")){
-            echo "<meta http-equiv='refresh' content='0'>";
+        if (file_exists($location . $_SESSION["user"] . ".jpg")) {
+            unlink($location . $_SESSION["user"] . ".jpg");
+        }
+        if (move_uploaded_file($tmp_name, $location . $_SESSION["user"] . ".jpg")) {
+            echo "<script>location.href='../?page=profile'</script>";
+
         }
     } else {
         echo 'please choose a file';
     }
-    echo "<meta http-equiv='refresh' content='0'>";
+    echo "<script>location.href='../?page=profile'</script>";
+
 }
 
 //註冊
-if(isset($_POST["register"])){
-        $birth = "";
-        $interests="";
-        $clubs="";
-        $family="";
-        if(isset($_POST["birth"])){
-            $birth = $_POST["birth"];
-        }
-        if(isset($_POST["interests"])){
-            $interests = $_POST["interests"];
-        }
-        if(isset($_POST["clubs"])){
-            $clubs = $_POST["clubs"];
-        }
-        if(isset($_POST["family"])){
-            $family = $_POST["family"];
-        }
-
-        $model->register($_POST["name"], $_POST["email"], $_POST["password"], $_POST["school"], $_POST["gender"], $birth, $interests, $clubs, $family);
-
-        $_SESSION["user"] = $_POST["name"];
+if (isset($_POST["register"])) {
+    $birth = "";
+    $interests = "";
+    $clubs = "";
+    $family = "";
+    if (isset($_POST["birth"])) {
+        $birth = $_POST["birth"];
     }
+    if (isset($_POST["interests"])) {
+        $interests = $_POST["interests"];
+    }
+    if (isset($_POST["clubs"])) {
+        $clubs = $_POST["clubs"];
+    }
+    if (isset($_POST["family"])) {
+        $family = $_POST["family"];
+    }
+
+    $model->register($_POST["name"], $_POST["email"], $_POST["password"], $_POST["school"], $_POST["gender"], $birth,
+        $interests, $clubs, $family);
+
+    $_SESSION["user"] = $_POST["name"];
+}
 
 //login
-if(isset($_POST["login"])){
-    if($model->login($_POST["name"], $_POST["password"])){
+if (isset($_POST["login"])) {
+    if ($model->login($_POST["name"], $_POST["password"])) {
         $_SESSION["user"] = $_POST["name"];
         $user = $model->searchUser($_POST["name"]);
-        $page="view/index.php";
-    }
-    else {
+        $page = "view/index.php";
+    } else {
         echo "<script>alert('帳號或密碼錯誤')</script>";
-        echo "<meta http-equiv='refresh' content='0'>";
+        echo "<script>location.href='../?page=login'</script>";
+
     }
 }
 
 //修改資料
-if(isset($_POST["profile"])){
-    $interests="";
-    $clubs="";
-    $family="";
-    if(isset($_POST["interests"])){
+if (isset($_POST["profile"])) {
+    $user = $model->searchUser($_SESSION["user"])[0];
+    $interests = "";
+    $clubs = "";
+    $family = "";
+    if (isset($_POST["interests"])) {
         $interests = $_POST["interests"];
     }
-    if(isset($_POST["clubs"])){
+    if (isset($_POST["clubs"])) {
         $clubs = $_POST["clubs"];
     }
-    if(isset($_POST["family"])){
+    if (isset($_POST["family"])) {
         $family = $_POST["family"];
     }
 
     $model->register($user[0], $user[1], $user[2], $user[3], $user[4], $user[5], $interests, $clubs, $family);
+    echo "<script>location.href='../?page=profile'</script>";
 
 }
 
 //add_article
-if(isset($_POST["add_article"])){
-    $model->addArticle($_POST["title2"], $_POST["board"], $_SESSION["user"], $_POST["context"]);
-    echo "<script>location.href='../?page=articles&board={$_POST["board"]}'</script>";
-}
-
-//message
-if(isset($_POST["message"])){
-    if(isset($_SESSION["user"])) {
-        $model->addMessage($_SESSION["user"], $_POST["message"], $_POST["title1"]);
-        echo "<meta http-equiv='refresh' content='0'>";
-    }
-    else{
+if (isset($_POST["add_article"])) {
+    if (isset($_SESSION['user'])) {
+        $model->addArticle($_POST["title2"], $_POST["board"], $_SESSION["user"], $_POST["context"]);
+        echo "<script>location.href='../?page=articles&board={$_POST["board"]}'</script>";
+    } else {
         echo "<script>alert('請先登入')</script>";
         echo "<script>location.href='../?page=login'</script>";
     }
+}
+
+//message
+if (isset($_POST["message"])) {
+    if (isset($_SESSION["user"])) {
+        $model->addMessage($_SESSION["user"], $_POST["message"], $_POST["title1"]);
+        echo "<script>location.href='../?page=articles&board={$_POST['board1']}&title={$_POST['title1']}'</script>";
+    } else {
+        echo "<script>alert('請先登入')</script>";
+        echo "<script>location.href='../?page=login'</script>";
+    }
+}
+
+//card
+if (isset($_POST["card"])) {
+    $model->sendInvitation($_SESSION["user"], $_POST["name"]);
+    echo "<script>location.href='../?page=card'</script>";
 }
 
 $boards = $model->lookUpBoard();

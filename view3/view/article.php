@@ -14,7 +14,7 @@
                     </div>
                     <div class="blog_text_in_page">
                         <h3><?php echo $article[0] ?></h3>
-                        <h4>By <span><?php echo $article[2] ?></span>, comments <span>23</span></h4>
+                        <h4>By <span><?php echo $article[2] ?></span>, likes <span><?php echo $article[5] ?></span>, dislikes <span><?php echo $article[6] ?></span></h4>
                     </div>
                     <div class="blog_detail_in_page">
                         <p><?php echo $article[3] ?></p>
@@ -32,14 +32,20 @@
                     </div>
                 </div>
                 <div class="comments">
-                    <h2>Comments(3)</h2>
+                    <h2>Comments</h2>
                     <div class="multi_line"></div>
                     <div class="single_comment">
                         <?php
                         foreach ($messages as $message) {
                             ?>
                             <div class="comment_img">
-                                <img src="images/comment1.png" alt=""/>
+                                <img src="<?php
+                                if(file_exists("images/{$message[0]}.jpg")){
+                                    echo "../images/{$message[0]}.jpg";
+                                }
+                                else{
+                                    echo "../images/comment1.png";
+                                }?> " alt=""/>
                             </div>
                             <div class="comment_text">
                                 <div class="comment_name">
@@ -65,6 +71,7 @@
                         <div class="right_input">
                             <p>Comments</p>
                             <input type="text" name="title1" style="display: none" value="<?php echo $article[0]?>">
+                            <input type="text" name="board1" style="display: none" value="<?php echo $article[1]?>">
                             <textarea name="message" cols="30" rows="10"></textarea>
                             <input type="submit" value="post comment" name="message"/>
                         </div>
