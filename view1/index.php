@@ -108,6 +108,18 @@ if(isset($_POST["newArticle"])) {
     $model->addMoney($user[0], $user[9]);
     $page = "view/articles.php";
     echo "<meta http-equiv='refresh' content='0'>";
+
+}
+
+//按讚
+if(isset($_POST["like"])) {
+    $model->addLike($_POST["title"], $_POST["like"]);
+    echo "<meta http-equiv='refresh' content='0'>";
+}
+
+if(isset($_POST["dislike"])) {
+    $model->addDislike($_POST["title"], $_POST["dislike"]);
+    echo "<meta http-equiv='refresh' content='0'>";
 }
 
 

@@ -25,8 +25,22 @@ $comment = '真感動';
             </div>
         </div>
         <div style="padding-top: 20px;padding-left: 50px;">
-            <img src="../img/like.png" style="padding-left: 5px;" width="3%">：<?php echo $article[5]?>
-            <img src="../img/dislike.png" style="padding-left: 5px;" width="3%">：<?php echo $article[6]?>
+            <form method="post" accept-charset="utf-8">
+                <input name="title" style="display: none" value="<?php echo $article[0] ?>">
+                <input name="like" style="display: none" value="<?php echo $article[5] ?>">
+                <input type="image" src="../img/like.png"
+                       style="padding-left: 5px;"
+                       width="3%"
+                       alt="Submit">：<?php echo $article[5] ?>
+            </form>
+            <form method="post" accept-charset="utf-8">
+                <input name="title" style="display: none" value="<?php echo $article[0] ?>">
+                <input name="dislike" style="display: none" value="<?php echo $article[6] ?>">
+                <input type="image" src="../img/dislike.png"
+                       style="padding-left: 5px;"
+                       width="3%"
+                       alt="Submit">：<?php echo $article[6] ?>
+            </form>
         </div>
         <div style="padding-top: 50px">
             <h4>留言板</h4>
