@@ -413,6 +413,7 @@ form.registed strong {
 }
 
 form.registed input[type='password'],
+form.registed input[type='text'],
 form.registed input[type='email'] {
     display: inline-block;
     width: 255px;
@@ -465,6 +466,7 @@ form.registed a.forgot {
      * Login page *
      **************/
 form.registed input[type='password'],
+form.registed input[type='text'],
 form.registed input[type='email'] {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -619,6 +621,7 @@ input[type='submit']:hover {
 
 /*** Input **/
 input[type='email'],
+input[type='text'],
 input[type='password'] {
     height: 33px;
     padding: 0 10px;
@@ -630,6 +633,7 @@ input[type='password'] {
 }
 
 input[type='email']:focus,
+input[type='text']:focus,
 input[type='password']:focus,
 textarea:focus {
     outline: none;

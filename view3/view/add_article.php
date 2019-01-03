@@ -9,14 +9,14 @@
                 <h2 class="t_center">新增文章</h2>
 
                 <div class="p_form">
-                    <form #form="ngForm">
+                    <form action="../index.php" method="post">
                         <div class="form-group">
                             <label for="board">board</label>
-                            <input type="text" name="board" required>
+                            <input type="text" name="board" value="<?php echo $board ?>" readonly>
                         </div>
                         <div class="form-group">
                             <label for="title">Title</label>
-                            <input type="text" name="title" required>
+                            <input type="text" name="title2" required>
                         </div>
                         <div class="s_order form-group">
                             <label for="br">context</label>
@@ -26,7 +26,7 @@
                         <div class="line"></div>
 
                         <div class="submit_btn form-group">
-                            <input type="submit" value="submit">
+                            <input type="submit" value="submit" name="add_article">
                         </div>
                     </form>
                 </div>

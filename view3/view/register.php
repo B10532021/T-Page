@@ -6,7 +6,7 @@
             <div class="col-md-offset-2 col-md-4 col-sm-6 col-xs-12">
                 <h3 class="register-header">註冊</h3>
 
-                <form  #form="ngForm">
+                <form method="post" action="../index.php">
                     <div
                             class="form-group"
                     >
@@ -30,15 +30,6 @@
                     <div
                             class="form-group"
                     >
-                        <label>手機號碼 </label>
-                        <input
-                                type="text"
-                                name="phone"
-                        />
-                    </div>
-                    <div
-                            class="form-group"
-                    >
                         <label>密碼(至少六碼) *</label>
                         <input
                                 type="password"
@@ -46,17 +37,57 @@
                                 required
                         />
                     </div>
+
                     <div
                             class="form-group"
                     >
-                        <label>確認密碼 *</label>
+                        <label>學校 *</label>
                         <input
-                                type="password"
-                                name="password_confirm"
+                                type="text"
+                                name="school"
                                 required
                         />
                     </div>
-
+                    <div
+                            class="form-group"
+                    >
+                        <label>性別 *</label>
+                        <input
+                                type="text"
+                                name="gender"
+                                required
+                        />
+                    </div>
+                    <div
+                            class="form-group"
+                    >
+                        <label>生日 *</label>
+                        <input
+                                type="text"
+                                name="birth"
+                                required
+                        />
+                    </div>
+                    <div
+                            class="form-group"
+                    >
+                        <label>興趣 *</label>
+                        <input
+                                type="text"
+                                name="intersets"
+                                required
+                        />
+                    </div>
+                    <div
+                            class="form-group"
+                    >
+                        <label>社團 *</label>
+                        <input
+                                type="text"
+                                name="club"
+                                required
+                        />
+                    </div>
                     <div class="form-check">
                         <label>
                             <input
@@ -105,7 +136,7 @@
                                                 style="position: relative;"
                                         >
                                             <p>
-                                                非常歡迎您光臨「口責口責木不」（以下簡稱本網站），為了讓您能夠安心的使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：
+                                                非常歡迎您光臨「T-Page」（以下簡稱本網站），為了讓您能夠安心的使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：
                                             </p>
                                             <h3 id="一、隱私權保護政策的適用範圍">
                                                 <a
@@ -375,10 +406,43 @@
                         </div>
                     </div>
                     <div class="submit_btn form-group">
-                        <input type="submit" value="註冊"/>
+                        <input name="register" type="submit" value="註冊"/>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </section>
+
+
+<!-- JS Files -->
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script>
+    $(function() {
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 150,
+            max: 1500,
+            values: [ 520, 1100 ],
+            slide: function( event, ui ) {
+                $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            }
+        });
+        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+            " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    });
+</script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="js/jquery.elevatezoom.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+<script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="js/rs-plugin/rs.home.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--Opacity & Other IE fix for older browser-->
+<!--[if lte IE 8]>
+<script type="text/javascript" src="js/ie-opacity-polyfill.js"></script>
+<![endif]-->
+<script src="js/main.js"></script>

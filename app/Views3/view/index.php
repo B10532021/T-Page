@@ -4,7 +4,7 @@
         <div class="fullwidthbanner">
             <ul>
                 <li data-transition="random" data-slotamount="7" data-masterspeed="1000">
-                    <img src="../images/slider-temp.jpg" alt="slide">
+                    <img src="../images/ad1.jpg" alt="slide">
 
                     <div class="tp-caption large_black sfr" data-x="120" data-y="140" data-speed="1100"
                          data-start="1100" data-easing="easeInOutBack"

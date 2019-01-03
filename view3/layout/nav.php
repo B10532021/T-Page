@@ -45,91 +45,24 @@
             <nav class="mainmenu">
                 <ul id="nav">
                     <li><a href="../#">Home</a>
-                        <!--                    <li class="current-page-item"><a href="../#">Home</a>-->
-                        <!--                        <ul id="sub-menu4">-->
-                        <!--                            <li><a href="index-2.html">Home Version Two</a></li>-->
-                        <!--                        </ul>-->
                     </li>
                     <li><a>board</a>
                         <ul id="sub-menu7">
-                            <li><a href="../product-detail.html">Product Detail Page</a></li>
+                            <?php
+                            $i=0;
+                            foreach ($boards as $singleBoard) {
+                                ?>
+                                <li><a href="../?page=articles&board=<?php echo $singleBoard[0]?>"><?php echo $singleBoard[0]?></a></li>
+                                <?php
+                                $i++;
+                            }
+                            ?>
                         </ul>
                     </li>
-                    <li><a href="../category-1.html">accessories</a>
-                        <ul id="sub-menu">
-                            <li><a href="">check shirts</a></li>
-                            <li><a href="">denim shirts</a></li>
-                            <li><a href="">long sleeve shirts</a></li>
-                            <li><a href="">plain shirts</a></li>
-                            <li><a href="">printed shirts</a></li>
-                            <li><a href="">short sleeve shirts</a></li>
-                            <li class="last-child"><a href="">shortsleeve denim shirts</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">pages</a>
-                        <ul id="sub-menu5">
-                            <li><a href="../category-1.html">Shop Page With Filter</a></li>
-                            <li><a href="../category-2.html">Shop Page Without Filter</a></li>
-                            <li><a href="../checkout.html">Checkout page</a></li>
-                            <li><a href="../cart.html">Cart page</a></li>
-                            <li><a href="../single-blog.html">Blog single</a></li>
-                            <li><a href="../contact.html">Contact page</a></li>
-                            <li><a href="../404.html">404 page</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../?page=card">Card</a></li>
                 </ul>
             </nav>
         </div>
-        <!--        <div class="nav_right floatright">-->
-        <!--            <a href="cart.html"><img src="images/bag.png" alt="Bag"/>cart: 2 items</a>-->
-        <!--            <div class="cart_menu">-->
-        <!--                <div class="cart_items">-->
-        <!--                    <div class="c_item_img floatleft">-->
-        <!--                        <a href="product-detail.html"><img src="images/c_item1.jpg" alt=""/></a>-->
-        <!--                    </div>-->
-        <!--                    <div class="c_item_totals floatleft">-->
-        <!--                        <div class="c_item_totals_detail floatleft">-->
-        <!--                            <a href="product-detail.html"><h5>men’s fashion blue jean coat</h5></a>-->
-        <!--                            <span>2 x $ 130.00</span>-->
-        <!--                        </div>-->
-        <!--                        <div class="close_icon_cart floatleft">-->
-        <!--                            <img src="images/close.png" alt=""/>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--                <div class="cart_items">-->
-        <!--                    <div class="c_item_img floatleft">-->
-        <!--                        <a href="product-detail.html"><img src="images/c_item2.jpg" alt=""/></a>-->
-        <!--                    </div>-->
-        <!--                    <div class="c_item_totals floatleft">-->
-        <!--                        <div class="c_item_totals_detail floatleft">-->
-        <!--                            <a href="product-detail.html"><h5>men’s fashion blue jean coat</h5></a>-->
-        <!--                            <span>2 x $ 130.00</span>-->
-        <!--                        </div>-->
-        <!--                        <div class="close_icon_cart floatleft">-->
-        <!--                            <img src="images/close.png" alt=""/>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--                <div class="cart_totals">-->
-        <!--                    <div class="c_totals_left floatleft">-->
-        <!--                        <p>Free shipping</p>-->
-        <!--                    </div>-->
-        <!--                    <div class="c_totals_right floatleft">-->
-        <!--                        <p>total $350</p>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--                <div class="cart_view_bottom">-->
-        <!--                    <div class="c_totals_left floatleft">-->
-        <!--                        <a href="cart.html">View Cart</a>-->
-        <!--                    </div>-->
-        <!--                    <div class="c_totals_right floatleft">-->
-        <!--                        <a href="checkout.html">Check Out</a>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
 
 
         <!-- MOBILE ONLY CONTENT -->
@@ -142,12 +75,8 @@
             <div class="mobi-menu">
                 <div id='cssmenu'>
                     <ul>
-                        <li class='has-sub'>
+                        <li>
                             <a href='../index.php'><span>Home</span></a>
-                            <ul class="sub-nav">
-                                <li><a href="../index.php"><span>Home 1</span></a></li>
-                                <li><a href="index-2.html"><span>Home 2</span></a></li>
-                            </ul>
                         </li>
 
                         <li class='has-sub'>

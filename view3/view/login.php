@@ -25,31 +25,29 @@
                         註冊帳號您將能夠贊助募資團隊，或是發起一場募資。
                     </p>
                     <div class="clear"></div>
+                    <a href="../?page=register" style="text-decoration:none;">
                     <button
                             class="account"
-                            [routerLink]="['/', 'register']"
-                            routerLinkActive="active"
                     >
                         註冊一個帳號
                     </button>
+                    </a>
                 </div>
                 <!-- .grid_6 -->
 
                 <div class="grid_6 registedBlock">
-                    <form class="registed" #form="ngForm">
+                    <form class="registed" action="../index.php" method="post">
                         <h2>已註冊會員</h2>
 
                         <p>如果您已經有帳號了，請登入</p>
 
                         <div class="email">
-                            <strong>email :</strong
+                            <strong>name :</strong
                             ><sup class="surely">*</sup><br/>
                             <input
-                                    type="email"
-                                    [(ngModel)]="user.email"
-                                    #f1="ngModel"
-                                    name="email"
-                                    placeholder="E-mail"
+                                    type="text"
+                                    name="name"
+                                    placeholder="Name"
                                     required
                             />
                         </div>
@@ -60,8 +58,6 @@
                             ><sup class="surely">*</sup><br/>
                             <input
                                     type="password"
-                                    [(ngModel)]="user.password"
-                                    #f2="ngModel"
                                     name="password"
                                     placeholder="密碼"
                                     required
@@ -69,8 +65,6 @@
                             <a
                                     class="forgot"
                                     href="#"
-                                    [routerLink]="['/', 'retrievePassword']"
-                                    routerLinkActive="active"
                             >
                                 忘記密碼?</a
                             >
@@ -82,14 +76,13 @@
                                     class="niceCheck"
                                     type="checkbox"
                                     name="Remember_password"
-                                    [(ngModel)]="user.remember"
                             />
                             <span class="rem">記得密碼</span>
                         </div>
                         <!-- .remember -->
 
                         <div class="submit">
-                            <input (click)="login(user)" type="submit" value="登入"/>
+                            <input name="login" type="submit" value="登入"/>
                             <sup class="surely">*</sup
                             ><span>必須欄位</span>
                         </div>

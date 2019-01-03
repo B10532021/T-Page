@@ -1,7 +1,7 @@
 {
     
     "require": {
-        
+        "nesbot/carbon": "^2.9"
     },
     "autoload": {
         "psr-4": {

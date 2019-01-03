@@ -9,22 +9,23 @@
             </div>
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="header_top_right floatright">
-                    <p><a href="index.php?page=login">login</a> / <a href="index.php?page=register">register</a></p>
-                    <!--<nav class="currency alignleft">-->
-                    <!--<ul>-->
-                    <!--<li><a href="">USD</a>-->
-                    <!--<ul class="currency-dropdown">-->
-                    <!--<li><a href="">EUR</a></li>-->
-                    <!--<li><a href="">GBP</a></li>-->
-                    <!--<li><a href="">CAD</a></li>-->
-                    <!--<li><a href="">AUD</a></li>-->
-                    <!--</ul>-->
-                    <!--</li>-->
-                    <!--</ul>-->
-                    <!--</nav>-->
-                    <!--<div class="top-flag alignleft">-->
-                    <!--<img src="images/flag.png" alt="Flags" />-->
-                    <!--</div>-->
+                    <?php if (!isset($_SESSION['user'])) { ?>
+                        <p>
+                            <a href="index.php?page=login">login</a>
+                            /
+                            <a href="index.php?page=register">register</a>
+                        </p>
+                    <?php } else { ?>
+                        <p>
+                            <a href="../?page=logout">
+                                logout
+                            </a>
+                            /
+                            <a href="../?page=profile">
+                                profile
+                            </a>
+                        </p>
+                    <?php } ?>
                 </div>
             </div>
         </div>
