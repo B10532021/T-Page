@@ -9,10 +9,10 @@
                     <header>
                         <h2>登入</h2>
                     </header>
-                    <form>
-                        <p>信箱 : <input type="email" placeholder="信箱"></p>
-                        <p>密碼 : <input type="password" placeholder="密碼"></p>
-                        <p><input type="submit" class="button" value="登入" onclick=""></p>
+                    <form method="post" action="../index.php">
+                        <p>名字 : <input type="texr" name="name" placeholder="名字"></p>
+                        <p>密碼 : <input type="password" name="password" placeholder="密碼"></p>
+                        <p><input type="submit" class="button" value="登入"></p>
                     </form>
                 </section>
             </div>

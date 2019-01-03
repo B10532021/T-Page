@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php
 
 include "../model/Model_SQL.php";
@@ -11,8 +12,8 @@ $title = "Card_Friend";
 $articleTitle="1";
 $article;
 $messages=array();
-$userArticles;
 $board=1;
+
 
 if(isset($_GET["page"])) {
     if($_GET["page"] == "article") {
@@ -36,6 +37,14 @@ if(isset($_GET["page"])) {
     if($_GET["page"] == "login") {
         $page = "view/login.php";
     }
+    if($_GET["page"] == "joinFamily") {
+        $page = "view/joinFamily.php";
+    }
+    if($_GET["page"] == "family") {
+        $page = "view/family.php";
+        $family=$model->searchFamily($_SESSION['user'][8]);
+    }
+
 }
 
 if(isset($_GET["board"])) {
@@ -53,6 +62,7 @@ if(isset($_GET["board"])) {
     }
 }
 
+//轉到文章頁面
 if(isset($_GET["articleTitle"])) {
 
     $articleTitle=$_GET["articleTitle"];
@@ -62,19 +72,53 @@ if(isset($_GET["articleTitle"])) {
 
 }
 
+//發留言
 if(isset($_POST["newMessage"]))
 {
     $model->addMessage("王小明",$_POST["newMessage"],$_POST["title"]);
 }
 
+//發文
 if(isset($_POST["newArticle"]))
 {
-    $model->addArticle($_POST["title"],$_POST["board"],"王小明",$_POST["newArticle"]);
+    $model->addArticle($_POST["title"],$_POST["board"],$_SESSION['user'][0],$_POST["newArticle"]);
+}
+
+//註冊
+if(isset($_POST["email"]) and isset($_POST['password'])) {
+    $model->register($_POST["name"], $_POST["email"], $_POST["password"], $_POST["school"],
+        $_POST["gender"],$_POST["birth"],$_POST["interests"],$_POST["clubs"]);
 }
 
 
-$user=$model->searchUser("王小明")[0];
+//登入
+if(isset($_POST["name"]) and isset($_POST['password'])) {
+    if($model->login($_POST["name"],$_POST["password"]))
+    {
+        $_SESSION['user'] = $model->searchUser($_POST["name"])[0];
+
+    }
+}
+
+//加家族
+if(isset($_POST["family"])) {
+    $model->addFamily($_SESSION['user'][0],$_POST["family"]);
+}
+
+
+function logout()
+{
+    unset($_SESSION['user']);
+}
+
+if(isset($_POST['action']))
+{
+    logout();
+}
+
 $articles=$model->searchBoard("ECE".$board);
+
+
 
 include("layouts/header.php");
 

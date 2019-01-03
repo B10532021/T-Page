@@ -1,5 +1,6 @@
 <?php
-$userArticles=$model->searchAuthor("王小明");
+$userArticles=$model->searchAuthor($_SESSION['user'][0]);
+$_SESSION['user'] = $model->searchUser($_SESSION['user'][0])[0];
 ?>
 <!-- Main -->
 <div id="main">
@@ -13,11 +14,11 @@ $userArticles=$model->searchAuthor("王小明");
                         <img src="../images/angel.jpg" style="width: 100%;height: 100%;">
                     </header>
                     <ul class="default">
-                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;"><?php echo $user[0]?></li>
-                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;"><?php echo $user[3]."<br>"?></li>
-                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">性別: <?php echo $user[4]?></li>
-                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">生日: <?php echo $user[5]?></li>
-                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">家族: <?php echo $user[8]?></li>
+                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;"><?php echo $_SESSION['user'][0]?></li>
+                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;"><?php echo $_SESSION['user'][3]."<br>"?></li>
+                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">性別: <?php echo $_SESSION['user'][4]?></li>
+                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">生日: <?php echo $_SESSION['user'][5]?></li>
+                        <li style="background-color: papayawhip;padding-left: 30%;margin-top: 10px;">家族: <?php echo $_SESSION['user'][8]?></li>
                     </ul>
                 </section>
             </div>
@@ -26,10 +27,6 @@ $userArticles=$model->searchAuthor("王小明");
             <!-- Content -->
             <div id="content" class="6u skel-cell-important">
                 <section>
-                    <header>
-                        <h2>狀態: 今天天氣真好</h2>
-                    </header>
-
 
                     <?php
 
@@ -47,7 +44,7 @@ $userArticles=$model->searchAuthor("王小明");
                                     ?>
                                     <div class='6u'>
                                         <section>
-                                            <p><?php echo$articles[$i*2+$j][0]?></p>
+                                            <p><?php echo$userArticles[$i*2+$j][0]?></p>
                                             <a href="../index.php?page=article&articleTitle=<?php echo $articles[$i*2+$j][0]?>" class='button'>Read More</a>
                                         </section>
                                     </div>
@@ -56,13 +53,13 @@ $userArticles=$model->searchAuthor("王小明");
                             }
                             else
                             {
-                                for($j=0;$j<sizeof($articles)%2;$j++)
+                                for($j=0;$j<sizeof($userArticles)%2;$j++)
                                 {
 
                                     ?>
                                     <div class='6u'>
                                         <section>
-                                            <p><?php echo$articles[$i*2+$j][0]?></p>
+                                            <p><?php echo$userArticles[$i*2+$j][0]?></p>
                                             <a href="../index.php?page=article&articleTitle=<?php echo $articles[$i*2+$j][0]?>" class='button'>Read More</a>
                                         </section>
                                     </div>
@@ -83,7 +80,7 @@ $userArticles=$model->searchAuthor("王小明");
             <!-- /Content -->
 
             <!-- Sidebar -->
-            <div id="sidebar" class="3u">
+            <div style="float: right;" id="sidebar" class="3u">
                 <section>
                    <a href="https://store.playstation.com/zh-hant-tw/grid/STORE-MSF86012-HS_GAME_ASIA/1?emcid=tw-cht_ad_holiday_bahamut">
                        <img src="../images/ad.jpg">

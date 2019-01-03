@@ -23,6 +23,26 @@
     </noscript>
     <!--[if lte IE 8]><link rel="stylesheet" href="../css/ie/v8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="../css/ie/v9.css" /><![endif]-->
+
+
+<!--    ajax    -->
+    <script type="text/javascript" language="javascript" src="jquery.js"></script>
+    <script type="text/javascript" language="javascript">
+        function logout() {
+            $.ajax({
+                url:"index.php", 			//the page containing php script
+                type: "POST", 				//request type
+                data:{action: "logout"},
+                success:function(){
+                    alert("已登出")
+                }
+            });
+        }
+    </script>
+    <!--    ajax    -->
+
+
+
 </head>
 <body class="homepage">
 
@@ -34,6 +54,12 @@
         <div id="logo">
             <h1><a href="#">T-Page</a></h1>
         </div>
+        <?php
+        if(isset($_SESSION['user']))
+        {
+            $_SESSION['user'] = $model->searchUser($_SESSION['user'][0])[0];
+        }
+        ?>
 
 
         <nav id="nav">
@@ -42,10 +68,35 @@
                 <li><a href="../index.php?page=articles&board=2">四電資二</a></li>
                 <li><a href="../index.php?page=articles&board=3">四電資三</a></li>
                 <li><a href="../index.php?page=articles&board=4">四電資四</a></li>
-                <li><a href="../index.php?page=card">抽卡</a></li>
-                <li><a href="../index.php?page=profile">個人頁面</a></li>
-                <li><a href="../index.php?page=register">註冊</a></li>
-                <li><a href="../index.php?page=login">登入</a></li>
+                <?php
+                if(!isset($_SESSION['user'])) {
+                    ?>
+                    <li><a href="../index.php?page=register">註冊</a></li>
+                    <li><a href="../index.php?page=login">登入</a></li>
+                    <?php
+                }
+                else {
+                    ?>
+                    <li><a href="../index.php?page=card">抽卡</a></li>
+                    <li><a href="../index.php?page=profile">個人頁面</a></li>
+                    <?php
+                    if($_SESSION['user'][8])
+                    {
+                    ?>
+                    <li><a href="../index.php?page=family">家族</a></li>
+                    <?php
+                    }
+                    else
+                    {
+                    ?>
+                        <li><a href="../index.php?page=joinFamily">加入家族</a></li>
+                        <?php
+                    }
+                        ?>
+                    <li><a href="../index.php?page=login" onclick="logout()">登出</a></li>
+                    <?php
+                }
+                ?>
             </ul>
         </nav>
 

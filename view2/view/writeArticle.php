@@ -16,7 +16,7 @@
 
                         <input type="text" name="title" placeholder="標題" style="width: 100%;">
                         <textarea name="newArticle" placeholder="發文..." style="width: 100%;"></textarea>
-                        <a href="profile.php"><button class="button" type="submit" onclick="">發文</button></a>
+                        <a href="profile.php"><button class="button" type="submit">發文</button></a>
                     </form>
                 </section>
             </div>
