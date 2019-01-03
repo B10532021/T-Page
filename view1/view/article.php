@@ -50,7 +50,7 @@ $comment = '真感動';
                 <div class="box box-success">
                     <div class="box-body chat" id="chat-box">
                         <div class="item">
-                            <img src="../img/angel.jpg" alt="user image" class="online">
+                            <img src="../img/profile.jpg" alt="user image" class="online">
                             <p class="message">
                             <span style="font-size: 16px">
                                 <?php echo $message[0] ?>

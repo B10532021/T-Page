@@ -1,6 +1,6 @@
 <!-- Content Wrapper. Contains page content -->
 <?php
-$image = 'angel.jpg';
+$image = 'profile.jpg';
 $article_title = '今晚的月色如何?';
 ?>
 <div class="content-wrapper">
@@ -35,9 +35,9 @@ $article_title = '今晚的月色如何?';
                                                                 data-title="My caption"
                                                         ><img src="images/product-plus.png" alt=""/></a>
                                                         <img
-                                                                id="zoom_02"
+                                                                align="center"
+                                                                width="80%"
                                                                 src="../img/<?php echo $image ?>"
-                                                                data-zoom-image="/assets/images/single-large.jpg"
                                                                 alt=""/>
                                                     </div>
                                                 </div>
@@ -78,7 +78,7 @@ $article_title = '今晚的月色如何?';
                                             <div class="detail_heading_left">
                                                 <div class="detail_heading_left">
                                                     <span style="font-size: 18px">家族：<?php echo $user[8] ?></span>
-                                                    <?php if ($_SESSION['user'] == $user[0]) {
+                                                    <?php if ($_SESSION['user'] == $user[0] and $user[8] != null) {
                                                     ?>
                                                     <a href="index.php?page=family">
                                                     <button style="
@@ -116,7 +116,7 @@ $article_title = '今晚的月色如何?';
                                                         <h4>興趣：</h4>
                                                         <textarea style="border:0; background-color:#f7f8f9"
                                                                   placeholder="請輸入你的興趣" cols="50"
-                                                                  rows="5"
+                                                                  rows="3"
                                                                   name="update_interests"><?php echo $user[6] ?></textarea>
                                                     </div>
                                                 </div>
@@ -127,7 +127,7 @@ $article_title = '今晚的月色如何?';
                                                         <h4>參加的社團：</h4>
                                                         <textarea style="border:0; background-color:#f7f8f9"
                                                                   placeholder="請輸入參加過的社團" cols="50"
-                                                                  rows="5"
+                                                                  rows="3"
                                                                   name="update_clubs"><?php echo $user[7] ?></textarea>
                                                     </div>
                                                 </div>

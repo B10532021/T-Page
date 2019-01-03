@@ -1,5 +1,5 @@
 <?php
-$image = 'angel.jpg';
+$image = 'profile.jpg';
 $name = '大美人';
 $article_title = '今晚的月色如何?';
 ?>

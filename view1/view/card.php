@@ -1,5 +1,5 @@
 <?php
-$image = 'angel.jpg';
+$image = 'profile.jpg';
 $name = '大美人';
 $school = '國立台灣科技大學企管系';
 $gender = '女';

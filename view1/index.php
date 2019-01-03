@@ -129,12 +129,12 @@ if(isset($_POST["family"])) {
 
 //按讚
 if(isset($_POST["like"])) {
-    $model->addLike($_POST["title"], $_POST["like"]);
+    $model->addGood($_POST["title"], $_POST["like"]);
     echo "<meta http-equiv='refresh' content='0'>";
 }
 //倒讚
 if(isset($_POST["dislike"])) {
-    $model->addDislike($_POST["title"], $_POST["dislike"]);
+    $model->addBad($_POST["title"], $_POST["dislike"]);
     echo "<meta http-equiv='refresh' content='0'>";
 }
 
