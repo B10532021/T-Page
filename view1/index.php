@@ -148,6 +148,15 @@ if(isset($_POST["newArticle"])) {
 
 }
 
+//刪除文章
+if(isset($_POST["delete_article"])) {
+    echo $_POST["delete_article"];
+    $model->deleteArticle($_POST["delete_article"]);
+    $page = "view/profile.php";
+    echo "<meta http-equiv='refresh' content='0'>";
+
+}
+
 //加入家族
 if(isset($_POST["family"])) {
     if($user[8]!=null) {

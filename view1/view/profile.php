@@ -57,11 +57,12 @@ $article_title = '今晚的月色如何?';
                                                             text-align: center;
                                                             text-transform: uppercase;
                                                             width: 120px;
-                                                            height: 40px;">我的家庭</button>
+                                                            height: 40px;">我的家庭
+                                                                </button>
                                                             </a>
                                                         <?php } ?>
-                                                            <a href="index.php?page=friend">
-                                                                <button style="
+                                                        <a href="index.php?page=friend">
+                                                            <button style="
                                                             background: none repeat scroll 0 0;
                                                             background-color: #2975d8;
                                                             border: 2px solid;
@@ -75,8 +76,9 @@ $article_title = '今晚的月色如何?';
                                                             text-align: center;
                                                             text-transform: uppercase;
                                                             width: 120px;
-                                                            height: 40px;">我的朋友</button>
-                                                            </a>
+                                                            height: 40px;">我的朋友
+                                                            </button>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -116,63 +118,42 @@ $article_title = '今晚的月色如何?';
                                             <div class="detail_heading_left">
                                                 <div class="detail_heading_left">
                                                     <span style="font-size: 18px">家族：<?php echo $user[8] ?></span>
-<!--                                                    --><?php //if ($_SESSION['user'] == $user[0] and $user[8] != null) {
-//                                                    ?>
-<!--                                                    <a href="index.php?page=family">-->
-<!--                                                    <button style="-->
-<!--                                                            background: none repeat scroll 0 0;-->
-<!--                                                            background-color: #2975d8;-->
-<!--                                                            border: 2px solid;-->
-<!--                                                            border-color: #2975d8;-->
-<!--                                                            border-radius:10px;-->
-<!--                                                            color: #fff;-->
-<!--                                                            font-size: 13px;-->
-<!--                                                            font-weight: 700;-->
-<!--                                                            margin: 8px auto 15px;-->
-<!--                                                            padding: 7px;-->
-<!--                                                            margin-left: 100px;-->
-<!--                                                            text-align: center;-->
-<!--                                                            text-transform: uppercase;-->
-<!--                                                            width: 120px;-->
-<!--                                                            height: 40px;">我的家庭</button>-->
-<!--                                                    </a>-->
-<!--                                                    --><?php //} ?>
                                                 </div>
                                             </div>
                                         </div>
                                         <?php if ($_SESSION['user'] == $user[0]) {
-                                        ?>
+                                            ?>
 
-                                        <script>
-                                            function show_alert() {
-                                                alert("修改成功");
-                                            }
-                                        </script>
-                                        <form method="post" action="index.php?page=profile" id="modifyProfile">
-                                            <div class="product_detail_heading">
-                                                <div class="detail_heading_left">
+                                            <script>
+                                                function show_alert() {
+                                                    alert("修改成功");
+                                                }
+                                            </script>
+                                            <form method="post" action="index.php?page=profile" id="modifyProfile">
+                                                <div class="product_detail_heading">
                                                     <div class="detail_heading_left">
-                                                        <h4>興趣：</h4>
-                                                        <textarea style="border:0; background-color:#f7f8f9"
-                                                                  placeholder="請輸入你的興趣" cols="50"
-                                                                  rows="3"
-                                                                  name="update_interests"><?php echo $user[6] ?></textarea>
+                                                        <div class="detail_heading_left">
+                                                            <h4>興趣：</h4>
+                                                            <textarea style="border:0; background-color:#f7f8f9"
+                                                                      placeholder="請輸入你的興趣" cols="50"
+                                                                      rows="3"
+                                                                      name="update_interests"><?php echo $user[6] ?></textarea>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="product_detail_heading">
-                                                <div class="detail_heading_left">
+                                                <div class="product_detail_heading">
                                                     <div class="detail_heading_left">
-                                                        <h4>參加的社團：</h4>
-                                                        <textarea style="border:0; background-color:#f7f8f9"
-                                                                  placeholder="請輸入參加過的社團" cols="50"
-                                                                  rows="3"
-                                                                  name="update_clubs"><?php echo $user[7] ?></textarea>
+                                                        <div class="detail_heading_left">
+                                                            <h4>參加的社團：</h4>
+                                                            <textarea style="border:0; background-color:#f7f8f9"
+                                                                      placeholder="請輸入參加過的社團" cols="50"
+                                                                      rows="3"
+                                                                      name="update_clubs"><?php echo $user[7] ?></textarea>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <input type="submit" value="儲存修改" onclick="show_alert()" style="
+                                                <div>
+                                                    <input type="submit" value="儲存修改" onclick="show_alert()" style="
                                             background: none repeat scroll 0 0;
                                             background-color: #2975d8;
                                             border: 2px solid;
@@ -188,27 +169,27 @@ $article_title = '今晚的月色如何?';
                                             text-transform: uppercase;
                                             width: 120px;
                                             height: 40px;">
-                                            </div>
-                                        </form>
+                                                </div>
+                                            </form>
                                         <?php } else { ?>
-                                        <div class="product_detail_heading">
-                                            <div class="detail_heading_left">
+                                            <div class="product_detail_heading">
                                                 <div class="detail_heading_left">
-                                                    <h4>興趣：</h4>
-                                                    <h5><?php echo $user[6] ?></h5>
+                                                    <div class="detail_heading_left">
+                                                        <h4>興趣：</h4>
+                                                        <h5><?php echo $user[6] ?></h5>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product_detail_heading">
-                                            <div class="detail_heading_left">
+                                            <div class="product_detail_heading">
                                                 <div class="detail_heading_left">
-                                                    <h4>參加的社團：</h4>
-                                                    <h5><?php echo $user[7] ?></h5>
+                                                    <div class="detail_heading_left">
+                                                        <h4>參加的社團：</h4>
+                                                        <h5><?php echo $user[7] ?></h5>
 
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <?php }?>
+                                        <?php } ?>
                                     </div>
                                 </div>
 
@@ -235,6 +216,26 @@ $article_title = '今晚的月色如何?';
                             </p>
                             <a href="index.php?page=article&article=<?php echo $article[0] ?>"
                                style="margin-left: 50px">閱讀完整文章...</a>
+                            <form method="post">
+                                <input name="delete_article" style="display:none" value="<?php echo $article[0] ?>">
+                                <button type="submit" style="
+                                            background: none repeat scroll 0 0;
+                                            background-color: red;
+                                            border: 2px solid;
+                                            border-color: red;
+                                            border-radius:10px;
+                                            color: #fff;
+                                            font-size: 10px;
+                                            font-weight: 700;
+                                            margin: 8px auto 15px;
+                                            padding: 7px;
+                                            margin-left: 80%;
+                                            text-align: center;
+                                            text-transform: uppercase;
+                                            width: 50px;
+                                            height: 30px;">刪除
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
