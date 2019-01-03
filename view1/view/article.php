@@ -24,7 +24,11 @@ $comment = '真感動';
 
             </div>
         </div>
-        <div style="padding-top: 100px">
+        <div style="padding-top: 20px;padding-left: 50px;">
+            <img src="../img/like.png" style="padding-left: 5px;" width="3%">：<?php echo $article[5]?>
+            <img src="../img/dislike.png" style="padding-left: 5px;" width="3%">：<?php echo $article[6]?>
+        </div>
+        <div style="padding-top: 50px">
             <h4>留言板</h4>
             <?php
             foreach ($messages as $message) {

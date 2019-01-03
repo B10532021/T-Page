@@ -15,7 +15,7 @@
                         <div class="card-body">
                             <form method="POST" action="../index.php">
                                 <div class="form-group row">
-                                    <label for="email" class="col-sm-4 col-form-label text-md-right">帳號/信箱：</label>
+                                    <label for="email" class="col-sm-4 col-form-label text-md-right">帳號姓名：</label>
 
                                     <div class="col-md-6">
 <!--                                        <input id="email" type="email"-->

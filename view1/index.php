@@ -24,7 +24,13 @@ if(isset($_POST["login_name"]) and isset($_POST['login_password'])) {
     }
 }
 
-if(isset($_SESSION['user'])) {
+//註冊
+if(isset($_POST["email"]) and isset($_POST['password'])) {
+    $model->register($_POST["name"], $_POST["email"], $_POST["password"], $_POST["school"], $_POST["gender"], $_POST["birth"]);
+    $_SESSION["user"] = $_POST['name'];
+}
+
+if(isset($_SESSION["user"])) {
     $user = $model->searchUser($_SESSION["user"])[0];
 }
 
@@ -91,18 +97,15 @@ if(isset($_GET["article"])) {
 //留言
 if(isset($_POST["message"])) {
     $model->addMessage($_POST["name"], $_POST["message"], $_POST["title"]);
+    $model->addMoney($user[0], $user[9]);
     echo "<meta http-equiv='refresh' content='0'>";
 }
 
-//註冊
-if(isset($_POST["email"]) and isset($_POST['password'])) {
-    $model->register($_POST["name"], $_POST["email"], $_POST["password"], $_POST["school"], $_POST["gender"], $_POST["birth"]);
-    $_SESSION['user'] = $_POST['name'];
-}
 
 //新增文章
 if(isset($_POST["newArticle"])) {
     $model->addArticle($_POST['newTitle'], 'ECE'.$_POST["board1"], $user[0], $_POST["newArticle"]);
+    $model->addMoney($user[0], $user[9]);
     $page = "view/articles.php";
     echo "<meta http-equiv='refresh' content='0'>";
 }
