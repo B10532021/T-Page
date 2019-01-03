@@ -99,27 +99,27 @@ class Model_SQL
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
         $datetime = date("Y-m-d/H:i:s", mktime(date('H')+8, date('i'), date('s'), date('m'), date('d'), date('Y')));
-        $sql = "INSERT INTO articles(title, board, author, content, time, like, dislike) VALUES ('$title', '$board', '$author', '$content', '$datetime', '0', '0')";
+        $sql = "INSERT INTO articles(title, board, author, content, time, good, bad) VALUES ('$title', '$board', '$author', '$content', '$datetime', '0', '0')";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
-    public function addLike($title, $like)
+    public function addGood($title, $good)
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
-        $like++;
-        $sql = "UPDATE articles SET like = '$like' WHERE title = '$title'";
+        $good++;
+        $sql = "UPDATE articles SET good = '$good' WHERE title = '$title'";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
-    public function addDislike($title, $dislike)
+    public function addBad($title, $bad)
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
-        $dislike++;
-        $sql = "UPDATE articles SET dislike = '$dislike' WHERE title = '$title'";
+        $bad++;
+        $sql = "UPDATE articles SET bad = '$bad' WHERE title = '$title'";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
