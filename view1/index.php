@@ -169,6 +169,8 @@ if(isset($_POST["dislike"])) {
 if(isset($_POST["cardfriend"]))
 {
     $model->sendInvitation($_POST['name'],$_POST['cardfriend']);
+    $model->minusMoney($user[0], $user[9]);
+    echo "<meta http-equiv='refresh' content='0'>";
 }
 
 
