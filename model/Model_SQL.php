@@ -428,7 +428,7 @@ class Model_SQL
         $result=mysqli_query($conn,"select * from users");
         $totalUsers=mysqli_num_rows($result);
         $id = rand(1, $totalUsers);
-        $sql = "select * from users WHERE id = ".$id;
+        $sql = "select * from users WHERE id = '$id'";
         $result = mysqli_query($conn, $sql);
         while($user = mysqli_fetch_row($result)){
             $this->userData[] = $user;
