@@ -2,8 +2,12 @@
 <?php
 include_once "../model/Model_SQL.php";
 $model = new Model_SQL();
+if(!isset($_SESSION['user'])) {
+    $page = "view/login.php";
+} else {
+    $page="view/articles.php";
+}
 
-$page = "view/login.php";
 $title = 0;
 $board = 1;
 $family;
