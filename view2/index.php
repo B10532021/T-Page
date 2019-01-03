@@ -1,4 +1,5 @@
 <?php session_start();?>
+<?php session_start();?>
 <?php
 
 include "../model/Model_SQL.php";
