@@ -9,14 +9,14 @@ class Model_SQL
     private $familyData = array();
     private $messageData = array();
     private $userData = array();
-    private $thumbnumber;
+
     //註冊
     public function register($name, $email, $password, $school, $gender, $birth = null, $interests = null, $clubs = null, $family = null)
     {
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
-        $sql = "INSERT INTO users(name, email, password, school, gender, birth, interests, clubs, family) VALUES ('$name', '$email', '$password', '$school', '$gender', '$birth', '$interests', '$clubs', '$family')";
+        $sql = "INSERT INTO users(name, email, password, school, gender, birth, interests, clubs, family, money) VALUES ('$name', '$email', '$password', '$school', '$gender', '$birth', '$interests', '$clubs', '$family', '0')";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
@@ -134,7 +134,7 @@ class Model_SQL
         $sql = "select * from articles where author = '$author'";
         $result = mysqli_query($conn, $sql);
         while($article = mysqli_fetch_row($result)) {
-            $this->articleData[] = $article;a
+            $this->articleData[] = $article;
         }
         return $this->articleData;
     }
@@ -368,5 +368,33 @@ class Model_SQL
         $sql = "DELETE FROM users WHERE name = '$name' AND email = '$email' AND password = '$password'";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
+    }
+    public function addMoney($name, $money)
+    {
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
+        $money++;
+        $sql = "UPDATE users SET money = $money WHERE name = '$name'";
+        mysqli_query($conn, $sql);
+        mysqli_close($conn);
+    }
+    public function minusMoney($name, $money)
+    {
+        $conn = mysqli_connect("localhost:33060", "root", "root");
+        mysqli_select_db($conn, "tpage");
+        mysqli_query( $conn, "SET NAMES 'utf8'");
+        if($money > 0)
+        {
+            $money--;
+            $sql = "UPDATE users SET money = $money WHERE name = '$name'";
+            mysqli_query($conn, $sql);
+            mysqli_close($conn);
+            return true;
+        }
+        else {
+            return false;
+        }
+
     }
 }
