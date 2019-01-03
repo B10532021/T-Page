@@ -393,7 +393,7 @@ class Model_SQLite
         $result=sqlite_query($conn,"select * from users");
         $totalUsers=sqlite_num_rows($result);
         $id = rand(1, $totalUsers);
-        $sql = "select * from users WHERE id = ".$id;
+        $sql = "select * from users WHERE id = '$id'";
         $result = sqlite_query($conn, $sql);
         while($user = sqlite_fetch_array($result)){
             $this->userData[] = $user;
