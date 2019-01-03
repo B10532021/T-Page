@@ -20,7 +20,6 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <?php
-                $i = 0;
                 foreach ($articles as $article) {
                     ?>
                     <div class="single_blog_in_page">
@@ -40,7 +39,7 @@
                             <h4>By <span><?php echo $article[2] ?></span></h4>
                             <div class="read_more">
                                 <a class="read_more_blog"
-                                   href="index.php?page=article&board=<?php echo $board ?>&title=<?php echo $i ?>">Read
+                                   href="index.php?page=article&board=<?php echo $board ?>&title=<?php echo $article[0] ?>">Read
                                     more</a>
                             </div>
                         </div>

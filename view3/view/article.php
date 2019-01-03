@@ -19,16 +19,28 @@
                     <div class="blog_detail_in_page">
                         <p><?php echo $article[3] ?></p>
                     </div>
-                    <div class="share">
-                        <span>12 shares</span>
-                    </div>
-                    <div class="share_icons">
-                        <ul id="share_icon">
-                            <li><a class="fa fa-facebook" href=""></a></li>
-                            <li><a class="fa fa-twitter" href=""></a></li>
-                            <li><a class="fa fa-google-plus" href=""></a></li>
-                            <li><a class="fa fa-linkedin" href=""></a></li>
-                        </ul>
+<!--                    <div class="share">-->
+<!--                        <span>12 shares</span>-->
+<!--                    </div>-->
+                    <div style="padding-top: 20px;padding-left: 50px;">
+                        <form method="post" accept-charset="utf-8">
+                            <input name="title1" style="display: none" value="<?php echo $article[0] ?>">
+                            <input name="board2" style="display: none" value="<?php echo $article[1] ?>">
+                            <input name="like" style="display: none" value="<?php echo $article[5] ?>">
+                            <input type="image" src="../images/like.png"
+                                   style="padding-left: 5px;"
+                                   width="5%"
+                                   alt="Submit">：<?php echo $article[5] ?>
+                        </form>
+                        <form method="post" accept-charset="utf-8">
+                            <input name="title1" style="display: none" value="<?php echo $article[0] ?>">
+                            <input name="board2" style="display: none" value="<?php echo $article[1] ?>">
+                            <input name="dislike" style="display: none" value="<?php echo $article[6] ?>">
+                            <input type="image" src="../images/dislike.png"
+                                   style="padding-left: 5px;"
+                                   width="5%"
+                                   alt="Submit">：<?php echo $article[6] ?>
+                        </form>
                     </div>
                 </div>
                 <div class="comments">
@@ -49,7 +61,7 @@
                             </div>
                             <div class="comment_text">
                                 <div class="comment_name">
-                                    <h3><?php echo $message[0] ?> | <span>April 18, 2015 at 5.00 pm</span></h3>
+                                    <h3><?php echo $message[0] ?> | <span><?php echo $message[3] ?></span></h3>
                                 </div>
                                 <div class="reply"><span>Reply</span></div>
                                 <div class="comment-detail">
@@ -72,7 +84,7 @@
                             <p>Comments</p>
                             <input type="text" name="title1" style="display: none" value="<?php echo $article[0]?>">
                             <input type="text" name="board1" style="display: none" value="<?php echo $article[1]?>">
-                            <textarea name="message" cols="30" rows="10"></textarea>
+                            <textarea name="context" cols="30" rows="10"></textarea>
                             <input type="submit" value="post comment" name="message"/>
                         </div>
                     </form>

@@ -120,8 +120,7 @@ if (isset($_GET["board"])) {
 }
 
 if (isset($_GET["title"])) {
-    $title = $_GET["title"];
-    $article = $articles[$title];
+    $article = $model->searchArticle($_GET["title"])[0];
     $messages = $model->searchMessage($article[0]);
 }
 if (isset($_GET["article"])) {
@@ -223,6 +222,7 @@ if (isset($_POST["profile"])) {
 if (isset($_POST["add_article"])) {
     if (isset($_SESSION['user'])) {
         $model->addArticle($_POST["title2"], $_POST["board"], $_SESSION["user"], $_POST["context"]);
+//        $model->addMoney($_SESSION["user"], 1);
         echo "<script>location.href='../?page=articles&board={$_POST["board"]}'</script>";
     } else {
         echo "<script>alert('請先登入')</script>";
@@ -233,8 +233,9 @@ if (isset($_POST["add_article"])) {
 //message
 if (isset($_POST["message"])) {
     if (isset($_SESSION["user"])) {
-        $model->addMessage($_SESSION["user"], $_POST["message"], $_POST["title1"]);
-        echo "<script>location.href='../?page=articles&board={$_POST['board1']}&title={$_POST['title1']}'</script>";
+        $model->addMessage($_SESSION["user"], $_POST["context"], $_POST["title1"]);
+        $model->addMoney($_SESSION["user"], 1);
+        echo "<script>location.href='../?page=article&board={$_POST['board1']}&title={$_POST['title1']}'</script>";
     } else {
         echo "<script>alert('請先登入')</script>";
         echo "<script>location.href='../?page=login'</script>";
@@ -245,6 +246,18 @@ if (isset($_POST["message"])) {
 if (isset($_POST["card"])) {
     $model->sendInvitation($_SESSION["user"], $_POST["name"]);
     echo "<script>location.href='../?page=card'</script>";
+}
+
+//按讚
+if(isset($_POST["like"])) {
+    $model->addGood($_POST["title1"], $_POST["like"]);
+    echo "<script>location.href='../?page=article&board={$_POST["board2"]}&title={$_POST["title1"]}'</script>";
+
+}
+//倒讚
+if(isset($_POST["dislike"])) {
+    $model->addBad($_POST["title1"], $_POST["dislike"]);
+    echo "<script>location.href='../?page=article&board={$_POST["board2"]}&title={$_POST["title1"]}'</script>";
 }
 
 $boards = $model->lookUpBoard();

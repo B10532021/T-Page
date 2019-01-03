@@ -17,6 +17,9 @@
                     <input type="file" name="file"><br><br>
                     <input type="submit" value="Submit">
                 </form>
+                <img src="../images/money.png" width="50%">
+                <br>
+                <span style="font-size: 70px"><?php echo $user[9]?></span>
             </div>
 
             <form method="post" action="../index.php" accept-charset="utf-8">
