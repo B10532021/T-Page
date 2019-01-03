@@ -72,7 +72,9 @@
                         </li>
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
-                            <a href="index.php?page=login">登出</a>
+                            <a href="index.php?page=login" <?php if(!isset($_SESSION['user'])) {
+                                echo "style='display:none;'";
+                            }?>>登出</a>
                         </li>
                     </ul>
                 </div>

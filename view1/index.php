@@ -1,5 +1,5 @@
+<?php session_start();?>
 <?php
-session_start();
 include_once "../model/Model_SQL.php";
 $model = new Model_SQL();
 
@@ -10,6 +10,7 @@ $messages;
 $title;
 $article;
 $user = $model->searchUser("大美人")[0];
+
 //登入
 if(isset($_POST["login_name"]) and isset($_POST['login_password'])) {
     if($model->login($_POST['login_name'], $_POST['login_password'])) {
@@ -62,7 +63,7 @@ if(isset($_GET["page"])) {
     }
     if($_GET["page"] == "login") {
         $page = "view/login.php";
-        unset($_SESSION['username']);
+        unset($_SESSION['user']);
     }
 }
 
@@ -86,8 +87,9 @@ if(isset($_POST["message"])) {
 
 //註冊(失敗中)
 if(isset($_POST["email"]) and isset($_POST['password'])) {
-    echo 'inside';
-    $model->register();
+    $model->register($_POST["name"], $_POST["email"], $_POST["password"], $_POST["school"], $_POST["gender"]);
+    $_SESSION['user'] = $_POST['name'];
+    echo $_SESSION['user'];
 }
 
 //新增文章
@@ -98,9 +100,12 @@ if(isset($_POST["newArticle"])) {
 
 $articles=$model->searchBoard("ECE".$board);
 
+
 include("layouts/header.php");
 
-include("layouts/sidebar.php");
+if(isset($_SESSION['user'])) {
+    include("layouts/sidebar.php");
+}
 
 include($page);
 
