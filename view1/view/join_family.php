@@ -33,6 +33,7 @@
                                             background-color: #2975d8;
                                             border: 2px solid;
                                             border-color: #2975d8;
+                                            border-radius:10px;
                                             color: #fff;
                                             font-size: 13px;
                                             font-weight: 700;
@@ -50,6 +51,7 @@
                                             background-color: #2975d8;
                                             border: 2px solid;
                                             border-color: #2975d8;
+                                            border-radius:10px;
                                             color: #fff;
                                             font-size: 13px;
                                             font-weight: 700;

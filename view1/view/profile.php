@@ -39,6 +39,44 @@ $article_title = '今晚的月色如何?';
                                                                 width="80%"
                                                                 src="../img/<?php echo $image ?>"
                                                                 alt=""/>
+                                                        <?php if ($_SESSION['user'] == $user[0] and $user[8] != null) {
+                                                            ?>
+                                                            <a href="index.php?page=family">
+                                                                <button style="
+                                                            background: none repeat scroll 0 0;
+                                                            background-color: #2975d8;
+                                                            border: 2px solid;
+                                                            border-color: #2975d8;
+                                                            border-radius:10px;
+                                                            color: #fff;
+                                                            font-size: 13px;
+                                                            font-weight: 700;
+                                                            margin: 8px auto 15px;
+                                                            padding: 7px;
+                                                            margin-left: 100px;
+                                                            text-align: center;
+                                                            text-transform: uppercase;
+                                                            width: 120px;
+                                                            height: 40px;">我的家庭</button>
+                                                            </a>
+                                                        <?php } ?>
+                                                            <a href="index.php?page=friend">
+                                                                <button style="
+                                                            background: none repeat scroll 0 0;
+                                                            background-color: #2975d8;
+                                                            border: 2px solid;
+                                                            border-color: #2975d8;
+                                                            border-radius:10px;
+                                                            color: #fff;
+                                                            font-size: 13px;
+                                                            font-weight: 700;
+                                                            margin: 8px auto 15px;
+                                                            padding: 7px;
+                                                            text-align: center;
+                                                            text-transform: uppercase;
+                                                            width: 120px;
+                                                            height: 40px;">我的朋友</button>
+                                                            </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -78,26 +116,27 @@ $article_title = '今晚的月色如何?';
                                             <div class="detail_heading_left">
                                                 <div class="detail_heading_left">
                                                     <span style="font-size: 18px">家族：<?php echo $user[8] ?></span>
-                                                    <?php if ($_SESSION['user'] == $user[0] and $user[8] != null) {
-                                                    ?>
-                                                    <a href="index.php?page=family">
-                                                    <button style="
-                                                            background: none repeat scroll 0 0;
-                                                            background-color: #2975d8;
-                                                            border: 2px solid;
-                                                            border-color: #2975d8;
-                                                            color: #fff;
-                                                            font-size: 13px;
-                                                            font-weight: 700;
-                                                            margin: 8px auto 15px;
-                                                            padding: 7px;
-                                                            margin-left: 100px;
-                                                            text-align: center;
-                                                            text-transform: uppercase;
-                                                            width: 120px;
-                                                            height: 40px;">我的家庭</button>
-                                                    </a>
-                                                    <?php } ?>
+<!--                                                    --><?php //if ($_SESSION['user'] == $user[0] and $user[8] != null) {
+//                                                    ?>
+<!--                                                    <a href="index.php?page=family">-->
+<!--                                                    <button style="-->
+<!--                                                            background: none repeat scroll 0 0;-->
+<!--                                                            background-color: #2975d8;-->
+<!--                                                            border: 2px solid;-->
+<!--                                                            border-color: #2975d8;-->
+<!--                                                            border-radius:10px;-->
+<!--                                                            color: #fff;-->
+<!--                                                            font-size: 13px;-->
+<!--                                                            font-weight: 700;-->
+<!--                                                            margin: 8px auto 15px;-->
+<!--                                                            padding: 7px;-->
+<!--                                                            margin-left: 100px;-->
+<!--                                                            text-align: center;-->
+<!--                                                            text-transform: uppercase;-->
+<!--                                                            width: 120px;-->
+<!--                                                            height: 40px;">我的家庭</button>-->
+<!--                                                    </a>-->
+<!--                                                    --><?php //} ?>
                                                 </div>
                                             </div>
                                         </div>
@@ -138,6 +177,7 @@ $article_title = '今晚的月色如何?';
                                             background-color: #2975d8;
                                             border: 2px solid;
                                             border-color: #2975d8;
+                                            border-radius:10px;
                                             color: #fff;
                                             font-size: 13px;
                                             font-weight: 700;

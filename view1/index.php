@@ -12,6 +12,7 @@ $title;
 $article;
 $user;
 $newCardUser;
+$friends;
 
 //登入
 if(isset($_POST["login_name"]) and isset($_POST['login_password'])) {
@@ -109,6 +110,10 @@ if(isset($_GET["page"])) {
         $page = "view/family.php";
         $family=$model->searchFamily($user[8]);
     }
+    if($_GET["page"] == "friend") {
+        $page = "view/friend.php";
+        $friends=$model->searchCardFriend($user[0]);
+    }
 }
 
 //使用者更新資料
@@ -130,7 +135,6 @@ if(isset($_POST["message"])) {
     echo "<meta http-equiv='refresh' content='0'>";
 }
 
-
 //新增文章
 if(isset($_POST["newArticle"])) {
     $model->addArticle($_POST['newTitle'], 'ECE'.$_POST["board1"], $user[0], $_POST["newArticle"]);
@@ -139,6 +143,7 @@ if(isset($_POST["newArticle"])) {
     echo "<meta http-equiv='refresh' content='0'>";
 
 }
+
 //加入家族
 if(isset($_POST["family"])) {
     if($user[8]!=null) {
@@ -153,15 +158,17 @@ if(isset($_POST["like"])) {
     $model->addGood($_POST["title"], $_POST["like"]);
     echo "<meta http-equiv='refresh' content='0'>";
 }
+
 //倒讚
 if(isset($_POST["dislike"])) {
     $model->addBad($_POST["title"], $_POST["dislike"]);
     echo "<meta http-equiv='refresh' content='0'>";
 }
 
+//抽卡
 if(isset($_POST["cardfriend"]))
 {
-    //$model->sendInvitation($_POST['name'],$_POST['cardfriend']);
+    $model->sendInvitation($_POST['name'],$_POST['cardfriend']);
 }
 
 
