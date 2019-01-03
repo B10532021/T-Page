@@ -32,6 +32,7 @@
                 <a href="index.php?page=articles&board=3"><i class="fa fa-table"></i> <span>四電資三</span></a>
                 <a href="index.php?page=articles&board=4"><i class="fa fa-table"></i> <span>四電資四</span></a>
                 <a href="index.php?page=card"><i class="fa fa-table"></i> <span>抽卡友</span></a>
+                <a href="index.php?page=joinFamily"><i class="fa fa-table"></i> <span>加入家族</span></a>
             </li>
             <!--            {{--TODO: multilevel example, remove before demo--}}-->
 

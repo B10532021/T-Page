@@ -6,6 +6,7 @@ $model = new Model_SQL();
 $page = "view/login.php";
 $title = 0;
 $board = 1;
+$family;
 $messages;
 $title;
 $article;
@@ -19,7 +20,7 @@ if(isset($_POST["login_name"]) and isset($_POST['login_password'])) {
         $page="view/articles.php";
     }
     else {
-        echo "alert('登入失敗')";
+        echo "<script>alert('登入失敗')</script>";
         echo "<meta http-equiv='refresh' content='0'>";
     }
 }
@@ -80,6 +81,13 @@ if(isset($_GET["page"])) {
         $page = "view/login.php";
         unset($_SESSION['user']);
     }
+    if($_GET["page"] == "joinFamily") {
+        $page = "view/join_family.php";
+    }
+    if($_GET["page"] == "family") {
+        $page = "view/family.php";
+        $family=$model->searchFamily($user[8]);
+    }
 }
 
 //使用者更新資料
@@ -110,13 +118,21 @@ if(isset($_POST["newArticle"])) {
     echo "<meta http-equiv='refresh' content='0'>";
 
 }
+//加入家族
+if(isset($_POST["family"])) {
+    if($user[8]!=null) {
+        $model->deleteFamily($_SESSION['user'], $user[8]);
+    }
+    $model->addFamily($_SESSION['user'],$_POST["family"]);
+    echo "<meta http-equiv='refresh' content='0'>";
+}
 
 //按讚
 if(isset($_POST["like"])) {
     $model->addLike($_POST["title"], $_POST["like"]);
     echo "<meta http-equiv='refresh' content='0'>";
 }
-
+//倒讚
 if(isset($_POST["dislike"])) {
     $model->addDislike($_POST["title"], $_POST["dislike"]);
     echo "<meta http-equiv='refresh' content='0'>";
