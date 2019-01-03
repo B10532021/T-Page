@@ -238,7 +238,6 @@ class Model_SQL
         $num = count($this->invitationData);
         if($num == 2)
         {
-            //$this->addCardFriend($me, $friend);
             $sql3 = "INSERT INTO cardfriend(me, friend) VALUES ('$me', '$friend')";
             $sql4 = "INSERT INTO cardfriend(me, friend) VALUES ('$friend', '$me')";
             mysqli_query($conn, $sql3);
@@ -397,7 +396,7 @@ class Model_SQL
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
         $money++;
-        $sql = "UPDATE users SET money = $money WHERE name = '$name'";
+        $sql = "UPDATE users SET money = '$money' WHERE name = '$name'";
         mysqli_query($conn, $sql);
         mysqli_close($conn);
     }
@@ -409,7 +408,7 @@ class Model_SQL
         if($money > 0)
         {
             $money--;
-            $sql = "UPDATE users SET money = $money WHERE name = '$name'";
+            $sql = "UPDATE users SET money = '$money' WHERE name = '$name'";
             mysqli_query($conn, $sql);
             mysqli_close($conn);
             return true;

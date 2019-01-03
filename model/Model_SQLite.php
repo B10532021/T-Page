@@ -7,6 +7,7 @@ class Model_SQLite
     private $boardData = array();
     private $cardFriendData = array();
     private $familyData = array();
+    private $invitationData = array();
     private $messageData = array();
     private $userData = array();
 
@@ -15,7 +16,7 @@ class Model_SQLite
     {
         $conn = sqlite_open("tpage");
         sqlite_query($conn, "SET NAMES 'utf8'");
-        $sql = "INSERT INTO users(name, email, password, school, gender, birth, interests, clubs, family) VALUES ('$name', '$email', '$password', '$school', '$gender', '$birth', '$interests', '$clubs', '$family')";
+        $sql = "INSERT INTO users(name, email, password, school, gender, birth, interests, clubs, family, money) VALUES ('$name', '$email', '$password', '$school', '$gender', '$birth', '$interests', '$clubs', '$family', '0')";
         sqlite_query($conn, $sql);
         sqlite_close($conn);
     }
@@ -30,7 +31,7 @@ class Model_SQLite
         while($user = sqlite_fetch_array($result)) {
             $this->userData[] = $user;
         }
-        if(sqlite_fetch_array($this->userData[0]))
+        if(count($this->userData))
         {
             return true;
         }
@@ -91,7 +92,25 @@ class Model_SQLite
         $conn = sqlite_open("tpage");
         sqlite_query($conn, "SET NAMES 'utf8'");
         $datetime = date("Y-m-d/H:i:s", mktime(date('H')+8, date('i'), date('s'), date('m'), date('d'), date('Y')));
-        $sql = "INSERT INTO articles(title, board, author, content, time) VALUES ('$title', '$board', '$author', '$content', '$datetime')";
+        $sql = "INSERT INTO articles(title, board, author, content, time, good, bad) VALUES ('$title', '$board', '$author', '$content', '$datetime', '0', '0')";
+        sqlite_query($conn, $sql);
+        sqlite_close($conn);
+    }
+    public function addGood($title, $good)
+    {
+        $conn = sqlite_open("tpage");
+        sqlite_query($conn, "SET NAMES 'utf8'");
+        $good++;
+        $sql = "UPDATE articles SET good = '$good' WHERE title = '$title'";
+        sqlite_query($conn, $sql);
+        sqlite_close($conn);
+    }
+    public function addBad($title, $bad)
+    {
+        $conn = sqlite_open("tpage");
+        sqlite_query($conn, "SET NAMES 'utf8'");
+        $bad++;
+        $sql = "UPDATE articles SET bad = '$bad' WHERE title = '$title'";
         sqlite_query($conn, $sql);
         sqlite_close($conn);
     }
@@ -185,18 +204,28 @@ class Model_SQLite
         return $this->boardData;
     }
     //跟卡友有關
-    public function sendInvitation()
-    {
-        return true;
-    }
-    public function addCardFriend($me, $friend)
+    public function sendInvitation($me, $friend)
     {
         $conn = sqlite_open("tpage");
         sqlite_query($conn, "SET NAMES 'utf8'");
-        $sql = "INSERT INTO cardfriend(me, friend) VALUES ('$me', '$friend')";
-        $sql2 = "INSERT INTO cardfriend(me, friend) VALUES ('$friend', '$me')";
+        $sql = "INSERT INTO invitationqueue(me, friend) VALUES ('$me', '$friend')";
         sqlite_query($conn, $sql);
-        sqlite_query($conn, $sql2);
+        $this->invitationData = array();
+        $sql2 = "select * from invitationqueue WHERE (me = '$me' AND friend = '$friend') OR (me = '$friend' AND friend = '$me')";
+        $result = sqlite_query($conn, $sql2);
+        while($cardfriend = sqlite_fetch_array($result)) {
+            $this->invitationData[] = $cardfriend;
+        }
+        $num = count($this->invitationData);
+        if($num == 2)
+        {
+            $sql3 = "INSERT INTO cardfriend(me, friend) VALUES ('$me', '$friend')";
+            $sql4 = "INSERT INTO cardfriend(me, friend) VALUES ('$friend', '$me')";
+            sqlite_query($conn, $sql3);
+            sqlite_query($conn, $sql4);
+            $sql5 = "DELETE FROM invitationqueue WHERE (me = '$me' AND friend = '$friend') OR (me = '$friend' AND friend = '$me')";
+            sqlite_query($conn, $sql5);
+        }
         sqlite_close($conn);
     }
     public function searchCardFriend($name)
@@ -329,5 +358,47 @@ class Model_SQLite
         $sql = "DELETE FROM users WHERE name = '$name' AND email = '$email' AND password = '$password'";
         sqlite_query($conn, $sql);
         sqlite_close($conn);
+    }
+    public function addMoney($name, $money)
+    {
+        $conn = sqlite_open("tpage");
+        sqlite_query($conn, "SET NAMES 'utf8'");
+        $money++;
+        $sql = "UPDATE users SET money = '$money' WHERE name = '$name'";
+        sqlite_query($conn, $sql);
+        sqlite_close($conn);
+    }
+    public function minusMoney($name, $money)
+    {
+        $conn = sqlite_open("tpage");
+        sqlite_query($conn, "SET NAMES 'utf8'");
+        if($money > 0)
+        {
+            $money--;
+            $sql = "UPDATE users SET money = '$money' WHERE name = '$name'";
+            sqlite_query($conn, $sql);
+            sqlite_close($conn);
+            return true;
+        }
+        else {
+            return false;
+        }
+
+    }
+    public function randomUser()
+    {
+        $this->userData = array();
+        $conn = sqlite_open("tpage");
+        sqlite_query($conn, "SET NAMES 'utf8'");
+        $result=sqlite_query($conn,"select * from users");
+        $totalUsers=sqlite_num_rows($result);
+        $id = rand(1, $totalUsers);
+        $sql = "select * from users WHERE id = ".$id;
+        $result = sqlite_query($conn, $sql);
+        while($user = sqlite_fetch_array($result)){
+            $this->userData[] = $user;
+        }
+
+        return $this->userData;
     }
 }
