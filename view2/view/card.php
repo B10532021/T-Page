@@ -16,7 +16,7 @@
                         <p>性別: <?php echo $newCardUser[4]?></p>
                     <p>興趣: <?php echo $newCardUser[6]?></p>
                     <p>參加過的社團: <?php echo $newCardUser[7]?></p>
-                        <button class="button" onclick="addCardFriend(<?php echo $_SESSION['user'][0].",".$newCardUser[0]?>)">
+                        <button class="button" onclick="addCardFriend(<?php echo "'".$_SESSION['user'][0]."','".$newCardUser[0]."'"?>)">
                             送出交友邀請
                         </button>
                     </div>
