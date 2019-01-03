@@ -104,6 +104,7 @@ if(isset($_POST["email"]) and isset($_POST['password'])) {
 if(isset($_POST["newArticle"])) {
     $model->addArticle($_POST['newTitle'], 'ECE'.$_POST["board1"], $user[0], $_POST["newArticle"]);
     $page = "view/articles.php";
+    echo "<meta http-equiv='refresh' content='0'>";
 }
 
 
