@@ -78,6 +78,17 @@
                                                required>
                                     </div>
                                 </div>
+                                <div class="form-group row">
+                                    <label for="password-confirm"
+                                           class="col-md-4 col-form-label text-md-right">生日：</label>
+
+                                    <div class="col-md-6">
+                                        <input id="gender" class="form-control"
+                                               name="birth"
+                                               placeholder="請輸入性別"
+                                               required>
+                                    </div>
+                                </div>
 
 <!--                                <div class="form-group row">-->
 <!--                                    <label for="password-confirm"-->

@@ -9,7 +9,7 @@ $board = 1;
 $messages;
 $title;
 $article;
-$user = $model->searchUser("大美人")[0];
+$user;
 
 //登入
 if(isset($_POST["login_name"]) and isset($_POST['login_password'])) {
@@ -22,6 +22,11 @@ if(isset($_POST["login_name"]) and isset($_POST['login_password'])) {
         echo "alert('登入失敗')";
        // echo "<meta http-equiv='refresh' content='0'>";
     }
+}
+
+if(isset($_SESSION['user'])) {
+    echo $_SESSION["user"];
+    $user = $model->searchUser($_SESSION["user"])[0];
 }
 
 //看板
@@ -39,6 +44,8 @@ if(isset($_GET["board"])) {
         $board=4;
     }
 }
+
+$articles=$model->searchBoard("ECE".$board);
 
 //page
 if(isset($_GET["page"])) {
@@ -85,11 +92,10 @@ if(isset($_POST["message"])) {
     echo "<meta http-equiv='refresh' content='0'>";
 }
 
-//註冊(失敗中)
+//註冊
 if(isset($_POST["email"]) and isset($_POST['password'])) {
-    $model->register($_POST["name"], $_POST["email"], $_POST["password"], $_POST["school"], $_POST["gender"]);
+    $model->register($_POST["name"], $_POST["email"], $_POST["password"], $_POST["school"], $_POST["gender"], $_POST["birth"]);
     $_SESSION['user'] = $_POST['name'];
-    echo $_SESSION['user'];
 }
 
 //新增文章
@@ -98,7 +104,7 @@ if(isset($_POST["newArticle"])) {
     $page = "view/articles.php";
 }
 
-$articles=$model->searchBoard("ECE".$board);
+
 
 
 include("layouts/header.php");
