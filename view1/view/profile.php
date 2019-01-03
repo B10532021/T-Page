@@ -74,6 +74,9 @@ $article_title = '今晚的月色如何?';
                                                 </div>
                                             </div>
                                         </div>
+                                        <?php if ($_SESSION['user'] == $user[0]) {
+                                        ?>
+
                                         <script>
                                             function show_alert() {
                                                 alert("修改成功");
@@ -87,8 +90,7 @@ $article_title = '今晚的月色如何?';
                                                         <textarea style="border:0; background-color:#f7f8f9"
                                                                   placeholder="請輸入你的興趣" cols="50"
                                                                   rows="5"
-                                                                  name="update_interests"><?php echo $user[6] ?>
-                                                        </textarea>
+                                                                  name="update_interests"><?php echo $user[6] ?></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -99,8 +101,7 @@ $article_title = '今晚的月色如何?';
                                                         <textarea style="border:0; background-color:#f7f8f9"
                                                                   placeholder="請輸入參加過的社團" cols="50"
                                                                   rows="5"
-                                                                  name="update_clubs"><?php echo $user[7] ?>
-                                                    </textarea>
+                                                                  name="update_clubs"><?php echo $user[7] ?></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -121,8 +122,27 @@ $article_title = '今晚的月色如何?';
                                             width: 120px;
                                             height: 40px;">
                                             </div>
+                                        </form>
+                                        <?php } else { ?>
+                                        <div class="product_detail_heading">
+                                            <div class="detail_heading_left">
+                                                <div class="detail_heading_left">
+                                                    <h4>興趣：</h4>
+                                                    <h5><?php echo $user[6] ?></h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product_detail_heading">
+                                            <div class="detail_heading_left">
+                                                <div class="detail_heading_left">
+                                                    <h4>參加的社團：</h4>
+                                                    <h5><?php echo $user[7] ?></h5>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <?php }?>
                                     </div>
-                                    </form>
                                 </div>
 
                             </div>
@@ -141,7 +161,7 @@ $article_title = '今晚的月色如何?';
                         <div class="item">
                             <img src="../img/<?php echo $image ?>" alt="user image" class="online">
                             <p class="message">
-                                <a href="index.php?page=profile" class="name">
+                                <a href="index.php?page=profile&author=<?php echo $article[2] ?>" class="name">
                                     <?php echo $article[2] ?>
                                 </a>
                                 <?php echo $article[0] ?>

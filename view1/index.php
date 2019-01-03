@@ -1,5 +1,5 @@
+<?php session_start();?>
 <?php
-session_start();
 include_once "../model/Model_SQL.php";
 $model = new Model_SQL();
 
@@ -9,7 +9,8 @@ $board = 1;
 $messages;
 $title;
 $article;
-$user = $model->searchUser("大美人")[0];
+$user;
+
 //登入
 if(isset($_POST["login_name"]) and isset($_POST['login_password'])) {
     if($model->login($_POST['login_name'], $_POST['login_password'])) {
@@ -19,8 +20,12 @@ if(isset($_POST["login_name"]) and isset($_POST['login_password'])) {
     }
     else {
         echo "alert('登入失敗')";
-       // echo "<meta http-equiv='refresh' content='0'>";
+        echo "<meta http-equiv='refresh' content='0'>";
     }
+}
+
+if(isset($_SESSION['user'])) {
+    $user = $model->searchUser($_SESSION["user"])[0];
 }
 
 //看板
@@ -39,6 +44,8 @@ if(isset($_GET["board"])) {
     }
 }
 
+$articles=$model->searchBoard("ECE".$board);
+
 //page
 if(isset($_GET["page"])) {
     if($_GET["page"] == "articles") {
@@ -49,6 +56,9 @@ if(isset($_GET["page"])) {
     }
     if($_GET["page"] == "profile") {
         $page = "view/profile.php";
+        if(isset($_GET["author"])) {
+            $user = $model->searchUser($_GET["author"])[0];
+        }
         $articles=$model->searchAuthor($user[0]);
     }
     if($_GET["page"] == "article") {
@@ -62,7 +72,7 @@ if(isset($_GET["page"])) {
     }
     if($_GET["page"] == "login") {
         $page = "view/login.php";
-        unset($_SESSION['username']);
+        unset($_SESSION['user']);
     }
 }
 
@@ -84,23 +94,27 @@ if(isset($_POST["message"])) {
     echo "<meta http-equiv='refresh' content='0'>";
 }
 
-//註冊(失敗中)
+//註冊
 if(isset($_POST["email"]) and isset($_POST['password'])) {
-    echo 'inside';
-    $model->register();
+    $model->register($_POST["name"], $_POST["email"], $_POST["password"], $_POST["school"], $_POST["gender"], $_POST["birth"]);
+    $_SESSION['user'] = $_POST['name'];
 }
 
 //新增文章
 if(isset($_POST["newArticle"])) {
     $model->addArticle($_POST['newTitle'], 'ECE'.$_POST["board1"], $user[0], $_POST["newArticle"]);
     $page = "view/articles.php";
+    echo "<meta http-equiv='refresh' content='0'>";
 }
 
-$articles=$model->searchBoard("ECE".$board);
+
+
 
 include("layouts/header.php");
 
-include("layouts/sidebar.php");
+if(isset($_SESSION['user'])) {
+    include("layouts/sidebar.php");
+}
 
 include($page);
 
