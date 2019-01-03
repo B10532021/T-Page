@@ -43,7 +43,7 @@
                         </li>
 
                         <li class='has-sub'>
-                            <a href='../category-1.html'><span>board</span></a>
+                            <a><span>board</span></a>
                             <ul class="sub-nav">
                                 <?php
                                 $i=0;

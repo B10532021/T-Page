@@ -80,7 +80,13 @@ if (isset($_GET["page"])) {
     }
     if ($_GET["page"] == "card") {
         $page = "view/card.php";
-        $friend = $model->randomUser()[0];
+        if(isset($_SESSION["card_friend"])){
+            $friend = $model->searchUser($_SESSION["card_friend"])[0];
+        }
+        else{
+            $friend = $model->randomUser()[0];
+            $_SESSION["card_friend"]=$friend[0];
+        }
     }
     if ($_GET["page"] == "profile") {
         $page = "view/profile.php";
@@ -110,12 +116,19 @@ if (isset($_GET["page"])) {
     }
     if ($_GET["page"] == "logout") {
         unset($_SESSION["user"]);
+        unset($_SESSION["card_friend"]);
         echo "<script>location.href='../#'</script>";
     }
     if ($_GET["page"] == "family") {
-        $user = $model->searchUser($_SESSION["user"])[0];
-       $f_friends = $model->searchFamily($user[8]);
-       $page = "view/family.php";
+        if(isset($_SESSION["user"])){
+            $user = $model->searchUser($_SESSION["user"])[0];
+            $f_friends = $model->searchFamily($user[8]);
+            $page = "view/family.php";
+        }
+        else{
+            echo "<script>alert('請先登入')</script>";
+            echo "<script>location.href='../?page=login'</script>";
+        }
     }
 }
 
@@ -131,6 +144,24 @@ if (isset($_GET["title"])) {
 if (isset($_GET["article"])) {
     $article = $model->searchArticle($_GET["article"])[0];
     $messages = $model->searchMessage($article[0]);
+}
+
+if(isset($_POST["delete_article"])){
+    $model->deleteArticle($_POST["delete_article"]);
+    //echo "<script>alert('{$_POST["delete_article"]}')</script>";
+    echo "<script>location.href='../?page=profile'</script>";
+}
+
+//加入家族
+if (isset($_POST["add_family"])) {
+    $model->addFamily($_SESSION["user"], $_POST["familyID"]);
+    echo "<script>location.href='../?page=family'</script>";
+}
+
+//創建家族
+if(isset($_POST["create_family"])){
+    $model->addFamily($_SESSION["user"], $_POST["familyID"]);
+    echo "<script>location.href='../?page=family'</script>";
 }
 
 //上傳照片
@@ -240,8 +271,15 @@ if (isset($_POST["message"])) {
 
 //card
 if (isset($_POST["card"])) {
-    $model->sendInvitation($_SESSION["user"], $_POST["name"]);
-    echo "<script>location.href='../?page=card'</script>";
+    if($model->minusMoney($_SESSION["user"], 1)){
+        $model->sendInvitation($_SESSION["user"], $_POST["name"]);
+        echo "<script>location.href='../?page=card'</script>";
+    }
+    else{
+        echo "<script>alert('沒錢還想交朋友啊')</script>";
+        echo "<script>location.href='../#'</script>";
+    }
+
 }
 
 //按讚

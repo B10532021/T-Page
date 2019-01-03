@@ -22,7 +22,7 @@
                 <div class=" new_customers createAccountBlock">
                     <h2>新會員</h2>
                     <p>
-                        註冊帳號您將能夠贊助募資團隊，或是發起一場募資。
+                        註冊帳號您將能夠暢遊T-Page,享受發文留言等互動功能。
                     </p>
                     <div class="clear"></div>
                     <a href="../?page=register" style="text-decoration:none;">
