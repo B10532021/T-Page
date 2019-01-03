@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once "../model/Model_SQL.php";
 $model = new Model_SQL();
 
@@ -8,8 +9,19 @@ $board = 1;
 $messages;
 $title;
 $article;
-
-$user=$model->searchUser("大美人")[0];
+$user = $model->searchUser("大美人")[0];
+//登入
+if(isset($_POST["login_name"]) and isset($_POST['login_password'])) {
+    if($model->login($_POST['login_name'], $_POST['login_password'])) {
+        $_SESSION['user'] = $_POST['login_name'];
+        $user = $model->searchUser($_POST['login_name'])[0];
+        $page="view/articles.php";
+    }
+    else {
+        echo "alert('登入失敗')";
+       // echo "<meta http-equiv='refresh' content='0'>";
+    }
+}
 
 //看板
 if(isset($_GET["board"])) {
@@ -48,6 +60,10 @@ if(isset($_GET["page"])) {
     if($_GET["page"] == "register") {
         $page = "view/register.php";
     }
+    if($_GET["page"] == "login") {
+        $page = "view/login.php";
+        unset($_SESSION['username']);
+    }
 }
 
 //使用者更新資料
@@ -68,14 +84,10 @@ if(isset($_POST["message"])) {
     echo "<meta http-equiv='refresh' content='0'>";
 }
 
-//登入
-if(isset($_POST["login_email"]) and isset($_POST['login_password'])) {
-}
-
 //註冊(失敗中)
 if(isset($_POST["email"]) and isset($_POST['password'])) {
-    $model->register($_POST["name"], $_POST["email"], $_POST["password"],
-        $_POST["school"], $_POST["gender"]);
+    echo 'inside';
+    $model->register();
 }
 
 //新增文章

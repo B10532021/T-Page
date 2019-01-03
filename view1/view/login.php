@@ -13,14 +13,15 @@
                     <div class="card">
 
                         <div class="card-body">
-                            <form method="POST" action="index.php?page=articles&board=1">
+                            <form method="POST" action="../index.php">
                                 <div class="form-group row">
                                     <label for="email" class="col-sm-4 col-form-label text-md-right">帳號/信箱：</label>
 
                                     <div class="col-md-6">
-                                        <input id="email" type="email"
+<!--                                        <input id="email" type="email"-->
+                                        <input id="email"
                                                class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
-                                               name="login_email" placeholder="請輸入帳號/信箱" required autofocus>
+                                               name="login_name" placeholder="請輸入帳號/信箱" required autofocus>
                                     </div>
                                 </div>
 
