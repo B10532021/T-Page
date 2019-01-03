@@ -2,32 +2,25 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-8 col-xs-12">
-                <div class="comments">
-                    <h2>Family</h2>
-                    <div class="multi_line"></div>
-                    <div class="single_comment">
-                        <?php
-                        foreach ($f_friends as $f_friend) {
-                            ?>
-                            <div class="comment_img">
-                                <img src="<?php
-                                if(file_exists("images/{$f_friend[0]}.jpg")){
-                                    echo "../images/{$f_friend[0]}.jpg";
-                                }
-                                else{
-                                    echo "../images/comment1.png";
-                                }?> " alt=""/>
-                            </div>
-                            <div class="comment_text">
-                                <div class="comment_name">
-                                    <h3><?php echo $f_friend[0] ?></h3>
-                                </div>
-                            </div>
-                            <?php
-                        }
-                        ?>
-                    </div>
+
+            </div>
+
+            <div class="leave_a_reply">
+                <h2>leave a reply</h2>
+                <div class="multi_line"></div>
+                <div class="left_input">
                 </div>
+                <form action="../index.php" method="post">
+                    <div class="left_input">
+                        <p>Family ID<span></span></p>
+                        <input type="text"/><br>
+                        <input type="submit" value="post comment" name="message"/>
+
+                    </div>
+                    <div class="right_input">
+                        <input type="submit" value="post comment" name="message"/>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

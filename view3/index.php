@@ -166,25 +166,18 @@ if (isset($_FILES["file"]["name"])) {
 
 //註冊
 if (isset($_POST["register"])) {
-    $birth = "";
     $interests = "";
     $clubs = "";
-    $family = "";
-    if (isset($_POST["birth"])) {
-        $birth = $_POST["birth"];
-    }
     if (isset($_POST["interests"])) {
         $interests = $_POST["interests"];
     }
     if (isset($_POST["clubs"])) {
         $clubs = $_POST["clubs"];
     }
-    if (isset($_POST["family"])) {
-        $family = $_POST["family"];
-    }
 
-    $model->register($_POST["name"], $_POST["email"], $_POST["password"], $_POST["school"], $_POST["gender"], $birth,
-        $interests, $clubs, $family);
+    $model->register($_POST["name"], $_POST["email"], $_POST["password"], $_POST["school"], $_POST["gender"], $_POST["birth"],
+        $interests, $clubs);
+//    $model->register("name","email","password","school","gender","birth","interests","clubs");
 
     $_SESSION["user"] = $_POST["name"];
 }
@@ -207,18 +200,14 @@ if (isset($_POST["profile"])) {
     $user = $model->searchUser($_SESSION["user"])[0];
     $interests = "";
     $clubs = "";
-    $family = "";
     if (isset($_POST["interests"])) {
         $interests = $_POST["interests"];
     }
     if (isset($_POST["clubs"])) {
         $clubs = $_POST["clubs"];
     }
-    if (isset($_POST["family"])) {
-        $family = $_POST["family"];
-    }
 
-    $model->register($user[0], $user[1], $user[2], $user[3], $user[4], $user[5], $interests, $clubs, $family);
+    $model->updateUser($user[0], $user[1], $user[2], $user[3], $user[4], $user[5], $interests, $clubs, $user[8]);
     echo "<script>location.href='../?page=profile'</script>";
 
 }

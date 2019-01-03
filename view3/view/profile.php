@@ -61,18 +61,18 @@
                         />
                     </div>
                     <div class="form-group">
-                        <p><label>interest</label></p>
+                        <p><label>interests</label></p>
                         <input
                             type="text"
-                            name="interest"
+                            name="interests"
                             value="<?php echo $user[6]?>"
                         />
                     </div>
                     <div class="form-group">
-                        <p><label>club</label></p>
+                        <p><label>clubs</label></p>
                         <input
                                 type="text"
-                                name="club"
+                                name="clubs"
                                 value="<?php echo $user[7]?>"
                         />
                     </div>
@@ -82,6 +82,7 @@
                             type="text"
                             name="family"
                             value="<?php echo $user[8]?>"
+                            readonly
                         />
                     </div>
                 </div>
