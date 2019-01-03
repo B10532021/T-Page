@@ -425,19 +425,15 @@ class Model_SQL
         $conn = mysqli_connect("localhost:33060", "root", "root");
         mysqli_select_db($conn, "tpage");
         mysqli_query( $conn, "SET NAMES 'utf8'");
-        $sql = "select * from users";
+        $result=mysqli_query($conn,"select * from users");
+        $totalUsers=mysqli_num_rows($result);
+        $id = rand(1, $totalUsers);
+        $sql = "select * from users WHERE id = ".$id;
         $result = mysqli_query($conn, $sql);
         while($user = mysqli_fetch_row($result)){
             $this->userData[] = $user;
         }
-        $num = count($this->userData);
-        $id = rand(0, $num - 1);
-        $this->userData = array();
-        $sql2 = "select * from users WHERE id = '$id'";
-        $result2 = mysqli_query($conn, $sql2);
-        while($user = mysqli_fetch_row($result2)){
-            $this->userData[] = $user;
-        }
+
         return $this->userData;
     }
 }
