@@ -2,7 +2,7 @@
 
 @media only screen and (min-width: 992px) and (max-width: 1280px) {
 
- 
+
 .main_cat_item .tr-add-cart > ul {
   margin: 158px 0 0 12px;
 }
@@ -11,7 +11,7 @@
 }
  .carousel-control.right {
   right: 46%;
-} 
+}
 .trending_box .nav.nav-tabs {
   width: 37%;
 }
@@ -106,7 +106,7 @@ ul.wid_social li {
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 14px;
-}   
+}
 .ex_left_text > h2 {
   font-size: 32px;
 }
@@ -136,7 +136,7 @@ ul.wid_social li {
 /* Tablet Layout: 768px. */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
- 
+
  /* new. */
  .review_comments {
 margin-bottom: 30px;
@@ -579,7 +579,7 @@ ul#single_blog_nav {
 /* Mobile Layout: 320px. */
 
 @media only screen and (max-width: 767px) {
- 
+
  /* new. */
  .review_comments {
 margin-bottom: 30px;
@@ -736,7 +736,7 @@ width:100%
  .pagi_ul ul li a {
   font-size: 12px;
   padding: 0 7px;
-}   
+}
 .blog_search input[type="text"] {
   width: 262px;
 }
@@ -909,7 +909,7 @@ width: 100%;
   margin: 0 auto;
 }
 .owl-carousel .owl-next {
-  
+
 }
 
 .month_right {
@@ -1027,7 +1027,7 @@ width: 100%;
 }
 .size_cart a {
   font-size: 8px;
-} 
+}
 .header_top_left > p {
 font-size:11px;
 }
@@ -1046,7 +1046,7 @@ font-size:11px;
 ul.nav.nav-tabs.tab-product li {
   margin-right: 4px;
   width:auto;
- 
+
 }
 ul.nav.nav-tabs.tab-product li a {
   font-size: 10px;
@@ -1183,7 +1183,7 @@ position: relative;
 /* Wide Mobile Layout: 480px. */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
- 
+
  /* new. */
  .review_comment_input input[type="submit"] {
   width: 33%;

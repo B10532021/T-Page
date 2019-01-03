@@ -21,6 +21,8 @@
                         </ul>
                     </li>
                     <li><a href="../?page=card">Card</a></li>
+                    <li><a href="../?page=family">Family</a></li>
+
                 </ul>
             </nav>
         </div>
@@ -55,6 +57,8 @@
                             </ul>
                         </li>
                         <li><a href="../?page=card">Card</a></li>
+                        <li><a href="../?page=family">Family</a></li>
+
                     </ul>
                 </div>
             </div>

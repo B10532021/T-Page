@@ -86,15 +86,6 @@
                                 name="clubs"
                         />
                     </div>
-                    <div
-                            class="form-group"
-                    >
-                        <label>家族 </label>
-                        <input
-                                type="text"
-                                name="family"
-                        />
-                    </div>
                     <div class="form-check">
                         <label>
                             <input
