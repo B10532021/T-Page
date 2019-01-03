@@ -38,6 +38,18 @@
                 }
             });
         }
+
+        function addCardFriend($myName,$friendName) {
+            $.ajax({
+                url:"index.php", 			//the page containing php script
+                type: "POST", 				//request type
+                data:{action: "addCardFriend",myName:$myName,friendName:$friendName},
+                success:function(){
+                    alert("已送出交友邀請");
+                }
+            });
+        }
+
     </script>
     <!--    ajax    -->
 

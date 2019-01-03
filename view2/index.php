@@ -26,6 +26,10 @@ if(isset($_GET["page"])) {
         $page = "view/card.php";
         $newCardUser=$model->randomUser()[0];
 
+        while($newCardUser[0]==$_SESSION['user'][0])
+        {
+            $newCardUser=$model->randomUser()[0];
+        }
     }
     if($_GET["page"] == "profile") {
     $page = "view/profile.php";
@@ -113,9 +117,22 @@ function logout()
     unset($_SESSION['user']);
 }
 
+function addCardFriend($myName,$friendName)
+{
+    $model=new Model_SQL();
+    $model->sendInvitation($myName,$friendName);
+}
+
 if(isset($_POST['action']))
 {
-    logout();
+    if($_POST['action']=="logout")
+    {
+        logout();
+    }
+    if($_POST['action']=="addCardFriend")
+    {
+        addCardFriend($_POST['myName'],$_POST['friendName']);
+    }
 }
 
 $articles=$model->searchBoard("ECE".$board);
