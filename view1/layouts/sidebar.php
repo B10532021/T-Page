@@ -7,8 +7,8 @@
                 <img src="../img/profile.jpg" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p><a href="index.php?page=profile"><?php echo $user[0]?></a></p>
-                <div style=" color: yellow"><?php echo $user[9]?><img src="../img/money.png" style="padding-left: 5px;" width="20%"></div>
+                <p><a href="index.php?page=profile"><?php echo $_SESSION['user'][0]?></a></p>
+                <div style=" color: yellow"><?php echo $_SESSION['user'][9]?><img src="../img/money.png" style="padding-left: 5px;" width="20%"></div>
             </div>
         </div>
         <!-- search form -->

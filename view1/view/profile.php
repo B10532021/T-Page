@@ -39,7 +39,7 @@ $article_title = '今晚的月色如何?';
                                                                 width="80%"
                                                                 src="../img/<?php echo $image ?>"
                                                                 alt=""/>
-                                                        <?php if ($_SESSION['user'] == $user[0] and $user[8] != null) {
+                                                        <?php if ($_SESSION['user'][0] == $user[0] and $user[8] != null) {
                                                             ?>
                                                             <a href="index.php?page=family">
                                                                 <button style="
@@ -61,7 +61,7 @@ $article_title = '今晚的月色如何?';
                                                                 </button>
                                                             </a>
                                                         <?php } ?>
-                                                        <?php if ($_SESSION['user'] == $user[0]) {
+                                                        <?php if ($_SESSION['user'][0] == $user[0]) {
                                                         ?>
                                                         <a href="index.php?page=friend">
                                                             <button style="
@@ -124,7 +124,7 @@ $article_title = '今晚的月色如何?';
                                                 </div>
                                             </div>
                                         </div>
-                                        <?php if ($_SESSION['user'] == $user[0]) {
+                                        <?php if ($_SESSION['user'][0] == $user[0]) {
                                             ?>
 
                                             <script>
@@ -219,7 +219,7 @@ $article_title = '今晚的月色如何?';
                             </p>
                             <a href="index.php?page=article&article=<?php echo $article[0] ?>"
                                style="margin-left: 50px">閱讀完整文章...</a>
-                            <?php if ($_SESSION['user'] == $user[0]) {
+                            <?php if ($_SESSION['user'][0] == $user[0]) {
                                 ?>
                             <form method="post">
                                 <input name="delete_article" style="display:none" value="<?php echo $article[0] ?>">

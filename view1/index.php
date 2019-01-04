@@ -5,6 +5,7 @@ $model = new Model_SQL();
 if(!isset($_SESSION['user'])) {
     $page = "view/login.php";
 } else {
+    $_SESSION['user'] = $model->searchUser($_SESSION['user'][0])[0];
     $page="view/articles.php";
 }
 
@@ -21,12 +22,12 @@ $friends;
 //登入
 if(isset($_POST["login_name"]) and isset($_POST['login_password'])) {
     if($model->login($_POST['login_name'], $_POST['login_password'])) {
-        $_SESSION['user'] = $_POST['login_name'];
         $user = $model->searchUser($_POST['login_name'])[0];
+        $_SESSION['user'] = $user;
         $page="view/articles.php";
         $newCardUser=$model->randomUser()[0];
 
-        while($newCardUser[0]==$_SESSION['user'])
+        while($newCardUser[0]==$_SESSION['user'][0])
         {
             $newCardUser=$model->randomUser()[0];
         }
@@ -46,7 +47,7 @@ if(isset($_POST["email"]) and isset($_POST['password'])) {
     $_SESSION["user"] = $_POST['name'];
     $newCardUser=$model->randomUser()[0];
 
-    while($newCardUser[0]==$_SESSION['user'])
+    while($newCardUser[0]==$_SESSION['user'][0])
     {
         $newCardUser=$model->randomUser()[0];
     }
@@ -56,7 +57,7 @@ if(isset($_POST["email"]) and isset($_POST['password'])) {
 }
 
 if(isset($_SESSION["user"])) {
-    $user = $model->searchUser($_SESSION["user"])[0];
+    $user = $model->searchUser($_SESSION["user"][0])[0];
 }
 
 //看板
@@ -135,14 +136,14 @@ if(isset($_GET["article"])) {
 //留言
 if(isset($_POST["message"])) {
     $model->addMessage($_POST["name"], $_POST["message"], $_POST["title"]);
-    $model->addMoney($user[0], $user[9]);
+    $model->addMoney($_SESSION['user'][0], $_SESSION['user'][9]);
     echo "<meta http-equiv='refresh' content='0'>";
 }
 
 //新增文章
 if(isset($_POST["newArticle"])) {
     $model->addArticle($_POST['newTitle'], 'ECE'.$_POST["board1"], $user[0], $_POST["newArticle"]);
-    $model->addMoney($user[0], $user[9]);
+    $model->addMoney($_SESSION['user'][0], $_SESSION['user'][9]);
     $page = "view/articles.php";
     echo "<meta http-equiv='refresh' content='0'>";
 
@@ -160,9 +161,9 @@ if(isset($_POST["delete_article"])) {
 //加入家族
 if(isset($_POST["family"])) {
     if($user[8]!=null) {
-        $model->deleteFamily($_SESSION['user'], $user[8]);
+        $model->deleteFamily($_SESSION['user'][0], $user[8]);
     }
-    $model->addFamily($_SESSION['user'],$_POST["family"]);
+    $model->addFamily($_SESSION['user'][0],$_POST["family"]);
     echo "<meta http-equiv='refresh' content='0'>";
 }
 
@@ -182,7 +183,7 @@ if(isset($_POST["dislike"])) {
 if(isset($_POST["cardfriend"]))
 {
     $model->sendInvitation($_POST['name'],$_POST['cardfriend']);
-    $model->minusMoney($user[0], $user[9]);
+    $model->minusMoney($_SESSION['user'][0], $_SESSION['user'][9]);
     echo "<meta http-equiv='refresh' content='0'>";
 }
 

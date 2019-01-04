@@ -100,7 +100,7 @@ $clubs = '跆拳道社';
                                     </script>
                                     <form method="post" action="index.php?page=card">
                                     <div>
-                                        <input name="name" style="display: none" value="<?php echo $_SESSION["user"] ?>">
+                                        <input name="name" style="display: none" value="<?php echo $_SESSION["user"][0] ?>">
                                         <input name="cardfriend" style="display: none" value="<?php echo $_SESSION["cardfriend"][0] ?>">
                                         <button type="submit" style="
                                             background: none repeat scroll 0 0;
