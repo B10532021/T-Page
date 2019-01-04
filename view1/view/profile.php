@@ -61,6 +61,8 @@ $article_title = '今晚的月色如何?';
                                                                 </button>
                                                             </a>
                                                         <?php } ?>
+                                                        <?php if ($_SESSION['user'] == $user[0]) {
+                                                        ?>
                                                         <a href="index.php?page=friend">
                                                             <button style="
                                                             background: none repeat scroll 0 0;
@@ -79,6 +81,7 @@ $article_title = '今晚的月色如何?';
                                                             height: 40px;">我的朋友
                                                             </button>
                                                         </a>
+                                                        <?php } ?>
                                                     </div>
                                                 </div>
                                             </div>
@@ -216,6 +219,8 @@ $article_title = '今晚的月色如何?';
                             </p>
                             <a href="index.php?page=article&article=<?php echo $article[0] ?>"
                                style="margin-left: 50px">閱讀完整文章...</a>
+                            <?php if ($_SESSION['user'] == $user[0]) {
+                                ?>
                             <form method="post">
                                 <input name="delete_article" style="display:none" value="<?php echo $article[0] ?>">
                                 <button type="submit" style="
@@ -236,6 +241,7 @@ $article_title = '今晚的月色如何?';
                                             height: 30px;">刪除
                                 </button>
                             </form>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
