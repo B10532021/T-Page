@@ -50,6 +50,9 @@
     <!-- Custom css -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/add_article.css">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/login.css">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
@@ -79,13 +82,19 @@ if (isset($_GET["page"])) {
         $page = "view/articles.php";
     }
     if ($_GET["page"] == "card") {
-        $page = "view/card.php";
-        if(isset($_SESSION["card_friend"])){
-            $friend = $model->searchUser($_SESSION["card_friend"])[0];
-        }
-        else{
-            $friend = $model->randomUser()[0];
-            $_SESSION["card_friend"]=$friend[0];
+
+        if (isset($_SESSION["user"])) {
+            $page = "view/card.php";
+            if(isset($_SESSION["card_friend"])){
+                $friend = $model->searchUser($_SESSION["card_friend"])[0];
+            }
+            else{
+                $friend = $model->randomUser()[0];
+                $_SESSION["card_friend"]=$friend[0];
+            }
+        } else {
+            echo "<script>alert('請先登入')</script>";
+            echo "<script>location.href='../?page=login'</script>";
         }
     }
     if ($_GET["page"] == "profile") {
@@ -132,6 +141,21 @@ if (isset($_GET["page"])) {
     }
     if ($_GET["page"] == "update_article"){
         $page = "view/update_article.php";
+    }
+    if ($_GET["page"] == "friend"){
+        $page = "view/friend.php";
+        $friend = $model->searchUser($_GET["name"])[0];
+    }
+    if ($_GET["page"] == "friends"){
+
+        if(isset($_SESSION["user"])){
+            $page = "view/friends.php";
+            $f_friends = $model->searchCardFriend($_SESSION["user"]);
+        }
+        else{
+            echo "<script>alert('請先登入')</script>";
+            echo "<script>location.href='../?page=login'</script>";
+        }
     }
 }
 
@@ -283,15 +307,16 @@ if (isset($_POST["message"])) {
 
 //card
 if (isset($_POST["card"])) {
-    if($model->minusMoney($_SESSION["user"], 1)){
+    $user = $model->searchUser($_SESSION["user"])[0];
+    if($model->minusMoney($_SESSION["user"],$user[9])){
         $model->sendInvitation($_SESSION["user"], $_POST["name"]);
-        echo "<script>location.href='../?page=card'</script>";
+        echo "<script>alert('成功送出邀請')</script>";
+        echo "<script>location.href='../#'</script>";
     }
     else{
         echo "<script>alert('沒錢還想交朋友啊')</script>";
         echo "<script>location.href='../#'</script>";
     }
-
 }
 
 //按讚

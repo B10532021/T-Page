@@ -15,60 +15,60 @@
                 />
             </div>
 
-            <form method="post" action="../index.php">
+            <form action="../index.php" method="post">
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="form-group">
                         <label>name</label>
                         <input
-                                type="text"
-                                name="name"
-                                value="<?php echo $friend[0] ?>"
-                                readonly
+                            type="text"
+                            name="name"
+                            value="<?php echo $friend[0] ?>"
+                            readonly
                         />
                     </div>
                     <div class="form-group">
                         <label>school</label>
                         <input
-                                type="text"
-                                name="school"
-                                value="<?php echo $friend[3] ?>"
-                                readonly
+                            type="text"
+                            name="school"
+                            value="<?php echo $friend[3] ?>"
+                            readonly
                         />
                     </div>
                     <div class="form-group">
                         <p><label>sex</label></p>
                         <input
-                                type="text"
-                                name="sex"
-                                value="<?php echo $friend[4] ?>"
-                                readonly
+                            type="text"
+                            name="sex"
+                            value="<?php echo $friend[4] ?>"
+                            readonly
                         />
                     </div>
                     <div class="form-group">
                         <label>birth</label>
                         <input
-                                type="text"
-                                name="birth"
-                                value="<?php echo $friend[5] ?>"
-                                readonly
+                            type="text"
+                            name="birth"
+                            value="<?php echo $friend[5] ?>"
+                            readonly
                         />
                     </div>
                     <div class="form-group">
                         <p><label>interests</label></p>
                         <input
-                                type="text"
-                                name="interests"
-                                value="<?php echo $friend[6] ?>"
-                                readonly
+                            type="text"
+                            name="interests"
+                            value="<?php echo $friend[6] ?>"
+                            readonly
                         />
                     </div>
                     <div class="form-group">
                         <p><label>clubs</label></p>
                         <input
-                                type="text"
-                                name="clubs"
-                                value="<?php echo $friend[7] ?>"
-                                readonly
+                            type="text"
+                            name="clubs"
+                            value="<?php echo $friend[7] ?>"
+                            readonly
                         />
                     </div>
                 </div>

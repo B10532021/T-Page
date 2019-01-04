@@ -52,10 +52,12 @@
                 <div class="comments">
                     <h2>Comments</h2>
                     <div class="multi_line"></div>
-                    <div class="single_comment">
+
                         <?php
                         foreach ($messages as $message) {
                             ?>
+                    <div class="single_comment">
+                        <a style="text-decoration: none" href="../?page=friend&name=<?php echo $message[0] ?>">
                             <div class="comment_img">
                                 <img src="<?php
                                 if(file_exists("images/{$message[0]}.jpg")){
@@ -63,21 +65,23 @@
                                 }
                                 else{
                                     echo "../images/comment1.png";
-                                }?> " style="height: 90px; width: 90px"/>
+                                }?> " style=""/>
                             </div>
-                            <div class="comment_text" style="white-space: pre-line;">
-                                <div class="comment_name" style="white-space: pre-line;">
+                        </a>
+                            <div class="comment_text">
+                                <div class="comment_name">
                                     <h3><?php echo $message[0] ?> | <span><?php echo $message[3] ?></span></h3>
                                 </div>
                                 <div class="reply"><span>Reply</span></div>
-                                <div class="comment-detail">
+                                <div class="comment-detail" style="white-space: pre-line;">
                                     <p> <?php echo $message[1] ?></p>
                                 </div>
                             </div>
+                    </div>
                             <?php
                         }
                         ?>
-                    </div>
+
                 </div>
 
                 <div class="leave_a_reply">
@@ -90,7 +94,7 @@
                             <p>Comments</p>
                             <input type="text" name="title1" style="display: none" value="<?php echo $article[0]?>">
                             <input type="text" name="board1" style="display: none" value="<?php echo $article[1]?>">
-                            <textarea name="context" cols="30" rows="10"></textarea>
+                            <textarea name="context" cols="30" rows="10" style="white-space: pre-line;"></textarea>
                             <input type="submit" value="post comment" name="message"/>
                         </div>
                     </form>

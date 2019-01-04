@@ -10,10 +10,12 @@
                     <li><a>board</a>
                         <ul id="sub-menu7">
                             <?php
-                            $i=0;
+                            $i = 0;
                             foreach ($boards as $singleBoard) {
                                 ?>
-                                <li><a href="../?page=articles&board=<?php echo $singleBoard[0]?>"><?php echo $singleBoard[0]?></a></li>
+                                <li>
+                                    <a href="../?page=articles&board=<?php echo $singleBoard[0] ?>"><?php echo $singleBoard[0] ?></a>
+                                </li>
                                 <?php
                                 $i++;
                             }
@@ -22,7 +24,7 @@
                     </li>
                     <li><a href="../?page=card">Card</a></li>
                     <li><a href="../?page=family">Family</a></li>
-
+                    <li><a href="../?page=friends">Friends</a></li>
                 </ul>
             </nav>
         </div>
@@ -46,10 +48,12 @@
                             <a><span>board</span></a>
                             <ul class="sub-nav">
                                 <?php
-                                $i=0;
+                                $i = 0;
                                 foreach ($boards as $singleBoard) {
                                     ?>
-                                    <li><a href="index.php/?page=articles&board=<?php echo $singleBoard[0]?>"><?php echo $singleBoard[0]?></a></li>
+                                    <li>
+                                        <a href="index.php/?page=articles&board=<?php echo $singleBoard[0] ?>"><?php echo $singleBoard[0] ?></a>
+                                    </li>
                                     <?php
                                     $i++;
                                 }
@@ -58,6 +62,7 @@
                         </li>
                         <li><a href="../?page=card">Card</a></li>
                         <li><a href="../?page=family">Family</a></li>
+                        <li><a href="../?page=friends">Friends</a></li>
 
                     </ul>
                 </div>

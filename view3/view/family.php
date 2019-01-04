@@ -50,6 +50,7 @@ if ($user[8] == null) {
                             <?php
                             foreach ($f_friends as $f_friend) {
                                 ?>
+                                <a style="text-decoration: none" href="../?page=friend&name=<?php echo $f_friend[0] ?>">
                                 <div class="comment_img">
                                     <img src="<?php
                                     if(file_exists("images/{$f_friend[0]}.jpg")){
@@ -68,6 +69,7 @@ if ($user[8] == null) {
                                         <p><br></p>
                                     </div>
                                 </div>
+                                </a>
                                 <?php
                             }
                             ?>

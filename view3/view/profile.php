@@ -16,7 +16,7 @@
                     <input type="file" name="file"><br><br>
                     <input type="submit" value="Submit">
                 </form>
-                <img src="../images/money.png" width="50%">
+                <img src="../images/money.png" width="30%">
                 <br>
                 <span style="font-size: 70px"><?php echo $user[9] ?></span>
             </div>
@@ -84,12 +84,13 @@
                                 readonly
                         />
                     </div>
-                </div>
-                <div class="col-md-offset-5 col-md-3 col-sm-offset-2">
                     <div class="submit_btn form-group">
                         <!-- TODO:驗證表單再重新導向 -->
                         <input type="submit" value="修改" name="profile"/>
                     </div>
+                </div>
+                <div class="col-md-offset-5 col-md-3 col-sm-offset-2">
+
                 </div>
 
             </form>
@@ -114,7 +115,7 @@
                                     ?>
                                     </span></h2>
                             <p><?php if ($article[4] != null) {
-                                    echo $article[4][0] . $article[4][1] . $article[4][2] . $article[4][3] . $article[4][4] . $article[4][5] . $article[4][6] . $article[4][7];
+                                    echo $article[4][0] . $article[4][1] . $article[4][2] . $article[4][3] . $article[4][4] . $article[4][5] . $article[4][6];
                                 }
                                 ?>
                         </div>
