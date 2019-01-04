@@ -132,7 +132,7 @@
                         <div>
                             <form class="col-md-1 col-md-offset-4" method="post" action="../index.php" style="">
                                 <input type="text" value="<?php echo $article[0] ?>" name="fix_article" style="display: none">
-                                <input type="image" src="../images/cog.png" alt="Submit" style="vertical-align: center" width="110%">
+                                <input type="image" src="../images/cog.png" alt="Submit" style="vertical-align: center" width="80%">
                             </form>
                             <form class="col-md-1"
                                   action="../index.php" method="post" style="height: 55px">

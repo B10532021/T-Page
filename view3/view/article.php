@@ -63,10 +63,10 @@
                                 }
                                 else{
                                     echo "../images/comment1.png";
-                                }?> " alt=""/>
+                                }?> " style="height: 90px; width: 90px"/>
                             </div>
-                            <div class="comment_text">
-                                <div class="comment_name">
+                            <div class="comment_text" style="white-space: pre-line;">
+                                <div class="comment_name" style="white-space: pre-line;">
                                     <h3><?php echo $message[0] ?> | <span><?php echo $message[3] ?></span></h3>
                                 </div>
                                 <div class="reply"><span>Reply</span></div>

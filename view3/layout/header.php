@@ -36,8 +36,10 @@
         <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <div class="header_left floatleft">
-<!--                    <a class="fa fa-search" href=""></a>-->
-<!--                    <input type="text" placeholder="search"/>-->
+<!--                    <form>-->
+<!--                        <a class="fa fa-search" href=""></a>-->
+<!--                        <input type="text" placeholder="search"/>-->
+<!--                    </form>-->
                 </div>
             </div>
             <div class="col-md-6 col-sm-5 col-xs-12">
