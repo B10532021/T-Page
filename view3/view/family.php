@@ -57,7 +57,7 @@ if ($user[8] == null) {
                                     }
                                     else{
                                         echo "../images/comment1.png";
-                                    }?> " alt=""/>
+                                    }?> " style="width: 90px; height: 90px"/>
                                 </div>
                                 <div class="comment_text">
                                     <div class="comment_name">

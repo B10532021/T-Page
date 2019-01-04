@@ -130,6 +130,9 @@ if (isset($_GET["page"])) {
             echo "<script>location.href='../?page=login'</script>";
         }
     }
+    if ($_GET["page"] == "update_article"){
+        $page = "view/update_article.php";
+    }
 }
 
 if (isset($_GET["board"])) {
@@ -150,6 +153,15 @@ if(isset($_POST["delete_article"])){
     $model->deleteArticle($_POST["delete_article"]);
     //echo "<script>alert('{$_POST["delete_article"]}')</script>";
     echo "<script>location.href='../?page=profile'</script>";
+}
+
+if(isset($_POST["update_article"])){
+    $model->updateArticle($_POST["title3"], $_POST["context"]);
+    echo "<script>location.href='../?page=profile'</script>";
+}
+
+if(isset($_POST["fix_article"])){
+    echo "<script>location.href='../?page=update_article&title={$_POST["fix_article"]}'</script>";
 }
 
 //加入家族

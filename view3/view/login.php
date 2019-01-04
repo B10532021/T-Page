@@ -53,33 +53,33 @@
                         </div>
                         <!-- .email -->
 
-                        <div class="password">
-                            <strong>password :</strong
-                            ><sup class="surely">*</sup><br/>
-                            <input
-                                    type="password"
-                                    name="password"
-                                    placeholder="密碼"
-                                    required
-                            />
-                            <a
-                                    class="forgot"
-                                    href="#"
-                            >
-                                忘記密碼?</a
-                            >
-                        </div>
-                        <!-- .password -->
-
-                        <div class="remember">
-                            <input
-                                    class="niceCheck"
-                                    type="checkbox"
-                                    name="Remember_password"
-                            />
-                            <span class="rem">記得密碼</span>
-                        </div>
-                        <!-- .remember -->
+<!--                        <div class="password">-->
+<!--                            <strong>password :</strong-->
+<!--                            ><sup class="surely">*</sup><br/>-->
+<!--                            <input-->
+<!--                                    type="password"-->
+<!--                                    name="password"-->
+<!--                                    placeholder="密碼"-->
+<!--                                    required-->
+<!--                            />-->
+<!--                            <a-->
+<!--                                    class="forgot"-->
+<!--                                    href="#"-->
+<!--                            >-->
+<!--                                忘記密碼?</a-->
+<!--                            >-->
+<!--                        </div>-->
+<!--                        <!-- .password -->-->
+<!---->
+<!--                        <div class="remember">-->
+<!--                            <input-->
+<!--                                    class="niceCheck"-->
+<!--                                    type="checkbox"-->
+<!--                                    name="Remember_password"-->
+<!--                            />-->
+<!--                            <span class="rem">記得密碼</span>-->
+<!--                        </div>-->
+<!--                        <!-- .remember -->-->
 
                         <div class="submit">
                             <input name="login" type="submit" value="登入"/>
