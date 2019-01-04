@@ -30,7 +30,7 @@
                                     ?>
                                     </span></h2>
                             <p><?php if($article[4] != null){
-                                    echo $article[4][0].$article[4][1].$article[4][2].$article[4][3].$article[4][4].$article[4][5].$article[4][6].$article[4][7];
+                                    echo $article[4][0].$article[4][1].$article[4][2].$article[4][3].$article[4][4].$article[4][5].$article[4][6];
                                 }
                                 ?>
                         </div>

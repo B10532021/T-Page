@@ -121,18 +121,25 @@
                         <div class="blog_text_in_page">
                             <a href="../?page=articles&board=<?php echo $article[1] ?>&title=<?php echo $article[0] ?>"
                                style="display: inline-block"><h3><?php echo $article[0] ?></h3></a>
-                            <form class="col-md-offset-4" style="display: inline-block padding-left:100px"
-                                  action="../index.php" method="post">
-                                <input type="text" value="<?php echo $article[0] ?>" name="delete_article" style="display: none">
-                                <input type="image" src="../images/close.png" style="display: inline-block;"
-                                       alt="Submit">
-                            </form>
+
                             <h4>By <span><?php echo $article[2] ?></span></h4>
                             <div class="read_more">
                                 <a class="read_more_blog"
                                    href="index.php?page=article&board=<?php echo $article[1] ?>&title=<?php echo $article[0] ?>">Read
                                     more</a>
                             </div>
+                        </div>
+                        <div>
+                            <form class="col-md-1 col-md-offset-4" method="post" action="../index.php" style="">
+                                <input type="text" value="<?php echo $article[0] ?>" name="fix_article" style="display: none">
+                                <input type="image" src="../images/cog.png" alt="Submit" style="vertical-align: center" width="110%">
+                            </form>
+                            <form class="col-md-1"
+                                  action="../index.php" method="post" style="height: 55px">
+                                <input type="text" value="<?php echo $article[0] ?>" name="delete_article" style="display: none">
+                                <input type="image" src="../images/close.png" style="display: inline-block vertical-align:middle;"
+                                       alt="Submit">
+                            </form>
                         </div>
 
                     </div>

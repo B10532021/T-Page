@@ -9,8 +9,14 @@
                 <div class="single_blog_in_page">
                     <!--                    <div class="blog_img_l"><img src="images/blog_page2.jpg" alt="" /></div>-->
                     <div class="blog_date_in_page">
-                        <h2>_ <span>18</span></h2>
-                        <p>april 2015</p>
+                        <h2>_ <span><?php if($article[4] != null){
+                                    echo $article[4][8].$article[4][9];
+                                }
+                                ?></span></h2>
+                        <p><?php if($article[4] != null){
+                                echo $article[4][0].$article[4][1].$article[4][2].$article[4][3].$article[4][4].$article[4][5].$article[4][6];
+                            }
+                            ?></p>
                     </div>
                     <div class="blog_text_in_page">
                         <h3><?php echo $article[0] ?></h3>
@@ -23,23 +29,23 @@
 <!--                        <span>12 shares</span>-->
 <!--                    </div>-->
                     <div style="padding-top: 20px;padding-left: 50px;">
-                        <form method="post" accept-charset="utf-8">
+                        <form class="col-md-offset-4 col-md-1" method="post" accept-charset="utf-8">
                             <input name="title1" style="display: none" value="<?php echo $article[0] ?>">
                             <input name="board2" style="display: none" value="<?php echo $article[1] ?>">
                             <input name="like" style="display: none" value="<?php echo $article[5] ?>">
                             <input type="image" src="../images/like.png"
                                    style="padding-left: 5px;"
-                                   width="5%"
-                                   alt="Submit">：<?php echo $article[5] ?>
+                                   width="100%"
+                                   alt="Submit">
                         </form>
-                        <form method="post" accept-charset="utf-8">
+                        <form class="col-md-1" method="post" accept-charset="utf-8">
                             <input name="title1" style="display: none" value="<?php echo $article[0] ?>">
                             <input name="board2" style="display: none" value="<?php echo $article[1] ?>">
                             <input name="dislike" style="display: none" value="<?php echo $article[6] ?>">
                             <input type="image" src="../images/dislike.png"
                                    style="padding-left: 5px;"
-                                   width="5%"
-                                   alt="Submit">：<?php echo $article[6] ?>
+                                   width="100%"
+                                   alt="Submit">
                         </form>
                     </div>
                 </div>
